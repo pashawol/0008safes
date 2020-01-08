@@ -38,12 +38,7 @@ mixin select(label,pl,...items)
 mixin form-wrap()
 	+b.form-wrap&attributes(attributes)
 		form
-			input(type='hidden',  name='example-input-field')
-			input(type='hidden', class="order", name='order', value=`Заявка  с сайта`) 
-			input(type="hidden" class='utm_source' name='utm_source')
-			input(type="hidden" class='utm_term' name='utm_term')
-			input(type="hidden" class='utm_medium' name='utm_medium')
-			input(type="hidden" class='utm_campaign' name='utm_campaign')
+			input(type='hidden', class="order", name='order', value=`Заявка  с сайта`)  
 			block
 //- /wrapper for form
 
@@ -66,7 +61,77 @@ mixin add-file(n)
 		+e.SPAN.filename 
 
 
+mixin inputName()
+	+input("Иван","text",'Как к вам обращаться?',"name")(required)
+mixin order-block(btn="Обсудить заказ")
+	input(type="hidden" class='order' name='order' value="")
+	input(type="hidden" class='color' name='color' value="") 
+	block
+	+inputName()
+	+form-tabs-modal()
+	.h6 Специалист компании &laquo;АБлок&raquo; Зоя позвонит  вам прямо сейчас или в&nbsp;другое рабочее время: мы&nbsp;работаем ежедневно с&nbsp;09:00 до&nbsp;20:00
+	+e.toggle 
+		span Укажите необходимое количество, если знаете
+	+e.toggle-block
+		+input("Текст сообщения","textarea",'',"comment")
+	+e.btn(type='submit')= btn
+	+polite
+ 
+mixin form-tabs()
+	.tabs
+		+e.group
+			+e.group-title Как с вами связаться?
+			
+			.tabs__caption
+				.tabs__btn.active
+					+icon('tel')
+					| Звонок 
+				.tabs__btn
+					+icon('viber')
+					| Viber
+				.tabs__btn
+					+icon('whatsapp')
+					| WhatsApp
+		block
+		.tabs__wrap
+			.tabs__content.active
+				+input("+7 (999) 999-99-99","tel",'Введите телефон:',"tel")(required)
+ 
+			.tabs__content
+				+input("+7 (999) 999-99-99","tel",'Введите viber:',"viber")
+			.tabs__content
+				+input("+7 (999) 999-99-99","tel",'Введите whatsapp:',"whatsapp")
+		.h5.text-secondar Перезвоню в течение рабочего дня
+
+
+//- wrapper for form
+mixin form-wrap(order)
+	+b.form-wrap()&attributes(attributes)
+		form
+			input(type='hidden', class="order", name='order', value= order ) 
+		 
+			block
+//- /wrapper for form
+
+
 mixin polite()
-	+e.polite
-		+in-c()(checked)
-			+e.SMALL.text.text-secondary Согласен на обработку и хранение моих персональных данных в соответствии с условиями
+	+e.polite.text-secondary  Нажимая на&nbsp;кнопку, вы&nbsp;даете согласие на&nbsp;обработку своих персональных данных и&nbsp;соглашаетесь с&nbsp;
+		a(href="privacy-policy.pdf" target="_blank").tdu.text-secondary Политикой конфиденциальности
+
+
+mixin form-body()
+	
+	+input("+7 (900) 444-44-44","tel",'Введите телефон:')(required)
+	//- +e.title  Выберите время для звонка
+	+b.LABEL.custom-input-time
+		+e.INPUT.input(type='checkbox', name='scr8-time', )
+		+e.SPAN.lab
+		+e.SPAN.text--now 
+			span.d-none.d-sm-inline Позвонить сейчас
+			span.d-sm-none Сейчас
+		+e.SPAN.text--time 
+			span.d-none.d-sm-inline Позвонить по времени
+			span.d-sm-none По времени
+	//- +input(" Ваш номер телефона","tel",'Введите Ваш номер телефона для связи')
+	.toggle-wrap-input-js
+		+input("Например, 10 апреля в 14:00","text",'','time')

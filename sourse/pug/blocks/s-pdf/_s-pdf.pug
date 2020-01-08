@@ -1,9 +1,13 @@
 mixin s-pdf()
 	// start s-pdf
-	+b.SECTION.s-pdf.section#s-pdf&attributes(attributes)
+	+b.SECTION.s-pdf.section.lazy-background#s-pdf&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 s-pdf
+			+e.inner
 				
-			.row
+				h2 Предпочитаете смотреть  товар&nbsp;вживую, а&nbsp;потом покупать?
+				p Приезжайте к&nbsp;нам: ответим на&nbsp;все вопросы,  покажем сейфы, подберем именно&nbsp;то,  что вам нужно
+				
+				+e.btn(href="#") Наши контакты
+				+e.img-wrap.d-none.d-sm-block
+					img.res-i(src="img/@2x/s-pdf-img.png", alt="")
 	// end s-pdf

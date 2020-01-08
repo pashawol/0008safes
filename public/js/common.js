@@ -110,7 +110,7 @@ function eventHandler() {
 		}, 1100);
 		return false;
 	});
-	var icon = '<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve" ><path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12    c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028    c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265    c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z" ></path>';
+	var icon = '<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="791.966px" height="791.967px" viewBox="0 0 791.966 791.967" style="enable-background:new 0 0 791.966 791.967;" xml:space="preserve"><path d="M245.454,396.017L617.077,56.579c12.973-12.94,12.973-33.934,0-46.874c-12.973-12.94-34.033-12.94-47.006,0L174.615,370.896c-6.932,6.899-9.87,16.076-9.408,25.087c-0.462,9.045,2.476,18.188,9.408,25.088l395.456,361.19c12.973,12.94,34.033,12.94,47.006,0c12.973-12.939,12.973-33.934,0-46.873L245.454,396.017z"/></svg>';
 	var arrl2 = ' <div class="r">' + icon,
 			arrr2 = ' <div class="l">' + icon; // // карусель
 
@@ -125,23 +125,20 @@ function eventHandler() {
 		autoplaySpeed: 6000,
 		lazyLoad: 'progressive'
 	};
-	$('.s-gal__slider--js').slick(_objectSpread({}, defaultSlide, {
+	$('.s-catalog__slider--js').slick(_objectSpread({}, defaultSlide, {
 		slidesToShow: 1,
+		dots: true,
+		appendArrows: '.control-wrap',
+		appendDots: '.control-wrap',
 		responsive: [{
-			breakpoint: 1200,
-			settings: {
-				slidesToShow: 4
-			}
-		}, {
 			breakpoint: 992,
 			settings: {
 				slidesToShow: 3
 			}
 		}, {
-			breakpoint: 576,
+			breakpoint: 768,
 			settings: {
-				slidesToShow: 2,
-				arrows: true
+				slidesToShow: 2
 			}
 		}]
 	})); // $('.s-gal__slider\
