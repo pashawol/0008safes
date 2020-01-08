@@ -1,0 +1,227 @@
+ .soc {
+ 	margin: 0 rem(-5px);
+ 	display: flex;
+
+ 	&__item {
+ 		text-decoration: none !important;
+ 		margin: 0 rem(5px);
+ 		vertical-align: middle;
+ 		@include mt;
+ 		display: block;
+
+ 		&:hover {
+ 			// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
+ 			opacity: .6;
+ 		}
+
+ 	}
+
+ 	.icon {
+ 		font-size: rem(30);
+ 	}
+
+
+ }
+
+
+ .counter {
+ 	counter-reset: num;
+
+ 	&__item {
+ 		position: relative;
+
+ 		&::before {
+ 			content: counter(num);
+ 			counter-increment: num;
+ 		}
+ 	}
+ }
+
+ .logo {
+ 	@include media-breakpoint-up(xl) {
+
+ 		margin-left: rem(20);
+ 		max-width: rem(430);
+ 	}
+
+ 	@include media-breakpoint-up(lg) {
+
+ 		max-width: rem(390);
+ 	}
+
+
+ 	img {
+ 		flex-shrink: 0;
+ 		@extend .res-i;
+
+ 		@include media-breakpoint-up(xl) {
+
+ 			margin-right: rem(38);
+ 		}
+
+ 		@include media-breakpoint-up(md) {
+
+ 			margin-right: rem(18);
+ 			max-width: none;
+ 		}
+ 	}
+
+ 	a {
+ 		@include media-breakpoint-up(md) {
+
+ 			display: flex;
+ 		}
+
+ 		text-decoration: none !important;
+ 		@extend .text-secondary;
+ 		line-height: 1.3;
+ 		// Text style for "П, родажа"
+ 		letter-spacing: rem(0.32px);
+ 		// align-items: center;
+ 	}
+
+ 	&__title {
+ 		font-weight: 600;
+ 		@include rfs(rem(22));
+ 		color: $body-color;
+ 		line-height: 0.77;
+ 		// Text style for "Комплексны"
+ 		letter-spacing: rem(0.44px);
+ 		display: block;
+ 		margin-bottom: rem(12);
+ 	}
+ }
+
+ .form-search {
+ 	display: none;
+
+ 	@include media-breakpoint-up(lg) {
+
+ 		max-width: rem(348);
+ 	}
+
+ 	position: relative;
+
+ 	input {
+ 		width: 100%;
+ 		border-radius: rem(3px);
+ 		border: 1px solid #e9e9e9;
+ 		font-size: rem(17px);
+ 		font-style: italic;
+ 		// font-family: $default-font2, serif;
+ 		padding: rem(8) rem(10);
+ 		padding-right: rem(40);
+ 	}
+
+ 	&__btn {
+ 		@include a-cent(y);
+ 		background: none;
+ 		color: #555555;
+ 		border: none;
+ 		right: rem(6);
+
+ 		.icon {
+
+ 			font-size: rem(18);
+ 		}
+ 	}
+ }
+
+ .contact-block {
+ 	text-align: right;
+ 	font-weight: 600;
+
+ 	// @include media-breakpoint-up(lg) {
+ 	// 	margin-bottom: 0;
+ 	// }
+
+ 	// margin-bottom: rem(10);
+
+ 	&__tel {
+ 		@extend .h4;
+ 		@extend .link-body;
+ 		font-family: $default-font2, serif;
+ 		font-weight: 600;
+ 	}
+
+ 	&__link {
+ 		text-decoration: none !important;
+ 		letter-spacing: rem(0.32px);
+ 		display: inline-block;
+ 		line-height: 1;
+ 		display: inline-block;
+ 		margin-bottom: rem(12);
+ 		border-bottom: 1px dashed #b9d2f6;
+
+ 		&:hover {
+ 			border-color: #0b4190;
+ 		}
+ 	}
+ }
+
+ .messanger-block {
+ 	display: flex;
+ 	margin-left: rem(-4);
+ 	margin-right: rem(-4);
+ 	justify-content: flex-end;
+
+ 	&__item {
+ 		margin-left: rem(4);
+ 		margin-right: rem(4);
+ 		width: rem(34);
+ 		height: rem(34);
+ 		border: none;
+
+ 		.icon {
+ 			color: #ffffff;
+ 			font-size: rem(19);
+
+ 		}
+
+ 		display: inline-flex;
+ 		align-items: center;
+ 		justify-content: center;
+ 		border-radius: 50%;
+ 		background-color: $primary;
+
+ 		&:hover {
+ 			background-color: darken($color: $primary, $amount: 10);
+
+ 		}
+
+ 		&--tel {
+ 			background-color: var(--teal);
+
+ 			&:hover {
+ 				// background-color: darken($color: #{var(--teal)}, $amount: 10);
+
+ 			}
+ 		}
+
+ 		&--viber {
+ 			background-color: #665cac;
+
+ 			&:hover {
+ 				background-color: darken($color: #665cac, $amount: 10);
+
+ 			}
+ 		}
+
+ 		&--whatsapp {
+ 			background-color: #25d366;
+
+ 			&:hover {
+ 				background-color: darken($color: #25d366, $amount: 10);
+
+ 			}
+ 		}
+
+ 	}
+ }
+
+ .page-head {
+ 	h1 {
+ 		@extend .h2;
+
+ 	}
+ }

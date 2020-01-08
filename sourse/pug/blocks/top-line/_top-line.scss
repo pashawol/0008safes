@@ -1,0 +1,75 @@
+.top-line {
+  padding-top: rem(17);
+  padding-bottom: rem(10);
+
+  &__basket {
+    .icon {
+      font-size: rem(35);
+    }
+  }
+
+  // 
+  @include media-breakpoint-up(xl) {}
+
+  @include media-breakpoint-up(lg) {}
+
+  @include media-breakpoint-up(md) {}
+
+  @include media-breakpoint-up(sm) {}
+
+  @include media-breakpoint-up(xs) {}
+
+  // 
+  @include media-breakpoint-between(md, xl) {}
+
+  // 
+  @include media-breakpoint-only(xs) {}
+
+  @include media-breakpoint-only(sm) {}
+
+  @include media-breakpoint-only(md) {}
+
+  @include media-breakpoint-only(lg) {}
+
+  @include media-breakpoint-only(xl) {}
+
+  // 
+  @include media-breakpoint-down(xl) {}
+
+  @include media-breakpoint-down(lg) {}
+
+  @include media-breakpoint-down(md) {}
+
+  @include media-breakpoint-down(sm) {}
+
+  @include media-breakpoint-down(xs) {}
+
+  ul {
+    display: flex;
+    @include roww(5);
+    padding-top: rem(5);
+
+    @include media-breakpoint-up(lg) {
+      justify-content: flex-start;
+    }
+
+    justify-content: flex-end;
+
+    a {
+      text-decoration: none !important;
+      border-bottom: 1px solid;
+      @extend .text-secondary;
+      font-weight: 300;
+      font-size: rem(14);
+
+      &:hover {
+        border-color: transparent;
+      }
+    }
+  }
+
+  li {
+    list-style-type: none;
+
+  }
+}

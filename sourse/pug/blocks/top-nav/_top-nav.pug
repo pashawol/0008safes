@@ -1,0 +1,61 @@
+
+mixin mob-mnu()
+	+b.toggle-menu-mobile--js.d-lg-none
+		span
+	+b.menu-mobile--js.d-lg-none
+		+b.toggle-menu-mobile--js
+			span
+		+e.inner
+		
+			+mnu()
+			.text-right
+	//  мобильное меню
+mixin top-nav() 
+	// start top-nav
+	+b.top-nav.block-with-lazy
+		.container
+			.row.no-gutters
+				.col-xl-3.col-md-auto.col-6
+					+b.catalog-menu
+						+e.toggle
+							+e.toggle-text 
+								span
+								| Каталог
+						+e.dropdown--tabs.tabs
+							.tabs__caption
+								.tabs__btn.active Сейфы
+								.tabs__btn Стеллажи
+							.tabs__wrap
+								mixin tab()
+									.tabs__content&attributes(attributes)
+										.row
+											mixin item(t, ...items)
+												.col-lg-3.col-sm-6
+													.h6.strong= t
+													ul
+														each item in items
+															li: a(href="#")= item
+											+item("Категории:",'Офисные и бухгалтерские','Взломостойкие','Огнестойкие','Взломо-огнестойкие','Мебельные','Встраиваемые','Оружейные','Мини-сейфы для дома','Автомобильные')
+											+item("Взломостойкость:",'0 класс','1 класс','2 класс','3 класс')
+											+item("Огнестойкость:",'60Б — 60 минут','30Б — 30 минут')
+											+item("Тип замка:",'Ключевой','Кодовый электронный','Кодовый механический')
+								+tab()(class="active")
+								+tab()(class="")
+
+				.col-md.col-6
+					+b.catalog-menu
+						+e.toggle.d-md-none
+							+e.toggle-text 
+								span
+								| Меню
+						+e.dropdown--menu-top
+							+b.menu-top
+								ul
+									li.current-menu-item: a(href="#") 
+										+icon("safety-box")
+										| Подобрать сейф
+									li: a(href="#") Доставка и оплата
+									li: a(href="#") Контакты
+					//- +mnu()
+					
+	// end top-nav

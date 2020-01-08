@@ -1,0 +1,48 @@
+mixin top-line()
+	// start .top-line
+	+b.top-line.block-with-lazy
+		.container
+			.row 
+				+b.logo.col-lg-auto.col
+					a(href="#")
+						div
+							img(src="img/@2x/logo.png", alt="")
+						div.d-none.d-md-block
+							+e.DIV.title Комплексные системы
+							| Продажа сейфов   и&nbsp;металлических&nbsp;стеллажей  с&nbsp;доставкой по&nbsp;Магнитогорску
+				.col-auto.order-lg-last
+					+e.basket
+						+icon("cart")
+						
+				.col-auto.order-lg-last
+					+b.contact-block
+						.d-lg-block.d-none
+							+e.tel(href="tel:+7(3519)22-00-00") +7 (3519) 22-00-00
+						
+						+e.link(href="#") Заказать звонок
+						+b.messanger-block
+							+e.item--viber(href="#")
+								+icon("viber")
+							
+							+e.item--whatsapp(href="#")
+								+icon("whatsapp")
+							
+							+e.item--tel.d-lg-none(href="tel:+7(3519)22-00-00")
+								+icon("tel")
+							
+							+e.item--search.d-lg-none(type="button")
+								+icon("search")
+							
+				.col-lg.d-lg-flex.flex-lg-column-reverse
+
+					ul
+						li: a(href="#") взломостойкие
+						li: a(href="#") Aiko
+						li: a(href="#") айко
+					+b.form-search.d-lg-block
+						form
+							input(type="text" placeholder="Поиск по названию или назначению")
+							+e.BUTTON.btn(type="button")
+								+icon("search")
+							
+	// end .top-line
