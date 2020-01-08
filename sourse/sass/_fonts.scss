@@ -3,17 +3,16 @@ $default-font2: "Open Sans";
 // $file-form: ($file-formats: woff2 woff ttf);
 $addr: '../fonts/';
 $file-format: woff ttf;
-$file-format2: woff2 woff ttf;
+$file-format2: woff2 ttf;
 
 @include font-face ($default-font2, $addr + "opensanslight/opensanslight", 300, $file-formats: $file-format2);
 @include font-face ($default-font2, $addr + "OpenSansSemiBold/OpenSansSemiBold", 600, $file-formats: $file-format);
 @include font-face ($default-font2, $addr + "OpenSansRegularItalic/OpenSansRegularItalic", italic, $file-formats: $file-format);
-@include font-face ($default-font, $addr + "RalewayRegular/RalewayRegular", $file-formats: $file-format);
-@include font-face ($default-font, $addr + "RalewayLight/RalewayLight", 300, $file-formats: $file-format);
-@include font-face ($default-font, $addr + "RalewayBold/RalewayBold", bold, $file-formats: $file-format);
-@include font-face ($default-font, $addr + "RalewayMedium/RalewayMedium", 500, $file-formats: $file-format);
-@include font-face ($default-font, $addr + "RalewayMedium/RalewayMedium", 500, $file-formats: $file-format);
-@include font-face ($default-font, $addr + "RalewaySemiBold/RalewaySemiBold", 600, $file-formats: $file-format);
+@include font-face ($default-font, $addr + "ralewayregular/ralewayregular", $file-formats: $file-format2);
+@include font-face ($default-font, $addr + "ralewaylight/ralewaylight", 300, $file-formats: $file-format2);
+@include font-face ($default-font, $addr + "ralewaybold/ralewaybold", bold, $file-formats: $file-format2);
+@include font-face ($default-font, $addr + "RalewayMedium/RalewayMedium", 500, $file-formats: $file-format2);
+@include font-face ($default-font, $addr + "ralewaysemibold/ralewaysemibold", 600, $file-formats: $file-format2);
 
 .fw-600 {
   font-weight: 600;

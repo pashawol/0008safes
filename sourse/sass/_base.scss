@@ -14,7 +14,7 @@ html {
 	height: 100%;
 	background-position: center 0;
 	opacity: 0;
-	// opacity: 0.7;
+	opacity: 0.7;
 }
 
 body,
@@ -25,16 +25,17 @@ html {
 
 .section {
 	@include bgs;
-	padding-top: rem(40px);
-	padding-bottom: rem(40px);
+	padding-top: rem(88);
+	padding-bottom: rem(88px);
 }
 
 .section-title {
 	@extend .h2;
 	padding-bottom: em(10);
 
-	>h2 {
+	h2 {
 		font-size: inherit;
+		line-height: 1.4;
 
 		@include media-breakpoint-up(md) {}
 	}
@@ -516,7 +517,76 @@ a {
 }
 
 
+.h2,
+h2 {
+	letter-spacing: rem(0.66px);
+}
+
 .h4,
 h4 {
 	letter-spacing: rem(0.44px);
+}
+
+.btn {
+	font-weight: 600;
+}
+
+.btn-blue {
+	color: #ffffff !important;
+	border: 2px solid #398bff;
+	background-image: linear-gradient(to bottom, #0a408d 0%, #1c62c4 100%);
+	box-shadow: 0 rem(6) 0 #0749a8,
+		1px 5px 5px 1px rgba(9, 62, 137, 0.17);
+	background-color: #0749a8;
+	position: relative;
+	z-index: 2;
+	min-height: rem(90);
+	align-items: center;
+	justify-content: center;
+	padding: rem(2) rem(10);
+	line-height: 1.2;
+	display: flex;
+
+	&::after,
+	&::before {
+		content: '';
+		z-index: -1;
+		left: 0;
+		top: 0;
+		position: absolute;
+		border-radius: $border-radius-lg;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		@include mt;
+	}
+
+	&::before {
+		background-image: linear-gradient(to bottom, #1e67cd 0%, #2f84fc 100%);
+
+	}
+
+	&::after {
+		background-image: linear-gradient(to bottom, #093f8a 0%, #1c61c3 100%);
+
+	}
+
+	&:hover {
+		&::before {
+			opacity: 1;
+
+		}
+	}
+
+	&:focus,
+	&:active {
+		box-shadow: none !important;
+
+		&::after {
+			opacity: 1;
+		}
+	}
+
+
+
 }

@@ -102,7 +102,7 @@ function eventHandler() {
 	});
 	heightses(); // листалка по стр
 
-	$(" .top-nav li a, .scroll-link").click(function () {
+	$("   .scroll-link").click(function () {
 		var elementClick = $(this).attr("href");
 		var destination = $(elementClick).offset().top;
 		$('html, body').animate({

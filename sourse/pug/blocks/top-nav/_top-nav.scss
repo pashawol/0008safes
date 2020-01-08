@@ -145,10 +145,6 @@
 
 	// margin-left: -15px;
 	// margin-right: -15px;
-	&:hover,
-	&.active {
-		background-color: #ffffff;
-	}
 
 	&__toggle-text {
 		position: relative;
@@ -156,6 +152,13 @@
 	}
 
 	&__toggle {
+
+		&:hover,
+		&.active {
+			background-color: #ffffff;
+		}
+
+		@include mt;
 		cursor: pointer;
 		height: 100%;
 		display: flex;

@@ -123,7 +123,7 @@ function eventHandler() {
 	heightses();
 
 	// листалка по стр
-	$(" .top-nav li a, .scroll-link").click(function () {
+	$("   .scroll-link").click(function () {
 		const elementClick = $(this).attr("href");
 		const destination = $(elementClick).offset().top;
 
