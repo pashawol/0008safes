@@ -1,0 +1,16 @@
+mixin s-error()
+	// start s-error
+	+b.s-error#s-error&attributes(attributes)
+		.container.text-center
+			+e.img-wrap.bg-wrap
+				img.object-fit-js.lazy(src="#" data-src="img/@2x/404.png", alt="")
+			h2 Кажется, того, что вы ищете, здесь нет
+			h5 Попробуйте найти нужное <a href="#">в каталоге</a> или на <a href="#">главной странице</a>
+			h4 Или воспользуйтесь поиском:
+			+b.form-search.d-lg-block
+				form
+					input(type="text" placeholder="Что вы ищете?")
+					+e.BUTTON.btn(type="button")
+						+icon("search")
+			h5 Удачи!
+	// end s-error
