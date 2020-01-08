@@ -29,12 +29,15 @@ html {
 	padding-bottom: rem(88px);
 }
 
+.section-border {
+	border-bottom: 1px solid #e9e9e9;
+}
+
 .section-title {
-	@extend .h2;
-	padding-bottom: em(10);
+	// padding-bottom: rem(10);
+	padding-bottom: rem(85);
 
 	h2 {
-		font-size: inherit;
 		line-height: 1.4;
 
 		@include media-breakpoint-up(md) {}
@@ -520,6 +523,11 @@ a {
 .h2,
 h2 {
 	letter-spacing: rem(0.66px);
+}
+
+.h3,
+h3 {
+	letter-spacing: rem(0.5px);
 }
 
 .h4,
