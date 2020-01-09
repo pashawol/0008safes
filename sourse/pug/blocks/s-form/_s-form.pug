@@ -27,7 +27,7 @@ mixin s-form()
 
 mixin s-form2()
 	// start s-form2
-	+b.s-form2.section.block-with-lazy#s-form2&attributes(attributes)
+	+b.s-form--2.section.block-with-lazy#s-form--2&attributes(attributes)
 		.container
 			.row
 
@@ -38,9 +38,11 @@ mixin s-form2()
 							+e.label-name Александр Сикерин
 							+e.label-prof руководитель 
 				.col
-					h2 Есть вопросы по доставке и сборке?
+					h2 Есть вопросы<br> по доставке и сборке?
+					h5 Напишите ваш вопрос
 					+form-wrap("Получить каталог и прайс")
-						+form-tabs() 
+						textarea
+						+form-tabs2() 
 						//- +inputName()
 						+e.btn(type="submit") Задать вопрос
 						+polite

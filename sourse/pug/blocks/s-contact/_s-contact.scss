@@ -1,5 +1,45 @@
 .s-contact {
-	//
+	font-weight: 500;
+
+	&__connection {
+		&-item {
+			display: flex;
+			img {
+				flex-shrink: 0;
+				width: rem(32);
+			}
+			ul {
+				padding-top: rem(20);
+				padding-left: rem(30);
+				li {
+					list-style: none;
+					padding-bottom: rem(10);
+					letter-spacing: 0.5px;
+					a{
+						color: $body-color;
+					}
+				}
+			}
+		}
+
+	}
+
+	.messanger-block {
+		box-shadow: 3px 2px 35px rgba(154, 187, 206, 0.17);
+		border-radius: 2px;
+		justify-content: center;
+		padding: rem(38);
+		h4 {
+			line-height: 1.36;
+			letter-spacing: 0.44px;
+		}
+		&__item {
+			
+		}
+	}
+
+
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

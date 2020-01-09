@@ -2,8 +2,42 @@ mixin s-contact()
 	// start s-contact
 	+b.s-contact.section.block-with-lazy#s-contact&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 s-contact
-				
-			.row
+			.row.justify-content-center
+				.col-5
+					+e.connection
+						h4 Звоните:
+						+e.connection-item
+							img.lazy(src="#" data-src="img/svg/telephone.svg", alt="")
+							ul
+								li
+									a(href="tel:+7(3519)22-00-00") +7 (3519) 22-00-22
+								li
+									a(href="tel:+7(3519)42-15-11") +7 (3519) 42-15-11
+				.col-3
+					+e.connection
+						h4 Пишите:
+						+e.connection-item
+							img.lazy(src="#" data-src="img/svg/envelope-shape.svg", alt="")
+							ul
+								li
+									a(href="mailto:abcde1135@mail.ru") abcde1135@mail.ru
+								li
+									a(href="mailto:abcde1135@yandex.ru") abcde1135@yandex.ru
+				.col-8
+					+b.messanger-block
+						h4 Задавайте вопросы,<br> мы всегда на связи
+						+e.item--viber(href="#")
+							+icon("viber") 
+							| WhatsApp
+						
+						+e.item--whatsapp(href="#")
+							+icon("whatsapp")
+							| Viber
+			h2.text-center Наш склад-магазин в Магнитогорске
+			h5.text-center К нам можно доехать за 15 минут из любой точки города
+			img.lazy(src="#" data-src="img/@2x/ofice.jpg", alt="")
+			h2.text-center Как добраться
+			<iframe src="https://yandex.ua/map-widget/v1/?um=constructor%3Adb87e64c101c358488e2d4335179bc5033ea071ebbe8c26551fe3a6251514200&amp;source=constructor" width="100%" height="578" frameborder="0"></iframe>
+
+
 	// end s-contact
