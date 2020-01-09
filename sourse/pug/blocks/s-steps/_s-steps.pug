@@ -3,7 +3,18 @@ mixin s-steps()
 	+b.SECTION.s-steps.section#s-steps&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 s-steps
-				
-			.row
+				h2 Берем на себя все, вплоть до монтирования сейфа в стену
+			+e.inner
+				.row
+					mixin item(i)
+						+e.col.col-sm-6
+							+e.item
+								img.res-i.lazy(src="#" data-src=`img/svg/${i}`, alt="")
+								block
+					+item("resign.svg")
+						p #[strong Доставляем до двери] 
+						p В&nbsp;любую точку Магнитогорска,  при наличии сейфа в&nbsp;день оплаты, при заказе&nbsp;&mdash;  за&nbsp;1&nbsp;неделю максимум.
+					+item("safety-box2.svg")
+						p #[strong  Устанавливаем на место]
+						p Если нужно, поможем с&nbsp;монтажом встраиваемого сейфа в&nbsp;стену и&nbsp;научим пользоваться замком.
 	// end s-steps

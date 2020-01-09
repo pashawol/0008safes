@@ -1,29 +1,92 @@
+// start .s-pdf
+.s-pdf {
+	position: relative;
+	z-index: 2;
+	background-color: #eeeeee;
 
-	// start .s-pdf
-	.s-pdf {
-		 
+	&.visible {
+
+		background-image: url(../img/@2x/s-pdf-bg.jpg);
+	}
+
+	&__inner {
+		max-width: rem(550);
+		margin-left: auto;
+		position: relative;
+	}
+
+	h2 {
+		line-height: 1.45;
+		margin-bottom: rem(20);
+	}
+
+	p {
+		@extend h3;
+		line-height: 1.6;
+	}
+
+	&__btn {
+		margin-top: rem(44);
+		@extend .btn-blue;
+		width: rem(240);
+	}
+
+	&__img-wrap {
+		position: absolute;
+		// left: 100%;
+		right: 100%;
+		top: rem(-40);
+		width: rem(1032px);
+		height: rem(646px);
+		z-index: -1;
+
+		@include media-breakpoint-up(md) {
+
+			margin-right: rem(-50);
+		}
+
+		margin-right: rem(-80);
+		pointer-events: none;
+	}
+
 	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
+
+	@include media-breakpoint-up(lg) {
+		margin-bottom: rem(24);
+	}
+
 	@include media-breakpoint-up(md) {}
+
 	@include media-breakpoint-up(sm) {}
+
 	@include media-breakpoint-up(xs) {}
-	
+
 	//
-	@include media-breakpoint-between(md, xl) { }
-	
-	
+	@include media-breakpoint-between(md, xl) {}
+
+
 	//
 	@include media-breakpoint-only(xs) {}
+
 	@include media-breakpoint-only(sm) {}
+
 	@include media-breakpoint-only(md) {}
+
 	@include media-breakpoint-only(lg) {}
+
 	@include media-breakpoint-only(xl) {}
-	
+
 	//
 	@include media-breakpoint-down(xl) {}
-	@include media-breakpoint-down(lg) {}
-	@include media-breakpoint-down(md) {}
-	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
 
-} // end.s-pdf
+	@include media-breakpoint-down(lg) {}
+
+	@include media-breakpoint-down(md) {}
+
+	@include media-breakpoint-down(sm) {}
+
+	@include media-breakpoint-down(xs) {}
+
+}
+
+// end.s-pdf

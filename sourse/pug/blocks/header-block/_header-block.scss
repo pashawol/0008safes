@@ -13,8 +13,8 @@
 		margin-bottom: rem(28);
 	}
 
-	h3,
-	.h3 {
+	p {
+		@extend .h3;
 		max-width: rem(470);
 		line-height: 1.4;
 		letter-spacing: rem(0.5px);
@@ -22,7 +22,6 @@
 	}
 
 	&__btn {
-		@extend .btn;
 		@extend .btn-lg;
 		// @extend .btn-block;
 

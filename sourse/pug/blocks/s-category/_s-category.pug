@@ -7,4 +7,17 @@ mixin s-category()
 				.h3 Доставляем по&nbsp;Магнитогорску в&nbsp;день заказа&nbsp;&mdash; все модели в&nbsp;наличии
 				
 			.row
+				mixin item(i,t,m,p)
+					+e.col.col-12
+						+e.item.bg-wrap(href="#")
+							img.object-fit-js.lazy(src="#" data-src=`img/@2x/s-category-${i}.jpg`, alt="")
+							+e.DIV.title= t
+							if p
+								p= p
+							div.mt-auto
+								+e.count=m
+				+item("1","Все сейфы","39 моделей","Взломостойкие, огнестойкие, встраиваемые: для документов, ценностей, оружия")
+				+item("2","Сейфы для оружия","9 моделей")
+				+item("3","Мини-сейфы для дома","17 моделей")
+				+item("4","Металлические стеллажи","15 моделей")
 	// end s-category
