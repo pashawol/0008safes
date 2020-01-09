@@ -311,55 +311,57 @@
 				</div>
 			</footer>
 		</div>
-		<div class="form-wrap modal-win modal-form" id="modal-call">
-			<form>
-				<input class="order" type="hidden" name="order"/> 
-				<div class="form-wrap__top-title">Укажите контактные данные   и&nbsp;удобное время для звонка
-				</div>
-				<div class="form-wrap__text form-wrap__text--sm">Менеджер компании позвонит вам прямо сейчасили в&nbsp;другое рабочее время: мы&nbsp;работаем пн-пт с&nbsp;10:00 до&nbsp;18:00
-				</div>
-				<input type="hidden" name="formwithtime" value="formwithtime"/>
-				<div class="form-wrap__input-wrap form-group">
-					<label><span class="form-wrap__title">Введите телефон:</span><input class="form-wrap__input form-control" type="tel" placeholder="+7 (900) 444-44-44" name="tel" required="required"/>
-					</label>
-				</div>
-				<!-- +e.input-wrap-->
-				<div class="form-wrap__input-wrap form-group">
-					<label><span class="form-wrap__title">Как к вам обращаться?</span><input class="form-wrap__input form-control" type="text" placeholder="Иван" name="name" required="required"/>
-					</label>
-				</div>
-				<!-- +e.input-wrap-->
-				<label class="custom-input-time"><input class="custom-input-time__input" type="checkbox" name="scr8-time"/><span class="custom-input-time__lab"></span><span class="custom-input-time__text custom-input-time__text--now"> <span class="d-none d-sm-inline">Позвонить сейчас</span><span class="d-sm-none">Сейчас</span></span><span class="custom-input-time__text custom-input-time__text--time"> <span class="d-none d-sm-inline">Позвонить по времени</span><span class="d-sm-none">По времени</span></span>
-				</label>
-				<div class="toggle-wrap-input-js">
+		<div class="d-none">
+			<div class="form-wrap modal-win modal-form" id="modal-call">
+				<form>
+					<input class="order" type="hidden" name="order"/> 
+					<div class="form-wrap__top-title">Укажите контактные данные   и&nbsp;удобное время для звонка
+					</div>
+					<div class="form-wrap__text form-wrap__text--sm">Менеджер компании позвонит вам прямо сейчасили в&nbsp;другое рабочее время: мы&nbsp;работаем пн-пт с&nbsp;10:00 до&nbsp;18:00
+					</div>
+					<input type="hidden" name="formwithtime" value="formwithtime"/>
 					<div class="form-wrap__input-wrap form-group">
-						<label><span class="form-wrap__title">Когда позвонить?</span><input class="form-wrap__input form-control" type="text" placeholder="Например: во вторник в 14:00" name="time"/>
+						<label><span class="form-wrap__title">Введите телефон:</span><input class="form-wrap__input form-control" type="tel" placeholder="+7 (900) 444-44-44" name="tel" required="required"/>
 						</label>
 					</div>
 					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__title">Как к вам обращаться?</span><input class="form-wrap__input form-control" type="text" placeholder="Иван" name="name" required="required"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<label class="custom-input-time"><input class="custom-input-time__input" type="checkbox" name="scr8-time"/><span class="custom-input-time__lab"></span><span class="custom-input-time__text custom-input-time__text--now"> <span class="d-none d-sm-inline">Позвонить сейчас</span><span class="d-sm-none">Сейчас</span></span><span class="custom-input-time__text custom-input-time__text--time"> <span class="d-none d-sm-inline">Позвонить по времени</span><span class="d-sm-none">По времени</span></span>
+					</label>
+					<div class="toggle-wrap-input-js">
+						<div class="form-wrap__input-wrap form-group">
+							<label><span class="form-wrap__title">Когда позвонить?</span><input class="form-wrap__input form-control" type="text" placeholder="Например: во вторник в 14:00" name="time"/>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+					</div>
+					<button class="form-wrap__btn" type="submit">Заказать звонок
+					</button>
+					<div class="form-wrap__polite text-secondary"> Нажимая на&nbsp;кнопку, вы&nbsp;даете согласие на&nbsp;обработку своих персональных данных и&nbsp;соглашаетесь с&nbsp;<a class="tdu text-secondary" href="privacy-policy.pdf" target="_blank">Политикой конфиденциальности</a>
+					</div>
+				</form>
+			</div>
+			<!-- #modal-call-->
+			<div class="modal-win modal-win--lg text-center" id="modal-pdf">
+				<div class="modal-win__title">Чтобы посмотреть варианты  стеллажей, скачайте каталог
 				</div>
-				<button class="form-wrap__btn" type="submit">Заказать звонок
-				</button>
-				<div class="form-wrap__polite text-secondary"> Нажимая на&nbsp;кнопку, вы&nbsp;даете согласие на&nbsp;обработку своих персональных данных и&nbsp;соглашаетесь с&nbsp;<a class="tdu text-secondary" href="privacy-policy.pdf" target="_blank">Политикой конфиденциальности</a>
+				<div class="text-center"><img class="res-i" src="img/@2x/pdf-doc.png" alt=""/></div><a class="modal-win__btn" href="#">Скачать каталог</a>
+				<div class="modal-win__small">Файл PDF .5.2 Mb откроется на вашем устройстве
 				</div>
-			</form>
+				<div class="modal-win__text">Модель стеллажа в&nbsp;наличии&nbsp;&mdash;  доставим&nbsp;не&nbsp;позже следующего дня.  <br/>Нет в&nbsp;наличии&nbsp;&mdash; доставим в&nbsp;течение 2-3&nbsp;дней.
+				</div>
+				<div class="modal-win__foot"> 
+					<div class="modal-win__foot-text">Для заказа звоните:
+					</div><a class="modal-win__tel" href="tel:+7(3519)22-00-22">+7 (3519) 22-00-22</a>
+				</div>
+			</div>
+			<!-- #modal-pdf-->
+			<!-- modal-->
 		</div>
-		<!-- #modal-call-->
-		<div class="modal-win modal-win--lg text-center" id="modal-pdf">
-			<div class="modal-win__title">Чтобы посмотреть варианты  стеллажей, скачайте каталог
-			</div>
-			<div class="text-center"><img class="res-i" src="img/@2x/pdf-doc.png" alt=""/></div><a class="modal-win__btn" href="#">Скачать каталог</a>
-			<div class="modal-win__small">Файл PDF .5.2 Mb откроется на вашем устройстве
-			</div>
-			<div class="modal-win__text">Модель стеллажа в&nbsp;наличии&nbsp;&mdash;  доставим&nbsp;не&nbsp;позже следующего дня.  <br/>Нет в&nbsp;наличии&nbsp;&mdash; доставим в&nbsp;течение 2-3&nbsp;дней.
-			</div>
-			<div class="modal-win__foot"> 
-				<div class="modal-win__foot-text">Для заказа звоните:
-				</div><a class="modal-win__tel" href="tel:+7(3519)22-00-22">+7 (3519) 22-00-22</a>
-			</div>
-		</div>
-		<!-- #modal-pdf-->
-		<!-- modal-->
 		<script src="js/lazy.js"></script>
 		<script src="libs/jquery/jquery.min.js"></script>
 		<!-- полифил для picture-->
