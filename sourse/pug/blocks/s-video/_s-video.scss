@@ -1,29 +1,125 @@
+// start .s-video
+.s-video {
+	&__block {
+		border-radius: 5px;
+		background-color: #e4e4e4;
+		display: block;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		color: $body-color !important;
+		text-decoration: none !important;
+		max-width: rem(945);
 
-	// start .s-video
-	.s-video {
-		 
-	@include media-breakpoint-up(xl) {}
+		@include media-breakpoint-up(sm) {
+
+			padding: rem(140) rem(20) rem(117);
+		}
+
+		padding: rem(140 * .2) rem(20) rem(117 * .2);
+		display: flex;
+		align-items: center;
+		@include bgs;
+	}
+
+	&__inner {
+
+		align-items: center;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: rem(945 - (90 * 2));
+
+	}
+
+	&__title {
+		@extend .h1;
+		font-weight: 600;
+		padding-bottom: rem(10);
+	}
+
+	p {
+		@extend .h3;
+		font-weight: normal;
+
+		strong {
+			font-weight: 600;
+		}
+	}
+
+	&__btn {
+		width: rem(134px);
+		height: rem(134px);
+		box-shadow: rem(3px) 0 rem(23px) rem(12px) rgba(192, 192, 192, 0.22);
+		background-color: #ffffff;
+		border-radius: 59%;
+		position: relative;
+		color: $accent;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: rem(20);
+		@include mt;
+		display: block;
+
+		&::before {
+			content: '';
+			@include a-cent;
+			@include triangle(rem(44) rem(32), currentColor, right);
+		}
+	}
+
+	&__block:hover &__btn {
+		transform: scale(1.2);
+	}
+
+	&__time {
+		text-align: center;
+		color: #0b4290;
+		font-family: "Open Sans";
+		font-size: $em-base;
+		font-weight: 300;
+		line-height: 1.44;
+		// Text style for "В, ремя пр"
+		letter-spacing: rem(0.32px);
+	}
+
+	@media (min-width: 1440px) {
+		padding-bottom: rem(75);
+	}
+
 	@include media-breakpoint-up(lg) {}
+
 	@include media-breakpoint-up(md) {}
+
 	@include media-breakpoint-up(sm) {}
+
 	@include media-breakpoint-up(xs) {}
-	
+
 	//
-	@include media-breakpoint-between(md, xl) { }
-	
-	
+	@include media-breakpoint-between(md, xl) {}
+
+
 	//
 	@include media-breakpoint-only(xs) {}
+
 	@include media-breakpoint-only(sm) {}
+
 	@include media-breakpoint-only(md) {}
+
 	@include media-breakpoint-only(lg) {}
+
 	@include media-breakpoint-only(xl) {}
-	
+
 	//
 	@include media-breakpoint-down(xl) {}
-	@include media-breakpoint-down(lg) {}
-	@include media-breakpoint-down(md) {}
-	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
 
-} // end.s-video
+	@include media-breakpoint-down(lg) {}
+
+	@include media-breakpoint-down(md) {}
+
+	@include media-breakpoint-down(sm) {}
+
+	@include media-breakpoint-down(xs) {}
+
+}
+
+// end.s-video

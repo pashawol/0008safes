@@ -1,5 +1,7 @@
-.s-form, .s-form2 {
+.s-form,
+.s-form2 {
 	background-color: #f7f7f7;
+	@extend .section-border;
 
 	@include media-breakpoint-up(lg) {
 

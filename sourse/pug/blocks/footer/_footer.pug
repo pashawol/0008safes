@@ -1,4 +1,29 @@
 mixin footer()
 	+b.FOOTER.footer.block-with-lazy
 		.container
-			h2 footer
+			.row
+				+logo()(class="col-lg-5   col")
+				.col-auto.order-sm-last
+					+contact-block()
+				.col-sm
+					+e.menu
+						ul
+							li: a(href="#") Каталог
+							li: a(href="#") Доставка и оплата
+							li: a(href="#") Контакты
+			.row
+				.col-sm
+					+e.btn(href="#")
+						+icon("safety-box")
+						| Подобрать сейф
+				.col-sm-auto.order-sm-0.order-last
+					+b.develop-block
+						+e.text Создание и&nbsp;продвижение  сайта: #[a(href="#")  Студия &laquo;Барс&raquo;]
+						img.lazy.res-i(src="#" data-src="img/@2x/develop.png", alt="")
+
+				.col-lg-5.order-lg-first
+					+e.secondary-menu
+						ul
+							li: a(href="#") Политика конфиденциальности
+							li: a(href="#") Пользовательское соглашение
+							li: a(href="#") Карта сайта
