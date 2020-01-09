@@ -9,12 +9,12 @@ include ../blocks/s-pdf/_s-pdf.pug
 include ../blocks/s-steps/_s-steps.pug
 include ../blocks/s-video/_s-video.pug
 include ../blocks/s-shipping/_s-shipping.pug
-include ../blocks/s-shipping-and-payment/_s-shipping-and-payment.pug
+
 
 block variables
 	- let  mainPage= null
 block title
-	- let  title= 'Доставка и оплата'
+	- let  title= 'Контакты'
 	title= title
 block pagecontent 
 	//- +mob-mnu()
@@ -22,9 +22,9 @@ block pagecontent
 		+top-line()
 		+top-nav()
 	+page-head("Главная", title)
-		.text-center
-			h1 Доставим ваш заказ в любую точку Магнитогорска
-	//- +s-shipping-and-payment2
-	+s-form()
+	.text-center
+			h1 Контакты
+	+s-contact
+	//- +s-form()
 	//- +s-video
 	+footer()
