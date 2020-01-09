@@ -22,4 +22,27 @@ mixin s-form()
 						+inputName()
 						+e.btn(type="submit") Получить консультацию
 						+polite
+
 	// end s-form
+
+mixin s-form2()
+	// start s-form2
+	+b.s-form2.section.block-with-lazy#s-form2&attributes(attributes)
+		.container
+			.row
+
+				.col-lg-7
+					+e.img-wrap.d-none.d-lg-block
+						img.lazy.res-i(src="#" data-src="img/@2x/man.png", alt="")
+						+e.label
+							+e.label-name Александр Сикерин
+							+e.label-prof руководитель 
+				.col
+					h2 Есть вопросы по доставке и сборке?
+					+form-wrap("Получить каталог и прайс")
+						+form-tabs() 
+						//- +inputName()
+						+e.btn(type="submit") Задать вопрос
+						+polite
+
+	// end s-form2

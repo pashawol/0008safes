@@ -2,51 +2,91 @@ mixin s-shipping-and-payment()
 	// start s-sipping-and-payment
 	+b.s-shipping-and-payment#s-shipping-and-payment&attributes(attributes)
 		.container
-			.row
-				.col-lg-3
-					+b.left-buttons
-						+e.delivery-button(href="#") Доставка
-						+e.payment-button(href="#") Оплата
-				.col-md-9
-					+b.cost-time
-						h5 Доставляем сейф на домашний адрес или адрес офиса:
-						ul 
-							li — при покупке до 16:00 час — в этот же день (время согласоваем);
-							li — при покупке после 16:00 час — на следующий день (время согласовываем);
-							li — по согласованию с покупателем в любое другое удобное время.
-						h3 Стоимость доставки
-						table
-							tr
-								td Доставка по Магнитогорску до места назначения
-								td 500 руб.
-							tr
-								td Подъем в квартиру/офис (при отсутствии лифта)
-								td 200 руб. этаж
-							tr
-								td Сборка стеллажей 
-								td 10% от стоимости
-						+e.byer
-							+icon('fire')
-							h5 Покупатель заранее должен предусмотреть место выгрузки, освободить подъездные пути и проходы
+			+b.tabs
+				.row
+					.col-lg-3
+						.tabs__caption
+							.tabs__btn.active Доставка
+							.tabs__btn Оплата
+					.tabs__wrap.col-lg-9
+						.tabs__content.active
+							+b.cost-time
+								h5 Доставляем сейф на домашний адрес или адрес офиса:
+								ul 
+									li — при покупке до 16:00 час — в этот же день (время согласоваем);
+									li — при покупке после 16:00 час — на следующий день (время согласовываем);
+									li — по согласованию с покупателем в любое другое удобное время.
+								h3 Стоимость доставки
+								table
+									tr
+										td Доставка по Магнитогорску до места назначения
+										td 500 руб.
+									tr
+										td Подъем в квартиру/офис (при отсутствии лифта)
+										td 200 руб. этаж
+									tr
+										td Сборка стеллажей 
+										td 10% от стоимости
+								+e.byer
+									img.lazy(src="#" data-src="img/svg/fire.svg", alt="")
+									h5 Покупатель заранее должен предусмотреть место выгрузки, освободить подъездные пути и проходы
+						.tabs__content
+							+b.cost-time
+								h3 Оплачивайте удобным вам способом
+								ol
+									li Наличными
+									li Банковской картой.
+									li Безналично по выставленному счету.
+								img.object-fit-js.lazy(src="#" data-src="img/@2x/visa-mastercard.png", alt="")
+								h5 Доставка сейфов и стеллажей <strong>за пределы Магнитогорска</strong><br> обсуждается индивидуально.
 
-mixin s-shipping-and-payment2()
-	// start s-sipping-and-payment
-	+b.s-shipping-and-payment#s-shipping-and-payment&attributes(attributes)
-		.container
-			.row
-				.col-lg-3
-					+b.left-buttons
-						// классы поменяны местами для страницы 06
-						+e.payment-button(href="#") Доставка
-						+e.delivery-button(href="#") Оплата
-				.col-md-9
-					+b.cost-time
-						h3 Оплачивайте удобным вам способом
-						ol
-							li Наличными
-							li Банковской картой.
-							li Безналично по выставленному счету.
-						img.object-fit-js.lazy(src="#" data-src="img/@2x/visa-mastercard.png", alt="")
-						h5 Доставка сейфов и стеллажей <strong>за пределы Магнитогорска</strong><br> обсуждается индивидуально.
+	// верстка без табов
+
+//- 	.row
+//- 		.col-lg-3
+//- 			+b.left-buttons
+//- 				+e.delivery-button(href="#") Доставка
+//- 				+e.payment-button(href="#") Оплата
+//- 		.col-md-9
+//- 			+b.cost-time
+//- 				h5 Доставляем сейф на домашний адрес или адрес офиса:
+//- 				ul 
+//- 					li — при покупке до 16:00 час — в этот же день (время согласоваем);
+//- 					li — при покупке после 16:00 час — на следующий день (время согласовываем);
+//- 					li — по согласованию с покупателем в любое другое удобное время.
+//- 				h3 Стоимость доставки
+//- 				table
+//- 					tr
+//- 						td Доставка по Магнитогорску до места назначения
+//- 						td 500 руб.
+//- 					tr
+//- 						td Подъем в квартиру/офис (при отсутствии лифта)
+//- 						td 200 руб. этаж
+//- 					tr
+//- 						td Сборка стеллажей 
+//- 						td 10% от стоимости
+//- 				+e.byer
+//- 					+icon('fire')
+//- 					h5 Покупатель заранее должен предусмотреть место выгрузки, освободить подъездные пути и проходы
+
+//- mixin s-shipping-and-payment2()
+//- 	// start s-sipping-and-payment
+//- 	+b.s-shipping-and-payment#s-shipping-and-payment&attributes(attributes)
+//- 		.container
+//- 			.row
+//- 				.col-lg-3
+//- 					+b.left-buttons
+//- 						// классы поменяны местами для страницы 06
+//- 						+e.payment-button(href="#") Доставка
+//- 						+e.delivery-button(href="#") Оплата
+//- 				.col-md-9
+//- 					+b.cost-time
+//- 						h3 Оплачивайте удобным вам способом
+//- 						ol
+//- 							li Наличными
+//- 							li Банковской картой.
+//- 							li Безналично по выставленному счету.
+//- 						img.object-fit-js.lazy(src="#" data-src="img/@2x/visa-mastercard.png", alt="")
+//- 						h5 Доставка сейфов и стеллажей <strong>за пределы Магнитогорска</strong><br> обсуждается индивидуально.
 							
 	// end s-sipping-and-payment
