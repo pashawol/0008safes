@@ -7,23 +7,35 @@
 		padding-bottom: rem(40);
 		line-height: 1.5;
 		@include roww(0);
-		.left-buttons {
+		.tabs__caption {
 			display: flex;
 			flex-wrap: wrap;
 			padding-top: rem(5);
-			&__delivery-button, &__payment-button {
-				margin-bottom: rem(10);
-				width: 100%;
-				background-color: $accent;
-				color: #ffffff;
-				padding: rem(18);
-				// text-align: center;
-
-			}
-
-			&__payment-button {
+			.tabs__btn {
+				margin-bottom: rem(25);
+				@include media-breakpoint-up(lg){
+					margin-bottom: rem(10);
+				}
+				margin-left: auto;
+				margin-right: auto;
+				width: 48%;
+				@include media-breakpoint-up(lg) {
+					width: 100%;
+				}
 				background-color: #f1f1f1;
 				color: #848484;
+
+				padding: rem(18);
+				text-align: center;
+				&:hover {
+					transition: .36s;
+					background-color: $accent;
+					color: #fff;
+				}
+			}
+			.active {
+				background-color: $accent;
+				color: #ffffff;
 			}
 		}
 
@@ -63,22 +75,6 @@
 					}
 				}
 			}
-			&__byer {
-				padding-top: rem(25);
-				position: relative;
-				h5 {
-					padding-left: rem(46);
-					line-height: 1.5;
-				}
-				img {
-					position: absolute;
-					left: 2px;
-					top: rem(29);
-					font-size: rem(33);
-					// color: $accent; 
-				}
-			}
-			// классы для второй секции 
 			ol {
 				padding-inline-start: rem(20);
 				li {
@@ -91,12 +87,21 @@
 				padding-bottom: rem(40);
 				width: 50%;
 			}
-		}
-		.tabs__content {
-			&:nth-child(1) {
-				display: block;
+			&__byer {
+				padding-top: rem(25);
+				position: relative;
+				h5 {
+					padding-left: rem(46);
+					line-height: 1.5;
+				}
+				img {
+					position: absolute;
+					left: 2px;
+					width: rem(24);
+				}
 			}
 		}
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

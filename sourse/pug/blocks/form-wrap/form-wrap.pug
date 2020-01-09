@@ -103,6 +103,31 @@ mixin form-tabs()
 				+input("+7 (999) 999-99-99","tel",'Введите whatsapp:',"whatsapp")
 		.h5.text-secondar Перезвоню в течение рабочего дня
 
+mixin form-tabs2()
+	.tabs
+		+e.group
+			+e.group-title Как вам удобно получить ответ?
+
+			.tabs__caption
+				.tabs__btn.active
+					+icon('tel')
+					| Звонок 
+				.tabs__btn
+					+icon('viber')
+					| Viber
+				.tabs__btn
+					+icon('whatsapp')
+					| WhatsApp
+		block
+		.tabs__wrap
+			.tabs__content.active
+				+input("+7 (999) 999-99-99","tel",'Введите телефон:',"tel")(required)
+ 
+			.tabs__content
+				+input("+7 (999) 999-99-99","tel",'Введите viber:',"viber")
+			.tabs__content
+				+input("+7 (999) 999-99-99","tel",'Введите whatsapp:',"whatsapp")
+		//- .h5.text-secondar Перезвоню в течение рабочего дня
 
 mixin form-tabs-qwiz()
 	.tabs
