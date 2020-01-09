@@ -286,7 +286,7 @@ $btn-block-spacing-y: .5rem !default;
 
 // Allows for customizing button radius independently from global border radius
 $btn-border-radius: $border-radius-lg !default;
-$btn-border-radius-lg: rem(2) !default;
+$btn-border-radius-lg: $border-radius-lg !default;
 // $btn-border-radius-sm:        $border-radius-sm !default;
 
 $btn-transition: color .15s ease-in-out,
@@ -887,9 +887,9 @@ $custom-file-text: (en: "Browse"
 
 // $breadcrumb-margin-bottom:          1rem !default;
 
-// $breadcrumb-bg:                     $gray-200 !default;
-// $breadcrumb-divider-color:          $gray-600 !default;
-// $breadcrumb-active-color:           $gray-600 !default;
+$breadcrumb-bg: #fff !default;
+// $breadcrumb-divider-color:          $primary !default;
+$breadcrumb-active-color: $primary !default;
 // $breadcrumb-divider:                quote("/") !default;
 
 // // $breadcrumb-border-radius:          $border-radius !default;

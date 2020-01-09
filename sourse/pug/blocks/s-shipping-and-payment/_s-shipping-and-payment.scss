@@ -70,12 +70,12 @@
 					padding-left: rem(46);
 					line-height: 1.5;
 				}
-				svg {
+				img {
 					position: absolute;
 					left: 2px;
 					top: rem(29);
 					font-size: rem(33);
-					fill: $accent; //Разобратся почему не красится
+					// color: $accent; 
 				}
 			}
 			// классы для второй секции 
@@ -90,6 +90,11 @@
 				padding-top: rem(20);
 				padding-bottom: rem(40);
 				width: 50%;
+			}
+		}
+		.tabs__content {
+			&:nth-child(1) {
+				display: block;
 			}
 		}
 	@include media-breakpoint-up(xl) {}

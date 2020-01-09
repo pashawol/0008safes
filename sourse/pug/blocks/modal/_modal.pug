@@ -1,46 +1,33 @@
 
-mixin modal() 
- 
-	//- #modal-win.modal.fade(tabindex='-1', role='dialog', aria-labelledby='modal-win', aria-hidden='true')
-		
-	//- 	div( class="   modal-dialog  modal-dialog-centered  " role='document') 
-	//- 		+form-wrap()(class=" modal-content modal-win ")
-	//- 			button.close.mfp-close(type='button', data-dismiss='modal', aria-label='Close')  ×
-	//- 			+input("tel","Введите ваш телефон")(name="tel" required) 
-				
-	//- 			+e.BUTTON.btn.btn.btn-accent.btn-block Отправить
-	//- 			+b.wrap-polite
-	//- 				+b.custom-input.polite
-	//- 					+b.LABEL.custom-input.polite
-	//- 						+e.INPUT.input.__input-radio(type="checkbox" checked name="polite" required value="")
-	//- 						+e.SPAN.lab
-	//- 						| Даю 
-	//- 						| 
-	//- 						span.link( data-toggle='modal', data-target='#exampleModal2') согласие 
-
-	//- 						| на хранение и обработку   персональных данных
-	
- 
-
-	//- #thanks.modal.fade(tabindex='-1', role='dialog', aria-labelledby='thanks', aria-hidden='true')
-	//- 	div( class=" ttext-center  modal-dialog  modal-dialog-centered  " role='document') 
-	//- 		+form-wrap()(class=" modal-content modal-win ")
-	//- 			button.close.mfp-close(type='button', data-dismiss='modal', aria-label='Close')  ×
-	//- 			br
-	//- 			.h2 Заявка принята
-	//- 			br
-	//- 			.h3 Скоро с Вами свяжутся
-	//- 			br 
+mixin modal()  
+	 
 	.d-none
-		+form-wrap()(id="modal-call" class="  modal-win modal-form" )
-			.text-center
-				+e.title.h3.ttu Обратный звонок
-				p Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течении 15&nbsp;минут
-			+input("Ваше Имя")(required) 
-			+input("Ваш телефон","tel")(required)
-			//- +input("email","Ваше email")(required)
-			//- +text( "Комментарий")
-			+e.INPUT.btn(type="submit" value="Рассчитать") 
-			+polite()
+		+form-wrap()(id="modal-call" class="  modal-win modal-form" ) 
+			+e.top-title Укажите контактные данные   и&nbsp;удобное время для звонка
+			//- +e.text.h6 Администратор Ольга позвонит вам прямо сейчас или в&nbsp;другое рабочее время:
+			+e.text--sm Менеджер компании позвонит вам прямо сейчасили в&nbsp;другое рабочее время: мы&nbsp;работаем пн-пт с&nbsp;10:00 до&nbsp;18:00
+			input(type="hidden" name="formwithtime" value="formwithtime") 
+			+form-body()
+			
+			+e.btn(type='submit') Заказать звонок
+			+polite
 		// #modal-call
-	// modal
+		
+	
+		+b.modal-win--lg(id="modal-pdf" class="text-center" )
+			//- +pic('modal-clean-img','jpg','','')
+			+e.title Чтобы посмотреть варианты  стеллажей, скачайте каталог
+			.text-center
+				img.res-i(src="img/@2x/pdf-doc.png", alt="")
+			+e.btn(href="#") Скачать каталог
+			+e.small Файл PDF .5.2 Mb откроется на вашем устройстве
+			+e.text Модель стеллажа в&nbsp;наличии&nbsp;&mdash;  доставим&nbsp;не&nbsp;позже следующего дня.  
+				br
+				| Нет в&nbsp;наличии&nbsp;&mdash; доставим в&nbsp;течение 2-3&nbsp;дней.
+			+e.foot 
+				+e.foot-text Для заказа звоните:
+				+e.tel(href="tel:+7(3519)22-00-22") +7 (3519) 22-00-22
+		// #modal-pdf
+
+	
+		// modal
