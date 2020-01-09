@@ -76,7 +76,7 @@ mixin order-block(btn="Обсудить заказ")
 		+input("Текст сообщения","textarea",'',"comment")
 	+e.btn(type='submit')= btn
 	+polite
- 
+
 mixin form-tabs()
 	.tabs
 		+e.group
@@ -104,6 +104,41 @@ mixin form-tabs()
 		.h5.text-secondar Перезвоню в течение рабочего дня
 
 
+mixin form-tabs-qwiz()
+	.tabs
+		+e.group
+			+e.group-title Как с вами связаться?
+			
+			.tabs__caption
+				.tabs__btn.active
+					+icon('viber')
+					| Viber
+				.tabs__btn
+					+icon('whatsapp')
+					| WhatsApp
+				.tabs__btn
+					+icon('telegram')
+					| Telegram
+					
+				.tabs__btn
+					+icon('email')
+					| Email
+
+		block
+		.tabs__wrap
+			.tabs__content.active
+				+input("+7 (999) 999-99-99","tel",'Введите viber:',"viber")
+			.tabs__content
+				+input("+7 (999) 999-99-99","tel",'Введите whatsapp:',"whatsapp")
+			.tabs__content
+				+input("Ваш telegraml","text",'Введите telegram:',"telegram")(required)
+ 
+			.tabs__content
+				+input("Ваш email","email",'Введите email:',"email")
+ 
+		.h5.text-secondar Проверьте правильность номера телефона &mdash;&nbsp;за&nbsp;ним мы&nbsp;зафиксируем вашу скидку&nbsp;10%
+
+
 //- wrapper for form
 mixin form-wrap(order)
 	+b.form-wrap()&attributes(attributes)
@@ -123,6 +158,7 @@ mixin form-body()
 	
 	+input("+7 (900) 444-44-44","tel",'Введите телефон:')(required)
 	//- +e.title  Выберите время для звонка
+	+inputName()
 	+b.LABEL.custom-input-time
 		+e.INPUT.input(type='checkbox', name='scr8-time', )
 		+e.SPAN.lab
@@ -133,5 +169,6 @@ mixin form-body()
 			span.d-none.d-sm-inline Позвонить по времени
 			span.d-sm-none По времени
 	//- +input(" Ваш номер телефона","tel",'Введите Ваш номер телефона для связи')
+
 	.toggle-wrap-input-js
-		+input("Например, 10 апреля в 14:00","text",'','time')
+		+input("Например: во вторник в 14:00","text",'Когда позвонить?','time')

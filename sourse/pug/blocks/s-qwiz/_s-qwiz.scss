@@ -1,11 +1,76 @@
 // start .s-qwiz
 .s-qwiz {
-	height: 1020px;
+	// height: 1020px;
 
 	.section-title {
 		margin-left: auto;
 		margin-right: auto;
 		max-width: rem(900);
+	}
+
+	.tabs__caption,
+	.tabs__btn {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.form-wrap {
+		padding-bottom: rem(20);
+
+		&__img-wrap {
+			position: relative;
+			bottom: rem(-68);
+		}
+
+		&__label {
+			@include a-cent(y);
+			left: 0;
+			@extend .h6;
+			font-weight: normal;
+			left: rem(10);
+			text-align: right;
+			margin-top: rem(100);
+
+			&-name {
+				font-weight: 600;
+				color: #ffffff;
+				text-align: center;
+				padding: rem(22) rem(28);
+				border-radius: 5px;
+				background-color: $accent;
+				position: relative;
+				z-index: 2;
+
+				// display: inline-block;
+				text-align: center;
+			}
+
+			&-prof {
+				display: inline-block;
+				text-align: center;
+				color: #404040;
+				padding: rem(20) rem(28);
+				border-radius: 5px;
+				background-color: #f1f1f1;
+				margin-top: rem(-10);
+				margin-right: rem(-20);
+			}
+		}
+
+		&__btn {
+			width: 100%;
+			max-width: 100%;
+		}
+
+		&__polite {
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+		}
+
+		.h5.text-secondar {
+			padding-left: rem(28);
+		}
 	}
 
 	@include media-breakpoint-up(xl) {}

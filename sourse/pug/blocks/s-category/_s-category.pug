@@ -9,7 +9,7 @@ mixin s-category()
 			.row
 				mixin item(i,t,m,p)
 					+e.col.col-12
-						+e.item.bg-wrap(href="#")
+						+e.item.bg-wrap(href="#")&attributes(attributes)
 							img.object-fit-js.lazy(src="#" data-src=`img/@2x/s-category-${i}.jpg`, alt="")
 							+e.DIV.title= t
 							if p
@@ -19,5 +19,5 @@ mixin s-category()
 				+item("1","Все сейфы","39 моделей","Взломостойкие, огнестойкие, встраиваемые: для документов, ценностей, оружия")
 				+item("2","Сейфы для оружия","9 моделей")
 				+item("3","Мини-сейфы для дома","17 моделей")
-				+item("4","Металлические стеллажи","15 моделей")
+				+item("4","Металлические стеллажи","15 моделей")(class="link-modal" href="#modal-pdf")
 	// end s-category
