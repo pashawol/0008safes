@@ -1,4 +1,15 @@
 // start .s-catalog
+.s-prod-head+.s-catalog {
+	@include media-breakpoint-up(lg) {
+		padding-top: rem(40);
+	}
+
+	.section-title {
+		padding-bottom: rem(30);
+		// margin-bottom: 0;
+	}
+}
+
 .s-catalog {
 	&__slider {
 		margin-left: -15px;

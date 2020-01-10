@@ -43,10 +43,10 @@ mixin s-catalog()
 					+e.footer-text *При оформлении заказа  уточняйте цену по&nbsp;т: #[a(href="tel:8(3519)22-00-22") 8 (3519) 22-00-22]
 	// end s-catalog
 
-mixin s-catalog-08()
+mixin s-catalog-08(t="Взломостойкие сейфы")
 	// start s-catalog
 	+b.s-catalog--page&attributes(attributes) 
-			h1 Взломостойкие сейфы
+			h1= t
 			+b.sort-catalog 
 				.row 
 					.col-auto Сортировать:    

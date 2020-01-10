@@ -169,6 +169,18 @@ function eventHandler() {
 				slidesToShow: 2
 			}
 		}]
+	}));
+	$('.s-prod-head-images__slider--lg-js').slick(_objectSpread({}, defaultSlide, {
+		// arrows: false,
+		dots: false,
+		asNavFor: '.s-prod-head-images__slider--sm-js'
+	}));
+	$('.s-prod-head-images__slider--sm-js').slick(_objectSpread({}, defaultSlide, {
+		slidesToShow: 3,
+		arrows: false,
+		slidesToScroll: 1,
+		asNavFor: '.s-prod-head-images__slider--lg-js',
+		focusOnSelect: true
 	})); //    const wow = new WOW({ mobile: false });
 	//         wow.init();
 

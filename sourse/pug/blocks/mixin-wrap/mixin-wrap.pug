@@ -31,9 +31,9 @@ mixin pugin()
 	.pagination-wrapper
 		ul.page-numbers
 			mixin li(n)
-				li&attributes(attributes)
+				li
 					if n
-						a.page-numbers(href='#')= n 
+						a.page-numbers(href='#')&attributes(attributes)= n 
 					else
 						block
 			+li("1  ")(class="current")

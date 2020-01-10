@@ -1,0 +1,68 @@
+mixin s-prod-head()
+	- let src= 'img/@2x/prod-1.jpg'
+	mixin img()
+		img.res-i(src="#" data-lazy= src, alt="")
+	// start s-prod-head
+	+b.s-prod-head&attributes(attributes)
+		.container
+			.row
+				.col-lg-4.col-md-6
+					+b.s-prod-head-images
+						+icon("zoom-in")
+						+e.inner
+							+e.slider--lg.--lg-js
+								- for (var x = 0; x < 5; x++)
+									+e.slide--lg
+										a(href= src data-fancybox="prod-gal")
+											+img()
+						+e.slider--sm.--sm-js
+							- for (var x = 0; x < 5; x++)
+								+e.slide
+									+e.img-wrap
+										+img()
+				.col-lg-4.col-md-6
+					h1 Сейф Aiko T-17 EL
+					+e.type Взломостойкий
+					p  #[strong Характеристики]
+					table
+						mixin tr(t1, t2)
+							tr
+								td= t1
+								td
+									strong= t2
+						+tr("Размер (ВхШхГ):","170х260х252 мм")
+						+tr("Внутренний размер (ВхШхГ):","170х260х252 мм")
+						+tr("Замки:","7,0 кг")
+						+tr("Вес:","ключевой")
+						+tr("Объем:","3,0 л")
+						+tr("Взломостойкость:","S1 класс")
+					p Корпус сейфа изготовлен из&nbsp;прочной стали,  которая покрыта порошковой эмалью.  Изделия можно крепить анкерным болтом  к&nbsp;полу и&nbsp;стене.
+				.col-lg-4
+					+e.availability(style="color: #8ac176;") В наличии
+					+b.s-prod-head-sidebar
+						+e.price 2000 Р*
+						ul
+							li
+								+icon('shipped')
+								strong Доставка 
+								| по&nbsp;Магнитогорску в&nbsp;день оплаты
+							
+							li
+								+icon('credit-card')
+								strong Оплата
+								| Безналично: банковской картой, по&nbsp;выставленному счету.При покупке со&nbsp;склада&nbsp;&mdash; наличными или безналично.
+							
+							li
+								+icon('guarantee')
+								strong Гарантия
+								| На&nbsp;корпус сейфы 5&nbsp;лет, на&nbsp;замки 1&nbsp;год.
+							
+							li
+								+icon('vault')
+								strong Помощь с установкой
+								| Если нужно, поможем установить  или встроить 
+						+e.btn(type="button")
+							+icon('cart')
+							| В корзину
+					+e.footer-text *При оформлении заказа  уточняйте&nbsp;цену по&nbsp;т: #[a(href="tel:8(3519)22-00-22") 8 (3519) 22-00-22]
+	// end s-prod-head
