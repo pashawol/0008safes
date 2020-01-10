@@ -5,3 +5,4 @@
 1. <https://pashawol.github.io/0008safes/public/24-error.html>
 1. <https://pashawol.github.io/0008safes/public/08-catalog.html>
 1. <https://pashawol.github.io/0008safes/public/07-contacts.html>
+1. <https://pashawol.github.io/0008safes/public/08-catalog.html>
