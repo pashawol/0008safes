@@ -42,3 +42,18 @@ mixin s-catalog()
 				.col-md-4.order-md-first
 					+e.footer-text *При оформлении заказа  уточняйте цену по&nbsp;т: #[a(href="tel:8(3519)22-00-22") 8 (3519) 22-00-22]
 	// end s-catalog
+
+mixin s-catalog-08()
+	// start s-catalog
+	+b.s-catalog.section&attributes(attributes)
+		.container
+			block
+				
+			.row
+				- for (var x = 0; x < 4; x++)
+					+e.col.col-sm-6
+						+item-prod()
+			
+
+	// end s-catalog
+
