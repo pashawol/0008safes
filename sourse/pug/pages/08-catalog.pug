@@ -8,26 +8,27 @@ include ../blocks/s-catalog/_s-catalog.pug
 include ../blocks/s-pdf/_s-pdf.pug
 include ../blocks/s-steps/_s-steps.pug
 include ../blocks/s-video/_s-video.pug
-include ../blocks/s-qwiz/_s-qwiz.pug
+include ../blocks/s-shipping/_s-shipping.pug
+include ../blocks/s-shipping-and-payment/_s-shipping-and-payment.pug
+include ../blocks/s-filter/_s-filter.pug
 
 block variables
 	- let  mainPage= null
 block title
-	- let  title= 'Главная'
+	- let  title= 'Каталог'
 	title= title
 block pagecontent 
 	//- +mob-mnu()
 	+header()
 		+top-line()
 		+top-nav()
-	+header-block()
-	+s-qwiz()(class="section-border ")
-	+s-category()(class="section-border ")
-	+s-catalog(class="section-border ")
-		+b.section-title.text-center
-			h2 Самые популярные модели сейфов
-	+s-pdf
-	+s-steps
-	+s-form()(class="section-border ")
-	+s-video()
+	+page-head("Главная", 'Доставка и оплата',title) 
+	.container
+		.row
+			.col-4
+				+s-filter
+			.col-8
+				+s-catalog-08
+	+s-form-08()
+	//- +s-video
 	+footer()

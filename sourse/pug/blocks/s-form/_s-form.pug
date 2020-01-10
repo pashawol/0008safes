@@ -4,7 +4,7 @@ mixin s-form()
 		.container
 			.row
 
-				.col-lg-7
+				.col-lg-7.align-self-end
 					+b.section-title
 						h2 Получите консультацию по&nbsp;интересующим моделям  сейфов
 					+e.img-wrap.d-none.d-lg-block
@@ -31,14 +31,14 @@ mixin s-form2()
 		.container
 			.row
 
-				.col-lg-7
+				.col-lg-7.align-self-end
 					+e.img-wrap.d-none.d-lg-block
 						img.lazy.res-i(src="#" data-src="img/@2x/man.png", alt="")
 						+e.label
 							+e.label-name Александр Сикерин
 							+e.label-prof руководитель 
 				.col
-					h2 Есть вопросы<br> по доставке и сборке?
+					h2 Есть вопросы  по&nbsp;доставке и&nbsp;сборке?
 					h5 Напишите ваш вопрос
 					+form-wrap("Получить каталог и прайс")
 						textarea
@@ -48,3 +48,26 @@ mixin s-form2()
 						+polite
 
 	// end s-form2
+mixin s-form-08()
+	// start s-form2
+	+b.s-form.section.block-with-lazy#s-form&attributes(attributes)
+		.container
+			.row
+
+				.col-lg-7.align-self-end
+					+e.img-wrap.d-none.d-lg-block
+						img.lazy.res-i(src="#" data-src="img/@2x/man.png", alt="")
+						+e.label
+							+e.label-name Александр Сикерин
+							+e.label-prof руководитель 
+				.col
+					h2 Нужна помощь в&nbsp;подборе  сейфа?
+					h5 Наш специалист проконсультирует  вас, ответит на&nbsp;все вопросы  и&nbsp;поможет подобрать сейф
+					+form-wrap("Получить каталог и прайс")
+						+form-tabs() 
+						+inputName()
+						+e.btn(type="submit") Получить помощь  в&nbsp;подборе&nbsp;сейфа
+						+polite
+
+
+	// end s-form
