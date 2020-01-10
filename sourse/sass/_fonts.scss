@@ -3,8 +3,9 @@ $default-font2: "Open Sans";
 // $file-form: ($file-formats: woff2 woff ttf);
 $addr: '../fonts/';
 $file-format: woff ttf;
-$file-format2: woff2 ttf;
+$file-format2: woff2 woff;
 
+@include font-face ($default-font2, $addr + "opensans/opensans", 400, $file-formats: $file-format2);
 @include font-face ($default-font2, $addr + "opensanslight/opensanslight", 300, $file-formats: $file-format2);
 @include font-face ($default-font2, $addr + "OpenSansSemiBold/OpenSansSemiBold", 600, $file-formats: $file-format);
 @include font-face ($default-font2, $addr + "OpenSansRegularItalic/OpenSansRegularItalic", italic, $file-formats: $file-format);

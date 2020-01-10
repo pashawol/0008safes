@@ -1,0 +1,36 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-category/_s-category.pug
+include ../blocks/s-catalog/_s-catalog.pug
+include ../blocks/s-pdf/_s-pdf.pug
+include ../blocks/s-steps/_s-steps.pug
+include ../blocks/s-video/_s-video.pug
+include ../blocks/s-shipping/_s-shipping.pug
+include ../blocks/s-shipping-and-payment/_s-shipping-and-payment.pug
+include ../blocks/s-filter/_s-filter.pug
+include ../blocks/s-other-products/_s-other-products.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Каталог'
+	title= title
+block pagecontent 
+	//- +mob-mnu()
+	+header()
+		+top-line()
+		+top-nav()
+	+page-head("Главная", 'Доставка и оплата',title) 
+	+b.main-container.container
+		.row
+			.col-xl-3.col-lg-4
+				+s-filter
+			.col-xl-9.col-lg-8
+				+s-catalog-08
+	+s-other-products()
+	+s-form-08()
+	//- +s-video
+	+footer()

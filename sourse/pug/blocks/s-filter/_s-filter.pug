@@ -1,0 +1,66 @@
+mixin s-filter()
+	button.s-filter__btn.s-filter__btn--js.btn.btn-block.btn-primary.d-lg-none.mb-3.ttu(type='button')
+		strong.d-none Свернуть фильтр
+		strong Фильтр товаров  
+	.s-filter-wrap.d-lg-block
+		// start s-filter
+		mixin in-c2(typ="checkbox", text, name= typ )
+			+b.LABEL.custom-input
+				+e.INPUT.input(type= typ , name= name)&attributes(attributes)
+				+e.SPAN.lab
+				if block
+					block 
+				else
+					+e.SPAN.text= text
+		mixin in-c3(a, b)
+			label.custom-input.woof_term_89
+				input#woof_89_5dedfb8190066.woof_checkbox_term.woof_checkbox_term_89(type='checkbox',   data-tax='product_tag', name='atol', data-term-id='89', value='89')
+				label.woof_checkbox_label(for='woof_89_5dedfb8190066')
+					= b
+					span.woof_checkbox_count (0)
+				input(type='hidden', value='Атол', data-anchor='woof_n_product_tag_atol')
+		+b.s-filter&attributes(attributes) 
+			+e.head.h6.strong Выберите сейф  по&nbsp;параметрам
+			mixin range(c1, c2)
+				.range-wrap.price_slider_amount
+					.row
+						label.col-auto  
+							+b.INPUT.range-result--minus.minus.form-control(type="text")
+						label.col-auto 
+							+b.INPUT.range-result--plus.plus.form-control(type="text")
+					input.range-slider.slider-js(type='text'  data-min= c1  data-max= c2)
+
+			mixin  group(t)
+				+e.group
+					+e.title.showhide.active= t 
+					.showhide-all
+						block
+				// +e.group
+			+group('Цена')
+				+range("1000","90000")
+			+group('Тип замка')
+				-
+					var list = ["Ключевой","Кодовый электронный","Кодовый механический"]
+				each item in list
+					+in-c2("checkbox",item)
+					//- +in-c3("checkbox",item)
+		
+			+group('Тип замка')
+				-
+					var list = ["0 класс","1 класс","2 класс","3 класс","4 класс","5 класс","H0 класс","S1 класс","S2 класс"]
+				each item in list
+					+in-c2("checkbox",item)
+			+group('Огнестойкость')
+				-
+					var list = ["30 Б","60 Б"]
+				each item in list
+					+in-c2("checkbox",item)
+		+b.sidebar-list
+			ul
+				li
+					img.res-i(src="img/svg/shipped.svg", alt="")
+					| Доставка по&nbsp;Магнитогорску #[strong в&nbsp;день заказа]
+				li
+					img.res-i(src="img/svg/guarantee.svg", alt="")
+					| Гарантия на&nbsp;сейф  #[strong 5&nbsp;лет], на&nbsp;замки  #[strong 1&nbsp;год]
+	// end s-filter

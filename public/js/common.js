@@ -47,8 +47,69 @@ var JSCCommon = {
 	inputMask: function inputMask() {
 		// mask for input
 		$('input[type="tel"]').attr("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+9(999)999-99-99");
-	} // /inputMask
+	},
+	// /inputMask
+	customRange: function customRange() {
+		$(".range-wrap").each(function () {
+			var _this = $(this);
 
+			var $d3 = _this.find(".slider-js");
+
+			var slider = $d3.ionRangeSlider({
+				skin: "round",
+				type: "double",
+				grid: false,
+				grid_snap: false,
+				hide_min_max: true,
+				hide_from_to: true,
+				onStart: function onStart(data) {
+					_this.find('.minus').val(data.from);
+
+					_this.find('.plus').val(data.to);
+				},
+				onChange: function onChange(data) {
+					_this.find('.minus').val(data.from);
+
+					_this.find('.plus').val(data.to);
+				},
+				onFinish: function onFinish(data) {
+					_this.find('.minus').val(data.from);
+
+					_this.find('.plus').val(data.to);
+				},
+				onUpdate: function onUpdate(data) {
+					_this.find('.minus').val(data.from);
+
+					_this.find('.plus').val(data.to);
+				}
+			});
+			var $d3_instance = slider.data("ionRangeSlider");
+			$(this).on('change  input  cut  copy  paste', '.minus', function () {
+				var th = $(this);
+				var data = th.val();
+				var min = +data; // th.val(data + ' т')
+
+				$d3_instance.update({
+					from: min
+				});
+			});
+			$(this).on('change  input  cut  copy  paste', '.plus', function () {
+				var th = $(this);
+				var data = th.val();
+				var max = +data; // th.val(data + ' т')
+
+				$d3_instance.update({
+					from: max
+				});
+			}); // $d3.on("change", function () {
+			// 	var $inp = $(this);
+			// 	var from = $inp.prop("value"); // reading input value
+			// 	var from2 = $inp.data("from"); // reading input data-from attribute
+			// 	_this.find('range-result--minus').val(from); // FROM value
+			// 	_this.find('range-result--plus').val(from); // FROM value
+			// });
+		});
+	}
 };
 
 function eventHandler() {
@@ -59,12 +120,13 @@ function eventHandler() {
 
 	svg4everybody({});
 	JSCCommon.modalCall();
+	JSCCommon.customRange();
 	JSCCommon.tabscostume('tabs'); // JSCCommon.mobileMenu();
 
 	JSCCommon.inputMask(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/1.png);"></div>'); // /добавляет подложку для pixel perfect
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/8.png);"></div>'); // /добавляет подложку для pixel perfect
 	// /закрыть/открыть мобильное меню
 	// листалка по стр
 
@@ -118,6 +180,14 @@ function eventHandler() {
 	});
 	$('.custom-input-time__input').change(function () {
 		$(this).parents('form').find('.toggle-wrap-input-js').toggle().toggleClass('active');
+	}); // accordion
+
+	$(".showhide").click(function () {
+		$(this).toggleClass("active").next().slideToggle().parents().toggleClass("active");
+	});
+	$(".s-filter__btn--js").click(function () {
+		$(this).toggleClass('active').find("strong").toggleClass("d-none");
+		$(".s-filter-wrap").toggle();
 	});
 }
 
