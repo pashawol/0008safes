@@ -11,6 +11,7 @@ include ../blocks/s-video/_s-video.pug
 include ../blocks/s-shipping/_s-shipping.pug
 include ../blocks/s-shipping-and-payment/_s-shipping-and-payment.pug
 include ../blocks/s-filter/_s-filter.pug
+include ../blocks/s-other-products/_s-other-products.pug
 
 block variables
 	- let  mainPage= null
@@ -23,12 +24,13 @@ block pagecontent
 		+top-line()
 		+top-nav()
 	+page-head("Главная", 'Доставка и оплата',title) 
-	.container
+	+b.main-container.container
 		.row
-			.col-4
+			.col-xl-3.col-lg-4
 				+s-filter
-			.col-8
+			.col-xl-9.col-lg-8
 				+s-catalog-08
+	+s-other-products()
 	+s-form-08()
 	//- +s-video
 	+footer()
