@@ -1,7 +1,9 @@
 .s-contact {
+	// padding-top: rem(50);
 	font-weight: 500;
-
+	// padding-bottom: rem();
 	&__connection {
+		padding-bottom: rem(30);
 		&-item {
 			display: flex;
 			img {
@@ -13,8 +15,9 @@
 				padding-left: rem(30);
 				li {
 					list-style: none;
-					padding-bottom: rem(10);
+					// padding-bottom: rem(5);
 					letter-spacing: 0.5px;
+					@extend h3;
 					a{
 						color: $body-color;
 					}
@@ -27,17 +30,80 @@
 	.messanger-block {
 		box-shadow: 3px 2px 35px rgba(154, 187, 206, 0.17);
 		border-radius: 2px;
-		justify-content: center;
-		padding: rem(38);
-		h4 {
+		// justify-content: space-around;
+		padding: rem(30);
+		@include media-breakpoint-up(lg){
+			padding: rem(37) rem(70) rem(33);
+		}
+		margin-bottom: rem(57);
+		&__question{
+			h4 {
 			line-height: 1.36;
 			letter-spacing: 0.44px;
+			padding-bottom: rem(10);
+			}
 		}
 		&__item {
-			
+			display: inline-block;
+			min-height: rem(60);
+			display: flex;
+			// flex-grow: 1;
+			min-width: rem(180);
+			align-items: center;
+			justify-content: center;
+			transition: .36s;
+			border: 1px solid #dfdfdf;
+			border-radius: 0;
+			margin-left: rem(16);
+			position: relative;
+			@include media-breakpoint-down(md) {
+				margin-bottom: rem(20);
+			}
+			&:hover {
+				border: 1px solid #398bff;
+				text-decoration: none;
+			}
+			&:active {
+				border: 2px solid #0075ff;
+			}
+			.icon {
+				color: $body-color;
+				font-size: rem(24);
+			}
+			span {
+				padding-left: rem(7);
+				@extend h5;
+				color: $body-color;
+			}
+			&--viber, &--whatsapp {
+				background-color: transparent;
+			}
 		}
 	}
-
+	&__warehouse {
+		h2 {
+			letter-spacing: 0.66px;
+			// line-height: 0.67;
+			padding-bottom: rem(13);
+		}
+		h5 {
+			letter-spacing: 0.4px;
+			padding-bottom: rem(35);
+		}
+		img {
+			width: 100%;
+			padding-bottom: rem(60);
+			@include media-breakpoint-up(lg){
+				padding-bottom: rem(105);
+			}
+		}
+	}
+	&__map {
+		h2 {
+			@extend h2;
+			padding-bottom: rem(40);
+		}
+	}
 
 
 	@include media-breakpoint-up(xl) {}
