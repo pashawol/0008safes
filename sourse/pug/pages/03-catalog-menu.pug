@@ -2,19 +2,20 @@ extends layout/main.pug
 
 
 include ../blocks/s-content/_s-content.pug
-include ../blocks/s-contact/_s-contact.pug
 include ../blocks/s-category/_s-category.pug
 include ../blocks/s-catalog/_s-catalog.pug
 include ../blocks/s-pdf/_s-pdf.pug
 include ../blocks/s-steps/_s-steps.pug
 include ../blocks/s-video/_s-video.pug
 include ../blocks/s-shipping/_s-shipping.pug
+include ../blocks/s-catalog-menu/_s-catalog-menu.pug
+
 
 
 block variables
 	- let  mainPage= null
 block title
-	- let  title= 'Контакты'
+	- let  title= 'Каталог'
 	title= title
 block pagecontent 
 	//- +mob-mnu()
@@ -23,8 +24,8 @@ block pagecontent
 		+top-nav()
 	+page-head("Главная", title)
 		.text-center
-				h1 Контакты
-	+s-contact
+				h1 Какой сейф вам нужен?
+	+s-catalog-menu
 	//- +s-form()
 	//- +s-video
 	+footer()

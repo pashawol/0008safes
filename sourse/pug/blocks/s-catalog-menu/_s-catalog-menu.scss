@@ -1,0 +1,95 @@
+
+	// start .s-catalog-menu
+	.s-catalog-menu {
+		padding-top: rem(50);
+		padding-bottom: rem(30);
+		&__hover-block {
+			opacity: 0;
+			p {
+				overflow-y: scroll;
+				max-height: rem(270);
+				line-height: 1.5;
+				&::-webkit-scrollbar {
+					width: rem(10);
+				}
+			 
+				&::-webkit-scrollbar-thumb {
+					border-radius: rem(5);
+					-webkit-box-shadow: inset 0 0 rem(6) rgba(0,0,0,0.7); 
+				}
+			}
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 3;
+			background-color: #0b4391;
+			width: 100%;
+			height: 100%;
+			color: #fff;
+			padding-left: rem(29);
+			padding-right: rem(29);
+			padding-bottom: rem(44);
+			@include mt;
+		}
+		&__item:hover &__hover-block {
+			opacity: 1;
+		}
+		&__item {
+			
+			box-shadow: 3px 2px 35px rgba(154, 187, 206, 0.17);
+			display: block;
+			overflow: hidden;
+			margin-bottom: rem(27);
+			color: $body-color;
+			height: rem(380);
+			display: flex;
+			position: relative;
+			// align-content: space-between;
+			flex-direction: column;
+			h3 {
+				padding-top: rem(30);
+				// padding-bottom: rem(30);
+				letter-spacing: 0.48px;
+			}
+			&__img-wrap {
+				vertical-align: bottom;
+				margin-top: auto;
+			}
+			img {
+				width: 100%;
+				// bottom: 0;
+				// position: absolute;
+			}
+			&:hover {
+				text-decoration: none;
+				color: #398bff;
+			}
+			&:active {
+				color: #1c61c1;
+			}
+		}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+} // end.s-catalog-menu
