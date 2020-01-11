@@ -1,4 +1,15 @@
 // start .s-catalog
+.s-prod-head+.s-catalog {
+	@include media-breakpoint-up(lg) {
+		padding-top: rem(40);
+	}
+
+	.section-title {
+		padding-bottom: rem(30);
+		// margin-bottom: 0;
+	}
+}
+
 .s-catalog {
 	&__slider {
 		margin-left: -15px;
@@ -26,8 +37,61 @@
 		}
 	}
 
+	&__footer-text---page {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
 	.slick-dots {
 		padding-top: rem(10);
+	}
+
+	&__col {
+		margin-bottom: rem(49);
+	}
+
+	&--page {
+		max-width: rem(803);
+
+		@include media-breakpoint-up(xl) {
+			padding-left: rem(30);
+		}
+
+		h1 {
+			@extend h4;
+			font-weight: 500;
+			margin-bottom: rem(20);
+		}
+	}
+
+	&__btn-more {
+		@extend .btn;
+		@extend .btn-block;
+		@extend .btn-lg;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: rem(327);
+		border-width: 2px;
+		border-color: #398bff;
+		margin-bottom: rem(30);
+		color: #0b4392;
+
+		&:hover {
+			color: #0b4392;
+			border-color: #1c61c1;
+
+		}
+
+		&:focus {
+			color: #0b4392;
+			border-color: #dfdfdf;
+		}
+
+		.icon {
+			font-size: rem(28);
+			color: #0b4392;
+			margin-right: rem(11);
+		}
 	}
 
 	@include media-breakpoint-up(xl) {}
@@ -68,4 +132,34 @@
 
 }
 
-// end.s-catalog
+// end.s-catalog\
+
+.sort-catalog {
+	font-weight: bold;
+	font-weight: 700;
+	line-height: 1.38;
+	letter-spacing: rem(0.32px);
+	margin-bottom: rem(40);
+}
+
+.sort-input {
+	cursor: pointer;
+
+	&__text {
+		border-bottom: 1px dashed #dedede;
+		@include mt;
+
+		&:hover {
+			border-bottom: 1px dashed $secondary;
+		}
+
+	}
+
+	&__input {
+		@extend .invisible;
+	}
+
+	&__input:checked~&__text {
+		border-color: currentColor;
+	}
+}

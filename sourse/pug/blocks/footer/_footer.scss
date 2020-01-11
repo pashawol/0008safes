@@ -1,6 +1,17 @@
+.main-container+.footer {
+
+  // padding-bottom: rem();
+  @include media-breakpoint-up(sm) {
+
+    margin-top: rem(70);
+  }
+
+  margin-top: rem(40);
+}
+
 .footer {
   background-color: #fdfdfd;
-  border-top: 1px solid #fdfdfd;
+  border-top: 1px solid #dcdcdc;
 
   @include media-breakpoint-up(sm) {
 

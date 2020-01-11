@@ -1,0 +1,120 @@
+// start .s-prod-head
+.s-prod-head-images {
+	text-align: center;
+	position: relative;
+
+	.icon {
+		color: #808080;
+		position: absolute;
+		right: rem(11px);
+		top: rem(11px);
+		font-size: rem(21);
+		z-index: 2;
+		pointer-events: none;
+	}
+
+	&__slider--lg {
+		box-shadow: 3px 3px 35px rgba(154, 187, 206, 0.17);
+		background-color: #ffffff;
+		margin-bottom: rem(34 - 20);
+	}
+
+	&__slide--lg {
+		a {
+			display: block;
+			// height: rem(310);
+			@include block(360, 310);
+			line-height: rem(310 - 40);
+			vertical-align: middle;
+			padding: rem(20);
+			position: relative;
+			max-height: rem(360);
+		}
+
+		img {
+			max-height: 100%;
+			@include a-cent;
+		}
+
+	}
+
+	&__slider--sm {
+		margin-left: rem(-7px);
+		margin-right: rem(-7);
+		padding-bottom: rem(20);
+	}
+
+	&__slide {
+		padding: rem(20) rem(7);
+
+	}
+
+	&__img-wrap {
+		@include block(111, 79);
+
+		img {
+			@include a-cent;
+			max-width: 70%;
+			max-height: 70%;
+		}
+
+		// height: 79px;
+		box-shadow: 3px 3px 15px rgba(154, 187, 206, 0.17);
+		background-color: #ffffff;
+	}
+
+	.slick-arrow {
+		// background-color: #ffffff;
+		background-color: transparent;
+
+		&:not(:hover) {
+
+			svg {
+				path {
+					fill: #808080 !important;
+				}
+			}
+		}
+
+		&::before {}
+	}
+
+	@include media-breakpoint-up(xl) {}
+
+	@include media-breakpoint-up(lg) {}
+
+	@include media-breakpoint-up(md) {}
+
+	@include media-breakpoint-up(sm) {}
+
+	@include media-breakpoint-up(xs) {}
+
+	//
+	@include media-breakpoint-between(md, xl) {}
+
+
+	//
+	@include media-breakpoint-only(xs) {}
+
+	@include media-breakpoint-only(sm) {}
+
+	@include media-breakpoint-only(md) {}
+
+	@include media-breakpoint-only(lg) {}
+
+	@include media-breakpoint-only(xl) {}
+
+	//
+	@include media-breakpoint-down(xl) {}
+
+	@include media-breakpoint-down(lg) {}
+
+	@include media-breakpoint-down(md) {}
+
+	@include media-breakpoint-down(sm) {}
+
+	@include media-breakpoint-down(xs) {}
+
+}
+
+// end.s-prod-head

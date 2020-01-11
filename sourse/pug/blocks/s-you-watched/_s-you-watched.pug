@@ -1,0 +1,23 @@
+mixin s-you-watched()
+	
+	// start s-you-watched
+	+b.SECTION.s-you-watched&attributes(attributes)
+		.container
+			h2 Вы смотрели
+				
+			.row
+				- for (var x = 0; x < 6; x++)
+					+e.col.col-lg-4.col-md-6
+						+e.item
+							.row
+								.col-md-6.col-auto
+									+e.img-wrap(href="#") 
+										img.res-i.lazy(src="#" data-src="img/@2x/prod-1.jpg" , alt="") 
+								.col
+									+e.title
+										a(href="#") Сейф Aiko&nbsp;T-17&nbsp;EL
+									.fw-300.text-secondary Взломостойкость:
+										br
+										| S1&nbsp;класс
+									.fw-600 2000 Р*
+	// end s-you-watched

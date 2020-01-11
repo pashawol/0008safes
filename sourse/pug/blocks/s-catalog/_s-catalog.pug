@@ -43,17 +43,30 @@ mixin s-catalog()
 					+e.footer-text *При оформлении заказа  уточняйте цену по&nbsp;т: #[a(href="tel:8(3519)22-00-22") 8 (3519) 22-00-22]
 	// end s-catalog
 
-mixin s-catalog-08()
+mixin s-catalog-08(t="Взломостойкие сейфы")
 	// start s-catalog
-	+b.s-catalog.section&attributes(attributes)
-		.container
-			block
-				
+	+b.s-catalog--page&attributes(attributes) 
+			h1= t
+			+b.sort-catalog 
+				.row 
+					.col-auto Сортировать:    
+					.col-auto 
+						+b.LABEL.sort-input
+							+e.INPUT.input(type="radio" name="sort")
+							+e.text сначала дешевые    
+					.col-auto 
+						+b.LABEL.sort-input
+							+e.INPUT.input(type="radio" name="sort")
+							+e.text сначала дорогие
 			.row
 				- for (var x = 0; x < 4; x++)
 					+e.col.col-sm-6
 						+item-prod()
-			
-
+			+e.footer
+				+e.footer-text---page.text-center *При оформлении заказа  уточняйте цену по&nbsp;т: #[a(href="tel:8(3519)22-00-22") 8 (3519) 22-00-22]
+				+e.btn-more(type="button")
+					+icon("refresh")
+					| Загрузить еще
+				+pugin()
 	// end s-catalog
 

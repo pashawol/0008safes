@@ -1,0 +1,87 @@
+// start .s-prod-head
+.s-prod-head-sidebar {
+
+	background-color: #f7f7f7;
+	padding: rem(25) rem(25);
+	margin-bottom: rem(22);
+
+	&__price {
+		@include rfs(rem(24)) // font-size: rem(24px);
+		font-weight: 700;
+		line-height: 0.92;
+		// Text style for "2000,  Р*"
+		letter-spacing: rem(0.48px);
+		margin-bottom: rem(20);
+	}
+
+	li {
+		list-style-type: none;
+		position: relative;
+		padding-left: rem(31);
+		font-size: rem(14);
+		margin-bottom: rem(20);
+
+		strong {
+
+			display: block;
+		}
+
+		.icon {
+			color: $accent;
+			position: absolute;
+			left: 0;
+			top: 0;
+			font-size: rem(18);
+		}
+	}
+
+	&__btn {
+		@extend .btn-blue;
+		width: rem(240);
+		margin-bottom: rem(20);
+
+		.icon {
+			font-size: rem(31);
+			margin-right: rem(10);
+		}
+	}
+
+	@include media-breakpoint-up(xl) {}
+
+	@include media-breakpoint-up(lg) {}
+
+	@include media-breakpoint-up(md) {}
+
+	@include media-breakpoint-up(sm) {}
+
+	@include media-breakpoint-up(xs) {}
+
+	//
+	@include media-breakpoint-between(md, xl) {}
+
+
+	//
+	@include media-breakpoint-only(xs) {}
+
+	@include media-breakpoint-only(sm) {}
+
+	@include media-breakpoint-only(md) {}
+
+	@include media-breakpoint-only(lg) {}
+
+	@include media-breakpoint-only(xl) {}
+
+	//
+	@include media-breakpoint-down(xl) {}
+
+	@include media-breakpoint-down(lg) {}
+
+	@include media-breakpoint-down(md) {}
+
+	@include media-breakpoint-down(sm) {}
+
+	@include media-breakpoint-down(xs) {}
+
+}
+
+// end.s-prod-head

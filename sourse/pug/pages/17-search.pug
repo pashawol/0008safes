@@ -16,21 +16,23 @@ include ../blocks/s-other-products/_s-other-products.pug
 block variables
 	- let  mainPage= null
 block title
-	- let  title= 'Каталог'
+	- let  title= 'Поиск по названию'
 	title= title
 block pagecontent 
 	//- +mob-mnu()
 	+header()
 		+top-line()
 		+top-nav()
-	+page-head("Главная", 'Доставка и оплата',title) 
+	+b.page-head
+		.container
+			+e.title-search Найдено #[span.text-primary.fw-500 3 товара]
 	+b.main-container.container
 		.row
 			.col-xl-3.col-lg-4
 				+s-filter
 			.col-xl-9.col-lg-8
-				+s-catalog-08
-	+s-other-products()
-	+s-form-08()
+				+s-catalog-08("Сейфы Aiko")
+	//- +s-other-products()
+	//- +s-form-08()
 	//- +s-video
 	+footer()
