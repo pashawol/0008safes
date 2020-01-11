@@ -126,7 +126,11 @@ function eventHandler() {
 	JSCCommon.inputMask(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 
+<<<<<<< HEAD
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/3.png);"></div>'); // /добавляет подложку для pixel perfect
+=======
 	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/8.png);"></div>'); // /добавляет подложку для pixel perfect
+>>>>>>> 91d5e1a1066089b4a5ba346aec89574331c896f9
 	// /закрыть/открыть мобильное меню
 	// листалка по стр
 
@@ -169,6 +173,18 @@ function eventHandler() {
 				slidesToShow: 2
 			}
 		}]
+	}));
+	$('.s-prod-head-images__slider--lg-js').slick(_objectSpread({}, defaultSlide, {
+		// arrows: false,
+		dots: false,
+		asNavFor: '.s-prod-head-images__slider--sm-js'
+	}));
+	$('.s-prod-head-images__slider--sm-js').slick(_objectSpread({}, defaultSlide, {
+		slidesToShow: 3,
+		arrows: false,
+		slidesToScroll: 1,
+		asNavFor: '.s-prod-head-images__slider--lg-js',
+		focusOnSelect: true
 	})); //    const wow = new WOW({ mobile: false });
 	//         wow.init();
 

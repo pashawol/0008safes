@@ -296,7 +296,7 @@ body {
 .slick-arrow {
 	position: absolute;
 	top: 50%;
-	transform: translateY(-50%);
+	margin-top: rem(-20);
 	z-index: 2;
 	cursor: pointer;
 	width: rem(41px);
@@ -325,6 +325,12 @@ body {
 		&::before {
 			opacity: 1;
 		}
+
+		svg {
+			path {
+				fill: #fff !important;
+			}
+		}
 	}
 
 	i {
@@ -352,6 +358,7 @@ body {
 	svg {
 		width: 17px;
 		height: auto;
+		@include mt;
 	}
 }
 
@@ -484,6 +491,37 @@ input::-webkit-inner-spin-button {
 
 .control-wrap {
 	position: relative;
+
+	.slick-arrow {
+		@include media-breakpoint-up(xl) {
+
+			&::after {
+				// @include a-cent(y);
+				top: 50%;
+				position: absolute;
+				margin-top: -1.2em;
+				font-weight: 300;
+
+			}
+
+			&.l {
+				&::after {
+					content: 'Назад';
+					left: 100%;
+					margin-left: rem(10);
+				}
+			}
+
+			&.r {
+				&::after {
+					content: 'Вперед';
+					right: 100%;
+					margin-right: rem(10);
+				}
+			}
+
+		}
+	}
 }
 
 .swiper-button-hand {
@@ -640,7 +678,7 @@ h4 {
 	min-height: rem(75);
 	font-size: $h5-font-size;
 
-	bdras &.btn-lg {
+	&.btn-lg {
 
 		min-height: rem(90);
 	}

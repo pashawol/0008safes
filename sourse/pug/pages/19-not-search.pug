@@ -9,22 +9,30 @@ include ../blocks/s-pdf/_s-pdf.pug
 include ../blocks/s-steps/_s-steps.pug
 include ../blocks/s-video/_s-video.pug
 include ../blocks/s-shipping/_s-shipping.pug
-
+include ../blocks/s-shipping-and-payment/_s-shipping-and-payment.pug
+include ../blocks/s-filter/_s-filter.pug
+include ../blocks/s-other-products/_s-other-products.pug
 
 block variables
 	- let  mainPage= null
 block title
-	- let  title= 'Контакты'
+	- let  title= 'Поиск по назначению'
 	title= title
 block pagecontent 
 	//- +mob-mnu()
 	+header()
 		+top-line()
 		+top-nav()
-	+page-head("Главная", title)
-		.text-center
-				h1 Контакты
-	+s-contact
-	//- +s-form()
+	+b.page-head
+		.container
+			+e.title-search Найдено #[span.text-primary.fw-500 3 товара]
+	+b.main-container.container
+		.row
+			.col-xl-3.col-lg-4
+				+s-filter
+			.col-xl-9.col-lg-8
+				+s-catalog-08("Взломостойкие сейфы")
+	//- +s-other-products()
+	//- +s-form-08()
 	//- +s-video
 	+footer()

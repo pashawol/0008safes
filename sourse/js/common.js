@@ -130,7 +130,11 @@ function eventHandler() {
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
+<<<<<<< HEAD
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/3.png);"></div>')
+=======
 	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/8.png);"></div>')
+>>>>>>> 91d5e1a1066089b4a5ba346aec89574331c896f9
 	// /добавляет подложку для pixel perfect
 
 
@@ -185,6 +189,22 @@ function eventHandler() {
 
 		}],
 
+	});
+
+	$('.s-prod-head-images__slider--lg-js').slick({
+		...defaultSlide,
+		// arrows: false,
+		dots: false,
+		asNavFor: '.s-prod-head-images__slider--sm-js'
+	});
+	$('.s-prod-head-images__slider--sm-js').slick({
+		...defaultSlide,
+		slidesToShow: 3,
+		arrows: false,
+		slidesToScroll: 1,
+		asNavFor: '.s-prod-head-images__slider--lg-js',
+
+		focusOnSelect: true
 	});
 
 

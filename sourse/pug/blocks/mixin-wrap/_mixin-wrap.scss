@@ -222,6 +222,11 @@
  .page-head {
  	h1 {
  		@extend .h2;
-		margin-top: rem(37);
+ 		margin-top: rem(37);
+ 	}
+
+ 	&__title-search {
+ 		@extend .h5;
+ 		padding-top: rem(45);
  	}
  }
