@@ -9,6 +9,7 @@
 				overflow-y: scroll;
 				max-height: rem(270);
 				line-height: 1.5;
+				padding-top: rem(17);
 				&::-webkit-scrollbar {
 					width: rem(10);
 				}
@@ -34,6 +35,10 @@
 		&__item:hover &__hover-block {
 			opacity: 1;
 		}
+		&__img-wrap {
+			// vertical-align: bottom;
+			margin-top: auto;
+		}
 		&__item {
 			
 			box-shadow: 3px 2px 35px rgba(154, 187, 206, 0.17);
@@ -41,7 +46,7 @@
 			overflow: hidden;
 			margin-bottom: rem(27);
 			color: $body-color;
-			height: rem(380);
+			height: rem(360);
 			display: flex;
 			position: relative;
 			// align-content: space-between;
@@ -51,10 +56,7 @@
 				// padding-bottom: rem(30);
 				letter-spacing: 0.48px;
 			}
-			&__img-wrap {
-				vertical-align: bottom;
-				margin-top: auto;
-			}
+
 			img {
 				width: 100%;
 				// bottom: 0;
