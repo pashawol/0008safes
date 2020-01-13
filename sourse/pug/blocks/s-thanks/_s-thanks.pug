@@ -1,0 +1,27 @@
+mixin s-thanks()
+	// start s-thanks
+	+b.SECTION.s-thanks.section#s-thanks&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				+e.title-wrap
+					img.lazy(src="#" data-src="img/svg/tick.svg", alt="")
+					h2 Иван, спасибо, мы приняли вашу заявку!
+				p Специалист компании перезвонит вам в&nbsp;течение рабочего дня и&nbsp;ответит на&nbsp;ваши вопросы. Удачного дня!
+	// end s-thanks
+
+
+mixin s-thanks2()
+	// start s-thanks
+	+b.s-thanks#s-thanks&attributes(attributes)
+		.container
+			.row
+				.col.after-quiz
+					img.lazy.check-mark(src="#" data-src="img/svg/tick.svg", alt="")
+					h2 Иван, мы отправили вам подборку сейфов,<br> подходящих под выбранные параметры.
+					p Скидку&nbsp;10% мы&nbsp;закрепили за&nbsp;вашим номером телефона,<br> она действительна в&nbsp;течение 2-х недель.
+					img.lazy(src="#" data-src="img/@2x/thanks-safes.jpg", alt="")
+					h5 Вы&nbsp;можете в&nbsp;любое время посмотреть сейфы на&nbsp;складе: <br>оценить размеры, попробовать закрыть и&nbsp;открыть замок, задать <br> вопросы&nbsp;&mdash; позвоните и&nbsp;договоритесь о&nbsp;встрече.
+					a(href="tel:+7(3519)22-00-22") +7 (3519) 22-00-22
+	// end s-thanks
+
+

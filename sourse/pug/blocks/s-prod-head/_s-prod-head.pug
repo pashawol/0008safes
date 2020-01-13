@@ -66,3 +66,61 @@ mixin s-prod-head()
 							| В корзину
 					+e.footer-text *При оформлении заказа  уточняйте&nbsp;цену по&nbsp;т: #[a(href="tel:8(3519)22-00-22") 8 (3519) 22-00-22]
 	// end s-prod-head
+
+mixin s-prod-head-basket()
+	- let src= 'img/@2x/prod-1.jpg'
+	mixin img()
+		img.res-i(src="#" data-lazy= src, alt="")
+	// start s-prod-head2
+	+b.s-prod-head.s-prod-head-basket&attributes(attributes)
+		.container
+			.row
+				.col-lg-4.col-md-6
+					+b.s-prod-head-images
+						+e.inner
+							+e.slider--lg.--lg-js
+								- for (var x = 0; x < 5; x++)
+									+e.slide--lg
+										a(href= src data-fancybox="prod-gal")
+											+img()
+											// возможно я не правильно убрал слайдер
+							// +e.slider--sm.--sm-js
+								// - for (var x = 0; x < 5; x++)
+									+e.slide
+										+e.img-wrap
+											+img()
+				.col-lg-4.col-md-6
+					h1 Сейф Aiko T-17 EL
+					+e.type Взломостойкий
+					p  #[strong Характеристики]
+					table
+						mixin tr(t1, t2)
+							tr
+								td= t1
+								td
+									strong= t2
+						+tr("Размер (ВхШхГ):","170х260х252 мм")
+						+tr("Внутренний размер (ВхШхГ):","170х260х252 мм")
+						+tr("Замки:","ключевой")
+						+tr("Вес:","7,0 кг")
+						+tr("Объем:","3,0 л")
+						+tr("Взломостойкость:","S1 класс")
+				.col-lg-4
+					+b.s-prod-head-sidebar
+						+e.number
+							button -
+							input(type="text" placeholder="1")
+							button +
+						+e.amount
+							| 2000 Р
+						+e.remove
+							button x
+			.row.to-order.justify-content-end
+				.col-lg-3.col-md-6
+					h5 Итого без доставки
+					h3 2000 Р
+				.col-lg-4.col-md-6
+					+e.checkout
+						button Оформить заказ
+						a(href="#") Доставка и оплата
+	// end s-prod-head2

@@ -1,0 +1,27 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-category/_s-category.pug
+include ../blocks/s-catalog/_s-catalog.pug
+include ../blocks/s-pdf/_s-pdf.pug
+include ../blocks/s-steps/_s-steps.pug
+include ../blocks/s-video/_s-video.pug
+include ../blocks/s-shipping/_s-shipping.pug
+include ../blocks/s-thanks/_s-thanks.pug
+
+
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Спасибо, мы приняли вашу заявку!'
+	title= title
+block pagecontent 
+	//- +mob-mnu()
+	+header()
+		+top-line()
+		+top-nav()
+	+page-head("Вернуться на сайт")
+	+s-thanks2
+	+footer()
