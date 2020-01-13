@@ -1,0 +1,55 @@
+mixin s-step2()
+	// start s-step2
+	+b.s-step2#s-step2&attributes(attributes)
+		.container
+			+b.order-steps.row
+				.col-sm-4
+					h5.text-center Контактные данные
+				.col-sm-4
+					h5.active.text-center Доставка и оплата
+				.col-sm-4
+					h5.text-center Подтверждение заказа
+			+b.delivery-method.row.justify-content-around
+				.col-md-7
+					h4 Выберите способ доставки
+					+b.choose-metod
+						mixin checkbox(t, n)
+							div&attributes(attributes)
+								+b.LABEL.metod-checkbox
+									+e.INPUT.input(type="checkbox")
+									+e.lab
+									+e.SPAN.title= t
+						+form-wrap('способ доставки')
+							+checkbox("Самовывоз из магазина - Бесплатно")
+							+checkbox("Доставка по Магнитогорску до места назначения - 500 руб.")
+							+checkbox("Подъем в квартиру/офис (при отсутствии лифта) - 200 руб. этаж","delivery")
+							+checkbox("Сборка стеллажей - 10% от стоимости","assembly")
+				.col-md-5
+					h4 Как хотите платить?
+					mixin radio(t, n)
+						div&attributes(attributes)
+							+b.LABEL.metod-radio
+								+e.INPUT.input(type="radio" name=n)
+								+e.lab
+								+e.SPAN.title= t
+								block
+					+form-wrap('Как хотите платить?')
+						+radio("Оплата банковской картой","credit card")
+						+radio("Банковский платеж для юр. лиц","bank payment")
+						+radio("Перевод на карту Сбербанка","card transfer")
+						+radio("Наличными","In cash")
+						p Только при покупке <br>из магазина
+			+b.contact-information.row
+				.col-lg-6
+					h4 Введите адрес доставки
+					+form-wrap
+						+input("Иван","text",'Имя и фамилия',"name")(required)
+						+input("г. Магнитогосрк, 50 Лет Октября пр.,д.118, кв.124","text",'Введите адрес доставки',"address")(required)
+						h5 Напишите комментарий, если хотите
+						textarea(placeholder="Например, можно ли заказать доставку в нерабочее время")
+			.row.justify-content-center
+				.col-lg-6
+					+form-wrap.bottom-button
+						+e.btn(type="submit") Перейти к подтверждению заказа
+
+	// end s-step2

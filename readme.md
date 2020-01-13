@@ -7,9 +7,10 @@
 1. <https://pashawol.github.io/0008safes/public/08-catalog.html>
 1. <https://pashawol.github.io/0008safes/public/09-prod.html>
 1. <https://pashawol.github.io/0008safes/public/12-basket.html>
-1. <https://pashawol.github.io/0008safes/public/13-step1.html>
-1. <https://pashawol.github.io/0008safes/public/14-step2.html>
-1. <https://pashawol.github.io/0008safes/public/15-step3.html>
+1. <https://pashawol.github.io/0008safes/public/13-checkout.html>
+1. <https://pashawol.github.io/0008safes/public/14-step-2.html>
+1. <https://pashawol.github.io/0008safes/public/15-step-3.html>
+1. <https://pashawol.github.io/0008safes/public/16-step-4.html>
 1. <https://pashawol.github.io/0008safes/public/17-search.html>
 1. <https://pashawol.github.io/0008safes/public/18-search-1.html>
 1. <https://pashawol.github.io/0008safes/public/19-not-search.html>

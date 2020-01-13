@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Корзина с товаром</title>
+		<title>Оформление заказа</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, shrink-to-fit=no">
@@ -24,7 +24,8 @@
 		<link rel="stylesheet" href="libs/ion-rangeslider/css/ion.rangeSlider.min.css"/>
 		<link rel="stylesheet" href="css/main.min.css"/>
 	</head>
-	<body class="inner-page"><!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
+	<!-- для отступов у h1-->
+	<body class="inner-page-2"><!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
 		<div class="main-wrapper">
 			<!-- start HEADER.header-->
 			<header class="header block-with-lazy">
@@ -229,112 +230,122 @@
 						<ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
 							<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
 									<meta itemprop="position" content="1"/></a></li>
-							<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Доставка и оплата</span>
+							<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Корзина</span>
 									<meta itemprop="position" content="2"/></a></li>
-							<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Взломостойкие сейфы</span>
+							<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Оформление заказа</span>
 									<meta itemprop="position" content="3"/></a></li>
-							<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Сейф Aiko T-17 EL</span>
-									<meta itemprop="position" content="4"/></a></li>
 						</ol>
 					</nav>
-					<!-- Стилизация находится в main рядом с breadcrumb-->
-					<div class="text-right back-to-main"> <a href="#">Назад к сейфам</a></div>
+					<div class="text-center">
+						<h1>Оформление заказа</h1>
+					</div>
 				</div>
 			</div>
-			<!-- start s-prod-head2-->
-			<div class="s-prod-head s-prod-head-basket">
+			<!-- start s-step2-->
+			<div class="s-step2" id="s-step2">
 				<div class="container">
-					<div class="row">
-						<div class="col-lg-4 col-md-6">
-							<div class="s-prod-head-images">
-								<div class="s-prod-head-images__inner">
-									<div class="s-prod-head-images__slider s-prod-head-images__slider--lg s-prod-head-images__slider--lg-js">
-										<div class="s-prod-head-images__slide s-prod-head-images__slide--lg"><a href="img/@2x/prod-1.jpg" data-fancybox="prod-gal"><img class="res-i" src="#" data-lazy="img/@2x/prod-1.jpg" alt=""/>
-												<!-- возможно я не правильно убрал слайдер--></a>
+					<div class="order-steps row">
+						<div class="col-sm-4">
+							<h5 class="text-center">Контактные данные</h5>
+						</div>
+						<div class="col-sm-4">
+							<h5 class="active text-center">Доставка и оплата</h5>
+						</div>
+						<div class="col-sm-4">
+							<h5 class="text-center">Подтверждение заказа</h5>
+						</div>
+					</div>
+					<div class="delivery-method row justify-content-around">
+						<div class="col-md-7">
+							<h4>Выберите способ доставки</h4>
+							<div class="choose-metod">
+								<div class="form-wrap">
+									<form>
+										<input class="order" type="hidden" name="order" value="способ доставки"/>
+										<div>
+											<label class="metod-checkbox"><input class="metod-checkbox__input" type="checkbox"/><span class="metod-checkbox__lab"></span><span class="metod-checkbox__title">Самовывоз из магазина - Бесплатно</span>
+											</label>
 										</div>
-										<div class="s-prod-head-images__slide s-prod-head-images__slide--lg"><a href="img/@2x/prod-1.jpg" data-fancybox="prod-gal"><img class="res-i" src="#" data-lazy="img/@2x/prod-1.jpg" alt=""/>
-												<!-- возможно я не правильно убрал слайдер--></a>
+										<div>
+											<label class="metod-checkbox"><input class="metod-checkbox__input" type="checkbox"/><span class="metod-checkbox__lab"></span><span class="metod-checkbox__title">Доставка по Магнитогорску до места назначения - 500 руб.</span>
+											</label>
 										</div>
-										<div class="s-prod-head-images__slide s-prod-head-images__slide--lg"><a href="img/@2x/prod-1.jpg" data-fancybox="prod-gal"><img class="res-i" src="#" data-lazy="img/@2x/prod-1.jpg" alt=""/>
-												<!-- возможно я не правильно убрал слайдер--></a>
+										<div>
+											<label class="metod-checkbox"><input class="metod-checkbox__input" type="checkbox"/><span class="metod-checkbox__lab"></span><span class="metod-checkbox__title">Подъем в квартиру/офис (при отсутствии лифта) - 200 руб. этаж</span>
+											</label>
 										</div>
-										<div class="s-prod-head-images__slide s-prod-head-images__slide--lg"><a href="img/@2x/prod-1.jpg" data-fancybox="prod-gal"><img class="res-i" src="#" data-lazy="img/@2x/prod-1.jpg" alt=""/>
-												<!-- возможно я не правильно убрал слайдер--></a>
+										<div>
+											<label class="metod-checkbox"><input class="metod-checkbox__input" type="checkbox"/><span class="metod-checkbox__lab"></span><span class="metod-checkbox__title">Сборка стеллажей - 10% от стоимости</span>
+											</label>
 										</div>
-										<div class="s-prod-head-images__slide s-prod-head-images__slide--lg"><a href="img/@2x/prod-1.jpg" data-fancybox="prod-gal"><img class="res-i" src="#" data-lazy="img/@2x/prod-1.jpg" alt=""/>
-												<!-- возможно я не правильно убрал слайдер--></a>
-										</div>
-									</div>
-									<!-- +e.slider--sm.--sm-js
-									// - for (var x = 0; x < 5; x++)
-										+e.slide
-											+e.img-wrap
-												+img()
-									-->
+									</form>
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-4 col-md-6">
-							<h1>Сейф Aiko T-17 EL</h1>
-							<div class="s-prod-head__type">Взломостойкий
-							</div>
-							<p> <strong>Характеристики</strong></p>
-							<table>
-												<tr>
-													<td>Размер (ВхШхГ):</td>
-													<td><strong>170х260х252 мм</strong></td>
-												</tr>
-												<tr>
-													<td>Внутренний размер (ВхШхГ):</td>
-													<td><strong>170х260х252 мм</strong></td>
-												</tr>
-												<tr>
-													<td>Замки:</td>
-													<td><strong>ключевой</strong></td>
-												</tr>
-												<tr>
-													<td>Вес:</td>
-													<td><strong>7,0 кг</strong></td>
-												</tr>
-												<tr>
-													<td>Объем:</td>
-													<td><strong>3,0 л</strong></td>
-												</tr>
-												<tr>
-													<td>Взломостойкость:</td>
-													<td><strong>S1 класс</strong></td>
-												</tr>
-							</table>
-						</div>
-						<div class="col-lg-4">
-							<div class="s-prod-head-sidebar">
-								<div class="s-prod-head-sidebar__number">
-									<button> </button>
-									<input type="text" placeholder="1"/>
-									<button> </button>
-								</div>
-								<div class="s-prod-head-sidebar__amount">2000 Р
-								</div>
-								<div class="s-prod-head-sidebar__remove">
-									<button> </button>
-								</div>
+						<div class="col-md-5">
+							<h4>Как хотите платить?</h4>
+							<div class="form-wrap">
+								<form>
+									<input class="order" type="hidden" name="order" value="Как хотите платить?"/>
+										<div>
+											<label class="metod-radio"><input class="metod-radio__input" type="radio" name="credit card"/><span class="metod-radio__lab"></span><span class="metod-radio__title">Оплата банковской картой</span>
+											</label>
+										</div>
+										<div>
+											<label class="metod-radio"><input class="metod-radio__input" type="radio" name="bank payment"/><span class="metod-radio__lab"></span><span class="metod-radio__title">Банковский платеж для юр. лиц</span>
+											</label>
+										</div>
+										<div>
+											<label class="metod-radio"><input class="metod-radio__input" type="radio" name="card transfer"/><span class="metod-radio__lab"></span><span class="metod-radio__title">Перевод на карту Сбербанка</span>
+											</label>
+										</div>
+										<div>
+											<label class="metod-radio"><input class="metod-radio__input" type="radio" name="In cash"/><span class="metod-radio__lab"></span><span class="metod-radio__title">Наличными</span>
+											</label>
+										</div>
+									<p>Только при покупке <br>из магазина</p>
+								</form>
 							</div>
 						</div>
 					</div>
-					<div class="row to-order justify-content-end">
-						<div class="col-lg-3 col-md-6">
-							<h5>Итого без доставки</h5>
-							<h3>2000 Р</h3>
+					<div class="contact-information row">
+						<div class="col-lg-6">
+							<h4>Введите адрес доставки</h4>
+							<div class="form-wrap">
+								<form>
+									<input class="order" type="hidden" name="order"/>
+									<div class="form-wrap__input-wrap form-group">
+										<label><span class="form-wrap__title">Имя и фамилия</span><input class="form-wrap__input form-control" type="text" placeholder="Иван" name="name" required="required"/>
+										</label>
+									</div>
+									<!-- +e.input-wrap-->
+									<div class="form-wrap__input-wrap form-group">
+										<label><span class="form-wrap__title">Введите адрес доставки</span><input class="form-wrap__input form-control" type="text" placeholder="г. Магнитогосрк, 50 Лет Октября пр.,д.118, кв.124" name="address" required="required"/>
+										</label>
+									</div>
+									<!-- +e.input-wrap-->
+									<h5>Напишите комментарий, если хотите</h5>
+									<textarea placeholder="Например, можно ли заказать доставку в нерабочее время"></textarea>
+								</form>
+							</div>
 						</div>
-						<div class="col-lg-4 col-md-6">
-							<div class="s-prod-head__checkout">
-								<button>Оформить заказ</button><a href="#">Доставка и оплата</a>
+					</div>
+					<div class="row justify-content-center">
+						<div class="col-lg-6">
+							<div class="form-wrap bottom-button">
+								<form>
+									<input class="order" type="hidden" name="order"/>
+									<button class="form-wrap__btn" type="submit">Перейти к подтверждению заказа
+									</button>
+								</form>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- end s-prod-head2-->
+			<!-- end s-step2-->
+			<!-- +s-form2()-->
+			<!-- +s-video-->
 			<footer class="footer block-with-lazy">
 				<div class="container">
 					<div class="row">

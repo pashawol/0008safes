@@ -47,6 +47,44 @@ $output-bourbon-deprecation-warnings: false;
   }
 }
 
+.inner-page {
+  ol.breadcrumb {
+    padding-bottom: rem(0);
+    // margin-bottom: rem(0);
+  }
+  .back-to-main {
+    a{
+      letter-spacing: 0.32px;
+      color: $secondary;
+      position: relative;
+      padding-bottom: rem(3);
+      border-bottom: 1px solid #dedede;
+      &::after {
+        content: '';
+        width: rem(10);
+        height: rem(10);
+        position: absolute;
+        top: rem(4);
+        right: rem(127);
+        border-bottom: solid 1px #808080;
+        border-left: solid 1px #808080;
+        transform: rotate(45deg);
+      }
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+.return-beginning {
+  padding-top: rem(25);
+  @include media-breakpoint-up(md) {
+    padding-left: rem(45);
+  }
+  a {
+    text-decoration: underline;
+  }
+}
 @import "./node_modules/bootstrap/scss/pagination";
 
 .pagination-wrapper ul {

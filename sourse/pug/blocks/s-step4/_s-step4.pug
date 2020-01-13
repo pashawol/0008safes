@@ -1,0 +1,20 @@
+mixin s-step4()
+	// start s-step4
+	+b.SECTION.s-step4.section#s-step4&attributes(attributes)
+		.container
+			.section-title.text-center
+				+e.title-wrap
+					img.lazy(src="#" data-src="img/svg/tick.svg", alt="")
+					h2 Заказ успешно оформлен!
+				+e.order-number.row.justify-content-center
+					.col-md-4.align-self-center
+						h3 № вашего заказа: <span class="number"><strong>5533</strong></span>
+					.col-md-3.align-self-center
+						+form-wrap
+							+e.btn(type="submit") Перейти к оплате
+				h4 Здравствуйте!
+				p Ваш заказ принят в&nbsp;обработку. Скоро мы&nbsp;свяжемся с&nbsp;вами для подтверждения заказа. Если по&nbsp;каким-то причинам мы&nbsp;никак не&nbsp;подтвердили ваш заказ в&nbsp;течение 24&nbsp;часов, пожалуйста, позвоните по&nbsp;номеру&nbsp;<strong><a href="tel:+7(3519)22-00-22">+7 (3519) 22-00-22</a></strong>
+				+b.label
+					+e.name Иван
+					+e.prof специалист компании <br>«Комплексные технологии»
+	// end s-step4
