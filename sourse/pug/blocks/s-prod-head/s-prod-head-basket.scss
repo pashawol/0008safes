@@ -1,42 +1,66 @@
 // start .s-prod-head
 .s-prod-head-basket {
-	padding-top: rem(20) !important;
+	padding-top: rem(0) !important;
 	padding-bottom: rem(40);
 		// .draggable {
 		// 	display: none;
 		// }
 	h1 {
-		padding-top: rem(10);
+		padding-top: rem(5);
 	}
 	.s-prod-head-sidebar {
 		background-color: transparent;
 		display: flex;
 		justify-content: space-between;
 		@include media-breakpoint-up(md) {
-			padding-top: 0;
+			padding-top: rem(20);
+			// padding-left: rem(60);
 			padding-right: 0;
 		}
 		&__number {
-			vertical-align: middle;
-			button {
-				vertical-align: inherit;
-				border: none;
-				background-color: transparent;
-				
-				font-size: rem(40);
-				line-height: 1;
-				color: #626262;
-			}
-
+			display: flex;
+			align-items: flex-start;
 			input {
-				margin-left: rem(5);
-				margin-right: rem(5);
+				// margin-left: rem(3);
+				// margin-right: rem(5);
 				width: rem(40);
 				height: rem(40);
+				font-size: rem(20);
 				text-align: center;
 				// vertical-align: middle;
 				border: 1px solid #e9e9e9;
 				background-color: #fdfdfd;
+			}
+			button {
+				position: relative;
+				border: none;
+				background-color: transparent;
+				width: rem(40);
+				height: rem(40);
+				&::after, &::before {
+					content: '';
+					position: absolute;
+					width: rem(15);
+					height: 1px;
+					left: rem(15);
+					top: rem(20);
+					background-color: #626262;
+				}
+				&::before {
+					// left: rem(11);
+					// bottom: 0;
+					transform: rotate(90deg);
+				}
+				&::after {
+				}
+				&:nth-child(1) {
+					&::before {
+						display: none;
+					}
+					&::after {
+						left: rem(6);
+					}
+				}
 			}
 		}
 		&__amount {
@@ -53,9 +77,23 @@
 				color: #dbdbdb;
 				border: 1px solid #e9e9e9;
 				background-color: transparent;
+				position: relative;
 				&:hover {
 					color: #626262;
 					@include mt;
+				}
+				&::after, &::before {
+					content: '';
+					position: absolute;
+					width: rem(15);
+					height: 1px;
+					left: 31%;
+					top: 50%;
+					background-color: #dbdbdb;
+					transform: rotate(45deg);
+				}
+				&::before {
+					transform: rotate(135deg);
 				}
 			}
 		}
@@ -144,3 +182,4 @@
 }
 
 // end.s-prod-head
+

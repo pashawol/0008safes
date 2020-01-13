@@ -29,3 +29,9 @@
     color: $breadcrumb-active-color;
   }
 }
+.inner-page {
+  ol.breadcrumb {
+    padding-bottom: rem(150);
+    margin-bottom: rem(0);
+  }
+}

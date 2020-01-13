@@ -8,23 +8,22 @@ include ../blocks/s-pdf/_s-pdf.pug
 include ../blocks/s-steps/_s-steps.pug
 include ../blocks/s-video/_s-video.pug
 include ../blocks/s-shipping/_s-shipping.pug
-include ../blocks/s-prod-head/_s-prod-head.pug
+include ../blocks/s-step4/_s-step4.pug
 
 
 
 block variables
-	- let  mainPage= 'inner-page'
+	- let  mainPage= null
 block title
-	- let  title= 'Корзина с товаром'
+	- let  title= 'Заказ успешно оформлен!'
 	title= title
 block pagecontent 
 	//- +mob-mnu()
 	+header()
 		+top-line()
 		+top-nav()
-	+page-head("Главная", "Доставка и оплата", "Взломостойкие сейфы", "Сейф Aiko T-17 EL")
-		// Стилизация находится в main рядом с breadcrumb
-		.text-right.back-to-main 
-				a(href="#") Назад к сейфам
-	+s-prod-head-basket
+	// стилизация в main
+	.container.return-beginning
+		a(href="#") Вернуться на сайт
+	+s-step4
 	+footer()
