@@ -130,7 +130,7 @@ function eventHandler() {
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/14.png);"></div>')
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/15.png);"></div>')
 	// /добавляет подложку для pixel perfect
 
 
@@ -202,7 +202,14 @@ function eventHandler() {
 
 		focusOnSelect: true
 	});
-
+	
+	// слайдер конзины
+	$('.s-prod-head-images__slider-js').slick({
+		...defaultSlide,
+		// arrows: false,
+		dots: false,
+		// asNavFor: '.s-prod-head-images__slider--sm-js'
+	});
 
 	//    const wow = new WOW({ mobile: false });
 	//         wow.init();

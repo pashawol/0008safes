@@ -57,3 +57,15 @@
 	@include media-breakpoint-down(xs) {} 
 
 } // end.s-error
+
+.not-found {
+	@include media-breakpoint-up(md) {
+		padding-bottom: rem(95);
+	}
+	h4 {
+		padding-bottom: rem(40);
+		@include media-breakpoint-down(md) {
+			padding-bottom: rem(60);
+		}
+	}
+}

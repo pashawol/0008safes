@@ -2,10 +2,14 @@
 	// start .s-step2
 	.s-step2 {
 		padding-top: rem(50);
-		padding-bottom: rem(50);
+		padding-bottom: rem(57);
 		.bottom-button {
 			.form-wrap__btn {
-				max-width: 100%;
+				
+				max-width: rem(407);
+				min-height: rem(75);
+				letter-spacing: 0.4px;
+
 			}
 		}
 
@@ -23,24 +27,22 @@
 			}
 		}
 
-		h4 {
-			padding-bottom: rem(30);
-		}
+
 		.delivery-method {
-			// padding-bottom: rem(40);
+			h4 {
+				padding-bottom: rem(20);
+			}
 
 			.form-wrap {
 				position: relative;
 				@include media-breakpoint-down(sm) {
 					margin-bottom: rem(40);
 				}
-				p {
+				.attention {
 					position: absolute;
 					bottom: rem(-40);
 					left: rem(160);
-					@include media-breakpoint-up(sm){
-						bottom: rem(-20);
-					}
+					// display: none;
 					font-size: rem(15);
 					line-height: 1.2;
 					opacity: 0.62;
@@ -80,83 +82,20 @@
 			}
 		}
 
-	.metod-radio, .metod-checkbox {
-		@include media-breakpoint-up(sm) {
 
-			// margin-bottom: rem(40);
-		}
-	
-		// margin-bottom: rem(20);
-	
-		position: relative;
-		cursor: pointer;
-	
-		&__input {
-			position: absolute;
-			z-index: 10;
-			// @extend .invisible;
-		}
-	
-		&__lab {
-			width: rem(24);
-			height: rem(24);
-	
-			background-color: #ffffff;
-			border-radius: 4px;
-			border: 1px solid #dcdcdc;
-			display: block;
-			position: absolute;
-			left: 0;
-			top: rem(0);
-			// border-radius: 50%;
-	
-			&::before {
-				content: '';
-				position: absolute;
-				left: 0;
-				top: 0;
-				width: 100%;
-				height: 100%;
-				border-radius: 50%;
-				border: $border-radius-lg solid $accent;
-				opacity: 0;
-				@include mt;
-			}
-	
-		}
-	
-		&__input:checked + &__lab {
-			&::before {
-				background-image: url('../img/svg/guarantee.svg');
-
-				opacity: 1;
-			}
-		}
-	
-		&__title {
-			// @extend .h5;
-			display: block;
-	
-			@include media-breakpoint-up(sm) {
-	
-				margin-bottom: rem(30);
-			}
-	
-			padding-left: rem(49);
-			// letter-spacing: rem0.4px;
-		}
-	
-		&__text {
-			text-align: center;
-			display: block;
-			margin-left: auto;
-			margin-right: auto;
-			max-width: rem(190);
-			font-size: rem(14);
-		}
-	}
 
 		.contact-information {
+			
+			margin-bottom: rem(30);
+			h4 {
+				padding-top: rem(20);
+				padding-bottom: rem(20);
+				@include media-breakpoint-up(md) {
+				
+					padding-top: rem(50);
+					padding-bottom: rem(32);
+				}
+			}
 			h5 {
 				padding-bottom: rem(10);
 			}
@@ -164,16 +103,24 @@
 				resize: none;
 				width: 100%;
 				height: rem(176);
-				padding: rem(29) rem(25);
+				padding: rem(20) rem(25);
 				border: 1px solid #ced4da;
 				font-size: rem(20);
 				font-family: "Open Sans";
 				font-weight: 400;
 			}
+			.address {
+				height: rem(100);
+				line-height: 1.4;
+				letter-spacing: 0.4px;
+				margin-bottom: rem(20);
+			}
 			.form-wrap {
-				&__btn {
-					max-width: rem(407);
+
+				&__input-wrap {
+					padding-bottom: rem(10);
 				}
+
 			}
 		}
 	@include media-breakpoint-up(xl) {}
@@ -201,3 +148,91 @@
 	@include media-breakpoint-down(xs) {} 
 
 } // end.s-step2
+.metod-radio, .metod-checkbox {
+	width: 100%;
+	border-radius: 4px;
+	margin-bottom: 2px;
+	@include media-breakpoint-up(sm) {
+		// margin-bottom: rem(40);
+	}
+	&:hover, &:active {
+		background-color: #f7f7f7;
+	}
+	// margin-bottom: rem(20);
+
+	position: relative;
+	cursor: pointer;
+
+	&__input {
+		position: absolute;
+		display: none;
+		// z-index: 10;
+		// @extend .invisible;
+	}
+
+	&__lab {
+		width: rem(24);
+		height: rem(24);
+
+		background-color: #ffffff;
+		border-radius: 4px;
+		border: 1px solid #dcdcdc;
+		display: block;
+		position: absolute;
+		left: rem(7);
+		top: rem(8);
+		// border-radius: 50%;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			// border-radius: 50%;
+			// border: $border-radius-lg solid $accent;
+			background-image: url('../img/svg/tick-black.svg');
+			background-size: rem(11);
+			background-position: center center;
+			background-repeat: no-repeat;
+			opacity: 0;
+			@include mt;
+		}
+
+	}
+
+	input:checked + &__lab {
+		&::before {
+
+			opacity: 1;
+		}
+	}
+
+	&__title {
+		// @extend .h5;
+		display: block;
+		font-family: "Open Sans";
+		font-weight: 400;
+		letter-spacing: 0.32px;
+		@include media-breakpoint-up(sm) {
+
+			margin-bottom: rem(13);
+		}
+		border-radius: rem(4);
+		line-height: 1.38;
+		padding-top: rem(8);
+		padding-left: rem(40);
+
+	}
+
+	&__text {
+		text-align: center;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: rem(190);
+		font-size: rem(14);
+	}
+}
+

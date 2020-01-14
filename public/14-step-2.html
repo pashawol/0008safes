@@ -244,15 +244,15 @@
 			<!-- start s-step2-->
 			<div class="s-step2" id="s-step2">
 				<div class="container">
-					<div class="order-steps row">
+					<div class="order-steps row text-center">
 						<div class="col-sm-4">
-							<h5 class="text-center">Контактные данные</h5>
+							<h5>Контактные данные</h5>
 						</div>
 						<div class="col-sm-4">
-							<h5 class="active text-center">Доставка и оплата</h5>
+							<h5 class="active">Доставка и оплата</h5>
 						</div>
 						<div class="col-sm-4">
-							<h5 class="text-center">Подтверждение заказа</h5>
+							<h5>Подтверждение заказа</h5>
 						</div>
 					</div>
 					<div class="delivery-method row justify-content-around">
@@ -260,51 +260,45 @@
 							<h4>Выберите способ доставки</h4>
 							<div class="choose-metod">
 								<div class="form-wrap">
-									<form>
-										<input class="order" type="hidden" name="order" value="способ доставки"/>
-										<div>
-											<label class="metod-checkbox"><input class="metod-checkbox__input" type="checkbox"/><span class="metod-checkbox__lab"></span><span class="metod-checkbox__title">Самовывоз из магазина - Бесплатно</span>
-											</label>
-										</div>
-										<div>
-											<label class="metod-checkbox"><input class="metod-checkbox__input" type="checkbox"/><span class="metod-checkbox__lab"></span><span class="metod-checkbox__title">Доставка по Магнитогорску до места назначения - 500 руб.</span>
-											</label>
-										</div>
-										<div>
-											<label class="metod-checkbox"><input class="metod-checkbox__input" type="checkbox"/><span class="metod-checkbox__lab"></span><span class="metod-checkbox__title">Подъем в квартиру/офис (при отсутствии лифта) - 200 руб. этаж</span>
-											</label>
-										</div>
-										<div>
-											<label class="metod-checkbox"><input class="metod-checkbox__input" type="checkbox"/><span class="metod-checkbox__lab"></span><span class="metod-checkbox__title">Сборка стеллажей - 10% от стоимости</span>
-											</label>
-										</div>
-									</form>
+									<div>
+										<label class="metod-checkbox"><input class="metod-checkbox__input" type="checkbox"/><span class="metod-checkbox__lab"></span><span class="metod-checkbox__title">Самовывоз из магазина - Бесплатно</span>
+										</label>
+									</div>
+									<div>
+										<label class="metod-checkbox"><input class="metod-checkbox__input" type="checkbox"/><span class="metod-checkbox__lab"></span><span class="metod-checkbox__title">Доставка по Магнитогорску до места назначения - 500 руб.</span>
+										</label>
+									</div>
+									<div>
+										<label class="metod-checkbox"><input class="metod-checkbox__input" type="checkbox"/><span class="metod-checkbox__lab"></span><span class="metod-checkbox__title">Подъем в квартиру/офис (при отсутствии лифта) - 200 руб. этаж</span>
+										</label>
+									</div>
+									<div>
+										<label class="metod-checkbox"><input class="metod-checkbox__input" type="checkbox"/><span class="metod-checkbox__lab"></span><span class="metod-checkbox__title">Сборка стеллажей - 10% от стоимости</span>
+										</label>
+									</div>
 								</div>
 							</div>
 						</div>
 						<div class="col-md-5">
 							<h4>Как хотите платить?</h4>
 							<div class="form-wrap">
-								<form>
-									<input class="order" type="hidden" name="order" value="Как хотите платить?"/>
-										<div>
-											<label class="metod-radio"><input class="metod-radio__input" type="radio" name="credit card"/><span class="metod-radio__lab"></span><span class="metod-radio__title">Оплата банковской картой</span>
-											</label>
-										</div>
-										<div>
-											<label class="metod-radio"><input class="metod-radio__input" type="radio" name="bank payment"/><span class="metod-radio__lab"></span><span class="metod-radio__title">Банковский платеж для юр. лиц</span>
-											</label>
-										</div>
-										<div>
-											<label class="metod-radio"><input class="metod-radio__input" type="radio" name="card transfer"/><span class="metod-radio__lab"></span><span class="metod-radio__title">Перевод на карту Сбербанка</span>
-											</label>
-										</div>
-										<div>
-											<label class="metod-radio"><input class="metod-radio__input" type="radio" name="In cash"/><span class="metod-radio__lab"></span><span class="metod-radio__title">Наличными</span>
-											</label>
-										</div>
-									<p>Только при покупке <br>из магазина</p>
-								</form>
+									<div>
+										<label class="metod-radio"><input class="metod-radio__input" type="radio" name="payment"/><span class="metod-radio__lab"></span><span class="metod-radio__title">Оплата банковской картой</span>
+										</label>
+									</div>
+									<div>
+										<label class="metod-radio"><input class="metod-radio__input" type="radio" name="payment"/><span class="metod-radio__lab"></span><span class="metod-radio__title">Банковский платеж для юр. лиц</span>
+										</label>
+									</div>
+									<div>
+										<label class="metod-radio"><input class="metod-radio__input" type="radio" name="payment"/><span class="metod-radio__lab"></span><span class="metod-radio__title">Перевод на карту Сбербанка</span>
+										</label>
+									</div>
+									<div>
+										<label class="metod-radio"><input class="metod-radio__input" type="radio" name="payment"/><span class="metod-radio__lab"></span><span class="metod-radio__title">Наличными</span>
+										</label>
+									</div>
+								<p class="attention">Только при покупке <br>из магазина</p>
 							</div>
 						</div>
 					</div>
@@ -319,11 +313,8 @@
 										</label>
 									</div>
 									<!-- +e.input-wrap-->
-									<div class="form-wrap__input-wrap form-group">
-										<label><span class="form-wrap__title">Введите адрес доставки</span><input class="form-wrap__input form-control" type="text" placeholder="г. Магнитогосрк, 50 Лет Октября пр.,д.118, кв.124" name="address" required="required"/>
-										</label>
-									</div>
-									<!-- +e.input-wrap-->
+									<h5>Введите адрес доставки</h5>
+									<textarea class="address" placeholder="г. Магнитогосрк, 50 Лет Октября пр., д.118, кв.124"></textarea>
 									<h5>Напишите комментарий, если хотите</h5>
 									<textarea placeholder="Например, можно ли заказать доставку в нерабочее время"></textarea>
 								</form>
@@ -331,13 +322,10 @@
 						</div>
 					</div>
 					<div class="row justify-content-center">
-						<div class="col-lg-6">
+						<div class="col-lg-5">
 							<div class="form-wrap bottom-button">
-								<form>
-									<input class="order" type="hidden" name="order"/>
-									<button class="form-wrap__btn" type="submit">Перейти к подтверждению заказа
-									</button>
-								</form>
+								<button class="form-wrap__btn" type="submit">Перейти к подтверждению заказа
+								</button>
 							</div>
 						</div>
 					</div>
