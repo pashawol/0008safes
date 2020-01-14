@@ -130,7 +130,7 @@ function eventHandler() {
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/15.png);"></div>')
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/14.png);"></div>')
 	// /добавляет подложку для pixel perfect
 
 
@@ -204,7 +204,7 @@ function eventHandler() {
 	});
 	
 	// слайдер конзины
-	$('.s-prod-head-images__slider-js').slick({
+	$('.s-prod-head-images__slider--js').slick({
 		...defaultSlide,
 		// arrows: false,
 		dots: false,
