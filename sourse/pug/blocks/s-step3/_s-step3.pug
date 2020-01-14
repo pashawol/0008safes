@@ -1,0 +1,63 @@
+mixin s-step3()
+	// start s-step3
+	+b.s-step3#s-step3&attributes(attributes)
+		.container
+			+b.order-steps.row
+				.col-sm-4
+					h5.active.text-center Контактные данные
+				.col-sm-4
+					h5.text-center Доставка и оплата
+				.col-sm-4
+					h5.text-center Подтверждение заказа
+			.row
+				+b.final-data.col-lg-4
+					mixin info(q,b,f)
+						p= q
+							span= b
+					+e.info-item
+						.h4 Контактная информация
+						+info('Имя:','Анна')
+						+info('Фамилия:','Соколова')
+						+info('Телефон:','+ 7 911 111-11-11')
+						+info('Email:','hello@mail.ru')
+						a(href="#") Изменить
+					+e.info-item
+						.h4 Доставка
+						+info('Тип:','Доставка до подъезда')
+						+info('Адрес:','Саратов, 50 Лет Октября пр., д.118, кв.124')
+						a(href="#") Изменить
+					+e.info-item
+						.h4 Способ оплаты
+						+info('','Банковской картой')
+						a(href="#") Изменить
+				+b.final-order.col-lg-8
+					.you-order
+						.h4 Заказ
+						a(href="") Изменить
+					+e.order-item.row
+						.img-wrap.col-sm-3
+							img.lazy(src="#" data-src="img/@2x/prod-1.jpg", alt="")
+						+e.order-description.col-sm-9
+							table
+								tr
+									td.safe-name Сейф Aiko T-17 EL
+									td 1 шт.
+									td 2 000 Р
+								tr
+									td.protection-class Взломостойкий
+									td
+									td
+					+e.final-price
+						table
+							tr
+								td Сумма
+								td 2 000 Р
+							tr
+								td Доставка
+								td 700 Р
+							tr
+								td Итого
+								td 2 700 Р
+					+b.form-wrap
+						+e.btn(type="submit") Подтвердить заказ
+	// end s-step3

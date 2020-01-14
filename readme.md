@@ -16,4 +16,5 @@
 1. <https://pashawol.github.io/0008safes/public/19-not-search.html>
 1. <https://pashawol.github.io/0008safes/public/20-thanks.html>
 1. <https://pashawol.github.io/0008safes/public/21-thanks2.html>
+1. <https://pashawol.github.io/0008safes/public/22-thanks-qwiz.html>
 1. <https://pashawol.github.io/0008safes/public/24-error.html>

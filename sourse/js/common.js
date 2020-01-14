@@ -202,7 +202,14 @@ function eventHandler() {
 
 		focusOnSelect: true
 	});
-
+	
+	// слайдер конзины
+	$('.s-prod-head-images__slider--js').slick({
+		...defaultSlide,
+		// arrows: false,
+		dots: false,
+		// asNavFor: '.s-prod-head-images__slider--sm-js'
+	});
 
 	//    const wow = new WOW({ mobile: false });
 	//         wow.init();

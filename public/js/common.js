@@ -181,6 +181,12 @@ function eventHandler() {
 		slidesToScroll: 1,
 		asNavFor: '.s-prod-head-images__slider--lg-js',
 		focusOnSelect: true
+	})); // слайдер конзины
+
+	$('.s-prod-head-images__slider--js').slick(_objectSpread({}, defaultSlide, {
+		// arrows: false,
+		dots: false // asNavFor: '.s-prod-head-images__slider--sm-js'
+
 	})); //    const wow = new WOW({ mobile: false });
 	//         wow.init();
 
