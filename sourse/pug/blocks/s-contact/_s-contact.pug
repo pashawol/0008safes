@@ -7,7 +7,8 @@ mixin s-contact()
 					+e.connection
 						h4 Звоните:
 						+e.connection-item
-							img.lazy(src="#" data-src="img/svg/telephone.svg", alt="")
+							.img-wrap
+								+icon("telephone")
 							ul
 								li
 									a(href="tel:+7(3519)22-00-00") +7 (3519) 22-00-22
@@ -17,7 +18,9 @@ mixin s-contact()
 					+e.connection
 						h4 Пишите:
 						+e.connection-item
-							img.lazy(src="#" data-src="img/svg/envelope-shape.svg", alt="")
+							.img-wrap
+								+icon("envelope-shape")
+								// img(src="img/svg/envelope-shape.svg" data-src="", alt="")
 							ul
 								li
 									a(href="mailto:abcde1135@mail.ru") abcde1135@mail.ru
