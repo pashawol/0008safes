@@ -38,6 +38,13 @@ $output-bourbon-deprecation-warnings: false;
 // @import "./node_modules/bootstrap/scss/card";
 @import "./node_modules/bootstrap/scss/breadcrumb";
 
+ol.breadcrumb {
+  padding-left: 0;
+  padding-right: 0;
+  @include media-breakpoint-down(md) {
+    padding-bottom: 0;
+  }
+}
 .breadcrumb {
   .active {
     a {
@@ -51,10 +58,15 @@ $output-bourbon-deprecation-warnings: false;
   ol.breadcrumb {
     padding-bottom: rem(0);
     // margin-bottom: rem(0);
+    
   }
   .back-to-main {
+    @include media-breakpoint-down(lg){
+      padding-bottom: rem(30);
+      padding-top: rem(10);
+    }
     a{
-      letter-spacing: 0.32px;
+      letter-spacing: rem(0.32);
       color: $secondary;
       position: relative;
       padding-bottom: rem(3);

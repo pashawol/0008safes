@@ -21,7 +21,19 @@
 			padding: rem(15);
 			padding-bottom: rem(10);
 			margin-bottom: rem(35);
-			
+			a {
+				@extend h4;
+				display: inline-block;
+				color: #a2a2a2;
+				border-bottom: 1px dashed transparent;
+				@include media-breakpoint-down(sm) {
+					padding-top: rem(10);
+				}
+				&:hover {
+					text-decoration: none;
+					border-bottom: 1px dashed $secondary;
+				}
+			}
 			.active {
 				color: $body-color;
 			}
@@ -38,7 +50,6 @@
 				@include media-breakpoint-down(sm) {
 					margin-bottom: rem(40);
 				}
-				
 
 			}
 		}
@@ -123,7 +134,9 @@
 				&__input-wrap {
 					padding-bottom: rem(10);
 				}
-
+				&__title {
+					text-align-last: left;
+				}
 			}
 		}
 	@include media-breakpoint-up(xl) {}
@@ -206,7 +219,7 @@
 	}
 
 	input:checked + &__lab {
-		&::before {
+		&::before, &::after {
 
 			opacity: 1;
 		}
@@ -223,8 +236,9 @@
 		display: block;
 		font-family: "Open Sans";
 		font-weight: 400;
-		letter-spacing: 0.32px;
+		letter-spacing: rem(0.32);
 		&:hover {
+			@include mt;
 			background-color: #f7f7f7;
 		}
 		@include media-breakpoint-up(sm) {
@@ -246,6 +260,24 @@
 		margin-right: auto;
 		max-width: rem(190);
 		font-size: rem(14);
+	}
+}
+.metod-radio {
+	&__lab {
+		&::before {
+			background-image: none;
+		}
+		&::after {
+			content: '';
+			width: rem(6);
+			height: rem(6);
+			background-color: #949494;
+			border-radius: 50%;
+			left: 35%;
+			top: 35%;
+			opacity: 0;
+			position: absolute;
+		}
 	}
 }
 

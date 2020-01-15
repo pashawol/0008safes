@@ -23,20 +23,15 @@ mixin s-contact()
 									a(href="mailto:abcde1135@mail.ru") abcde1135@mail.ru
 								li
 									a(href="mailto:abcde1135@yandex.ru") abcde1135@yandex.ru
-				.col-lg-9
-					+b.messanger-block
-						.row
-							.col-md-4
-								+e.question
-									h4 Задавайте вопросы, мы всегда на связи
-							.col-sm-4
-								+e.item--whatsapp(href="#")
-									+icon("whatsapp") 
-									span WhatsApp
-							.col-sm-4
-								+e.item--viber(href="#")
-									+icon("viber")
-									span Viber
+			+b.ask-questin
+				+e.question
+					h4 Задавайте вопросы, мы всегда на связи
+				+e.item--whatsapp(href="#")
+					+icon("whatsapp") 
+					span WhatsApp
+				+e.item--viber(href="#")
+					+icon("viber")
+					span Viber
 			+e.warehouse.text-center
 				h2 Наш склад-магазин в Магнитогорске
 				h5 К нам можно доехать за 15 минут из любой точки города
