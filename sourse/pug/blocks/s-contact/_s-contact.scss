@@ -6,9 +6,12 @@
 		padding-bottom: rem(30);
 		&-item {
 			display: flex;
-			img {
+
+			svg {
 				flex-shrink: 0;
-				width: rem(32);
+				max-width: rem(32);
+				max-height: rem(32);
+				color: #f27f00;
 			}
 			ul {
 				padding-top: rem(20);
@@ -31,7 +34,9 @@
 				}
 			}
 		}
-
+		.img-wrap {
+			align-self: center;
+		}
 	}
 
 	.ask-questin {

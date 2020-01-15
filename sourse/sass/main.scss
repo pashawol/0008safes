@@ -38,14 +38,21 @@ $output-bourbon-deprecation-warnings: false;
 // @import "./node_modules/bootstrap/scss/card";
 @import "./node_modules/bootstrap/scss/breadcrumb";
 
-ol.breadcrumb {
+.breadcrumb {
   padding-left: 0;
   padding-right: 0;
   @include media-breakpoint-down(md) {
     padding-bottom: 0;
   }
-}
-.breadcrumb {
+  a {
+    &:hover {
+      text-decoration: none;
+      color: #398bff;
+    }
+    &:active {
+      color: #1c61c1;
+    }
+  }
   .active {
     a {
       color: $breadcrumb-active-color;
