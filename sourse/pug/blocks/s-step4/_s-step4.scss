@@ -70,6 +70,8 @@
 				color: $body-color;
 				&:hover {
 					text-decoration: none;
+					color: #398bff;
+					@include mt;
 				}
 			}
 		}

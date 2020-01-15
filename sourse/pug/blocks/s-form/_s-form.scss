@@ -113,6 +113,14 @@
 			padding: rem(20);
 			line-height: 1.5;
 			margin-bottom: rem(25);
+			border: 1px solid #ced4da;
+			@include mt;
+			&:focus {
+				border-color: #2177f0;
+				box-shadow: 0 0 0 0.2rem rgba(9,62,137,.25);
+				outline: 0;
+				border-radius: rem(3);
+			}
 		}
 
 		.form-wrap {

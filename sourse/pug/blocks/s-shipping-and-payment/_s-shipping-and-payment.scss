@@ -3,7 +3,10 @@
 	.s-shipping-and-payment {
 		@extend h5;
 		font-weight: 500;
-		padding-top: rem(36);
+		padding-top: rem(15);
+		@include media-breakpoint-up(sm){
+			padding-top: rem(36);
+		}
 		padding-bottom: rem(40);
 		line-height: 1.5;
 		@include roww(0);
@@ -40,14 +43,15 @@
 		}
 
 		.cost-time {
-			letter-spacing: 0.4px;
+			letter-spacing: rem(0.4);
 			font-weight: 500;
 			padding-left: rem(15);
 			padding-right: rem(15);
 			@include media-breakpoint-up(lg) {
 				padding-left: rem(39);
 			}
-			h5 {
+			p {
+				@extend h5;
 				padding-bottom: rem(14);
 				line-height: 1.5;
 			}
@@ -61,7 +65,8 @@
 				}
 			}
 
-			h3 {
+			.h3 {
+				@extend h3;
 				font-weight: 700;
 				padding-bottom: rem(20);
 			}
@@ -90,7 +95,8 @@
 			&__byer {
 				padding-top: rem(25);
 				position: relative;
-				h5 {
+				.h5 {
+					@extend h5;
 					padding-left: rem(46);
 					line-height: 1.5;
 				}
@@ -127,3 +133,11 @@
 	@include media-breakpoint-down(xs) {} 
 
 } // end.s-sipping-and-payment
+
+.inner-page {
+	h1 {
+		@include media-breakpoint-down(xs) {
+			margin-top: 0;
+		} 
+	}
+}

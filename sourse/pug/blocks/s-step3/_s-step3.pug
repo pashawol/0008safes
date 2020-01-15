@@ -2,15 +2,15 @@ mixin s-step3()
 	// start s-step3
 	+b.s-step3#s-step3&attributes(attributes)
 		.container
-			+b.order-steps.row
+			+b.order-steps.row.text-center
 				.col-sm-4
-					h5.active.text-center Контактные данные
+					a(href='#') Контактные данные
 				.col-sm-4
-					h5.text-center Доставка и оплата
+					a(href='#') Доставка и оплата
 				.col-sm-4
-					h5.text-center Подтверждение заказа
+					a.active(href='#') Подтверждение заказа
 			.row
-				+b.final-data.col-lg-4
+				+b.final-data.col-lg-4#mobile-order-2
 					mixin info(q,b,f)
 						p= q
 							span= b
@@ -18,8 +18,12 @@ mixin s-step3()
 						.h4 Контактная информация
 						+info('Имя:','Анна')
 						+info('Фамилия:','Соколова')
-						+info('Телефон:','+ 7 911 111-11-11')
-						+info('Email:','hello@mail.ru')
+						p Телефон: 
+							a(href="tel:+7(911)111-11-11")
+								span + 7 911 111-11-11
+						p Email:
+							a(href="mailto:hello@mail.ru")
+								span hello@mail.ru
 						a(href="#") Изменить
 					+e.info-item
 						.h4 Доставка
@@ -30,10 +34,10 @@ mixin s-step3()
 						.h4 Способ оплаты
 						+info('','Банковской картой')
 						a(href="#") Изменить
-				+b.final-order.col-lg-8
+				+b.final-order.col-lg-8#mobile-order-1
 					.you-order
 						.h4 Заказ
-						a(href="") Изменить
+						a(href="#") Изменить
 					+e.order-item.row
 						.img-wrap.col-sm-3
 							img.lazy(src="#" data-src="img/@2x/prod-1.jpg", alt="")
@@ -41,12 +45,9 @@ mixin s-step3()
 							table
 								tr
 									td.safe-name Сейф Aiko T-17 EL
+										span.protection-class Взломостойкий
 									td 1 шт.
 									td 2 000 Р
-								tr
-									td.protection-class Взломостойкий
-									td
-									td
 					+e.final-price
 						table
 							tr
