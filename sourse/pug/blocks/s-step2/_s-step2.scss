@@ -1,106 +1,119 @@
+// start .s-step2
+.s-step2 {
+	padding-top: rem(50);
+	padding-bottom: rem(50);
 
-	// start .s-step2
-	.s-step2 {
-		padding-top: rem(50);
-		padding-bottom: rem(50);
-		.bottom-button {
-			.form-wrap__btn {
-				max-width: 100%;
+	.bottom-button {
+		.form-wrap__btn {
+			max-width: 100%;
+		}
+	}
+
+	.order-steps {
+		border: 1px solid #e9e9e9;
+		background-color: #f5f5f5;
+		letter-spacing: 0.44px;
+		color: #a2a2a2;
+		padding: rem(15);
+		padding-bottom: rem(10);
+		margin-bottom: rem(35);
+
+		.active {
+			color: $body-color;
+		}
+	}
+
+	h4 {
+		padding-bottom: rem(30);
+	}
+
+	.delivery-method {
+		// padding-bottom: rem(40);
+
+		.form-wrap {
+			position: relative;
+
+			@include media-breakpoint-down(sm) {
+				margin-bottom: rem(40);
 			}
-		}
 
-		.order-steps {
-			border: 1px solid #e9e9e9;
-			background-color: #f5f5f5;
-			letter-spacing: 0.44px;
-			color: #a2a2a2;
-			padding: rem(15);
-			padding-bottom: rem(10);
-			margin-bottom: rem(35);
-			
-			.active {
-				color: $body-color;
-			}
-		}
+			p {
+				position: absolute;
+				bottom: rem(-40);
+				left: rem(160);
 
-		h4 {
-			padding-bottom: rem(30);
-		}
-		.delivery-method {
-			// padding-bottom: rem(40);
-
-			.form-wrap {
-				position: relative;
-				@include media-breakpoint-down(sm) {
-					margin-bottom: rem(40);
+				@include media-breakpoint-up(sm) {
+					bottom: rem(-20);
 				}
-				p {
+
+				font-size: rem(15);
+				line-height: 1.2;
+				opacity: 0.62;
+				border: 1px solid #e8e8e8;
+				border-radius: rem(5);
+				padding: rem(10);
+
+				@include media-breakpoint-up(sm) {
+					padding: rem(19) rem(11);
+				}
+
+				z-index: 1;
+
+				&::before {
+					content: '';
 					position: absolute;
-					bottom: rem(-40);
-					left: rem(160);
-					@include media-breakpoint-up(sm){
-						bottom: rem(-20);
-					}
-					font-size: rem(15);
-					line-height: 1.2;
-					opacity: 0.62;
-					border: 1px solid #e8e8e8;
-					border-radius: rem(5);
-					padding: rem(10);
-					@include media-breakpoint-up(sm){
-						padding: rem(19) rem(11);
-					}
-					z-index: 1;
-					&::before {
-						content: '';
-						position: absolute;
-						left: rem(-6);
-						@include media-breakpoint-down(sm){
-							top: rem(6);
-						}
-						@include media-breakpoint-only(sm) {
-							top: rem(15);
+					left: rem(-6);
 
-						}
-						@include media-breakpoint-only(md) { 
-							top: rem(30);
-						}
+					@include media-breakpoint-down(sm) {
+						top: rem(6);
+					}
+
+					@include media-breakpoint-only(sm) {
 						top: rem(15);
-						width: rem(10);
-						height: rem(10);
-						border-top: 1px solid #e8e8e8;
-						border-left: 1px solid #e8e8e8;
-						transform: rotate(315deg);
-						z-index: 2;
-						background-color: #fff;
-						
+
 					}
+
+					@include media-breakpoint-only(md) {
+						top: rem(30);
+					}
+
+					top: rem(15);
+					width: rem(10);
+					height: rem(10);
+					border-top: 1px solid #e8e8e8;
+					border-left: 1px solid #e8e8e8;
+					transform: rotate(315deg);
+					z-index: 2;
+					background-color: #fff;
+
 				}
-
 			}
-		}
 
-	.metod-radio, .metod-checkbox {
+		}
+	}
+
+	.metod-radio,
+	.metod-checkbox {
 		@include media-breakpoint-up(sm) {
 
 			// margin-bottom: rem(40);
 		}
-	
+
 		// margin-bottom: rem(20);
-	
+
 		position: relative;
 		cursor: pointer;
-	
+
 		&__input {
 			position: absolute;
 			z-index: 10;
 			// @extend .invisible;
 		}
-	
+
 		&__lab {
 			width: rem(24);
 			height: rem(24);
-	
+
 			background-color: #ffffff;
 			border-radius: 4px;
 			border: 1px solid #dcdcdc;
@@ -109,7 +122,7 @@
 			left: 0;
 			top: rem(0);
 			// border-radius: 50%;
-	
+
 			&::before {
 				content: '';
 				position: absolute;
@@ -122,82 +135,89 @@
 				opacity: 0;
 				@include mt;
 			}
-	
-		}
-	
-		&__input:checked + &__lab {
-			&::before {
-				background-image: url('../img/svg/guarantee.svg');
 
+		}
+
+		&__input:checked+&__lab {
+			&::before {
 				opacity: 1;
 			}
 		}
-	
+
 		&__title {
 			// @extend .h5;
 			display: block;
-	
+
 			@include media-breakpoint-up(sm) {
-	
+
 				margin-bottom: rem(30);
 			}
-	
+
 			padding-left: rem(49);
 			// letter-spacing: rem0.4px;
 		}
-	
-		&__text {
-			text-align: center;
-			display: block;
-			margin-left: auto;
-			margin-right: auto;
-			max-width: rem(190);
-			font-size: rem(14);
+
+	}
+
+	.contact-information {
+		h5 {
+			padding-bottom: rem(10);
+		}
+
+		textarea {
+			resize: none;
+			width: 100%;
+			height: rem(176);
+			padding: rem(29) rem(25);
+			border: 1px solid #ced4da;
+			font-size: rem(20);
+			font-family: "Open Sans";
+			font-weight: 400;
+		}
+
+		.form-wrap {
+			&__btn {
+				max-width: rem(407);
+			}
 		}
 	}
 
-		.contact-information {
-			h5 {
-				padding-bottom: rem(10);
-			}
-			textarea {
-				resize: none;
-				width: 100%;
-				height: rem(176);
-				padding: rem(29) rem(25);
-				border: 1px solid #ced4da;
-				font-size: rem(20);
-				font-family: "Open Sans";
-				font-weight: 400;
-			}
-			.form-wrap {
-				&__btn {
-					max-width: rem(407);
-				}
-			}
-		}
 	@include media-breakpoint-up(xl) {}
+
 	@include media-breakpoint-up(lg) {}
+
 	@include media-breakpoint-up(md) {}
+
 	@include media-breakpoint-up(sm) {}
+
 	@include media-breakpoint-up(xs) {}
-	
+
 	//
-	@include media-breakpoint-between(md, xl) { }
-	
-	
+	@include media-breakpoint-between(md, xl) {}
+
+
 	//
 	@include media-breakpoint-only(xs) {}
+
 	@include media-breakpoint-only(sm) {}
+
 	@include media-breakpoint-only(md) {}
+
 	@include media-breakpoint-only(lg) {}
+
 	@include media-breakpoint-only(xl) {}
-	
+
 	//
 	@include media-breakpoint-down(xl) {}
-	@include media-breakpoint-down(lg) {}
-	@include media-breakpoint-down(md) {}
-	@include media-breakpoint-down(sm) {}
-	@include media-breakpoint-down(xs) {} 
 
-} // end.s-step2
+	@include media-breakpoint-down(lg) {}
+
+	@include media-breakpoint-down(md) {}
+
+	@include media-breakpoint-down(sm) {}
+
+	@include media-breakpoint-down(xs) {}
+
+}
+
+// end.s-step2
