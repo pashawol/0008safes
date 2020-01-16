@@ -9,23 +9,23 @@ include ../blocks/s-pdf/_s-pdf.pug
 include ../blocks/s-steps/_s-steps.pug
 include ../blocks/s-video/_s-video.pug
 include ../blocks/s-shipping/_s-shipping.pug
-include ../blocks/s-shipping-and-payment/_s-shipping-and-payment.pug
+include ../blocks/s-step3/_s-step3.pug
 
 block variables
-	- let  mainPage= 'inner-page'
-	// для отступов у h1
+	- let  mainPage= 'inner-page-2'
+		// для отступов у h1
 block title
-	- let  title= 'Доставка и оплата'
+	- let  title= 'Оформление заказа'
 	title= title
 block pagecontent 
 	//- +mob-mnu()
 	+header()
 		+top-line()
 		+top-nav()
-	+page-head("Главная", title)
+	+page-head("Главная", "Корзина", title)
 		.text-center
-			h1 Доставим ваш заказ в любую точку Магнитогорска
-	+s-shipping-and-payment
-	+s-form2()
-	//- +s-video
+			h1 Оформление заказа
+	+s-step3
+	// +s-form2()
+	// +s-video
 	+footer()

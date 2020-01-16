@@ -241,90 +241,75 @@
 					</div>
 				</div>
 			</div>
-			<!-- start s-step2-->
-			<div class="s-step2" id="s-step2">
+			<!-- start s-step3-->
+			<div class="s-step3" id="s-step3">
 				<div class="container">
 					<div class="order-steps row text-center">
 						<div class="col-sm-4"><a href="#">Контактные данные</a></div>
-						<div class="col-sm-4"><a class="active" href="#">Доставка и оплата</a></div>
-						<div class="col-sm-4"><a href="#">Подтверждение заказа</a></div>
+						<div class="col-sm-4"><a href="#">Доставка и оплата</a></div>
+						<div class="col-sm-4"><a class="active" href="#">Подтверждение заказа</a></div>
 					</div>
-					<div class="delivery-method row justify-content-around">
-						<div class="col-md-7">
-							<h4>Выберите способ доставки</h4>
-							<div class="choose-metod">
-								<div class="form-wrap">
-									<div>
-										<label class="metod-checkbox"><input class="metod-checkbox__input" type="checkbox"/><span class="metod-checkbox__lab"></span><span class="metod-checkbox__title">Самовывоз из магазина - Бесплатно</span>
-										</label>
-									</div>
-									<div>
-										<label class="metod-checkbox"><input class="metod-checkbox__input" type="checkbox"/><span class="metod-checkbox__lab"></span><span class="metod-checkbox__title">Доставка по Магнитогорску до места назначения - 500 руб.</span>
-										</label>
-									</div>
-									<div>
-										<label class="metod-checkbox"><input class="metod-checkbox__input" type="checkbox"/><span class="metod-checkbox__lab"></span><span class="metod-checkbox__title">Подъем в квартиру/офис (при отсутствии лифта) - 200 руб. этаж</span>
-										</label>
-									</div>
-									<div>
-										<label class="metod-checkbox"><input class="metod-checkbox__input" type="checkbox"/><span class="metod-checkbox__lab"></span><span class="metod-checkbox__title">Сборка стеллажей - 10% от стоимости</span>
-										</label>
-									</div>
+					<div class="row">
+						<div class="final-data col-lg-4" id="mobile-order-2">
+							<div class="final-data__info-item">
+								<div class="h4">Контактная информация</div>
+								<p>Имя:<span>Анна</span></p>
+								<p>Фамилия:<span>Соколова</span></p>
+								<p>Телефон: <a href="tel:+7(911)111-11-11"><span>+ 7 911 111-11-11</span></a></p>
+								<p>Email:<a href="mailto:hello@mail.ru"><span>hello@mail.ru</span></a></p><a href="#">Изменить</a>
+							</div>
+							<div class="final-data__info-item">
+								<div class="h4">Доставка</div>
+								<p>Тип:<span>Доставка до подъезда</span></p>
+								<p>Адрес:<span>Саратов, 50 Лет Октября пр., д.118, кв.124</span></p><a href="#">Изменить</a>
+							</div>
+							<div class="final-data__info-item">
+								<div class="h4">Способ оплаты</div>
+								<p><span>Банковской картой</span></p><a href="#">Изменить</a>
+							</div>
+						</div>
+						<div class="final-order col-lg-8" id="mobile-order-1">
+							<div class="you-order">
+								<div class="h4">Заказ</div>
+								<div><a href="#">Изменить</a></div>
+							</div>
+							<div class="final-order__order-item row">
+								<div class="img-wrap col-sm-3"><img class="lazy" src="#" data-src="img/@2x/prod-1.jpg" alt=""/></div>
+								<div class="final-order__order-description col-sm-9">
+									<table>
+										<tr>
+											<td class="safe-name">Сейф Aiko T-17 EL<span class="protection-class">Взломостойкий</span></td>
+											<td>1 шт.</td>
+											<td>2 000 Р</td>
+										</tr>
+									</table>
 								</div>
 							</div>
-						</div>
-						<div class="col-md-5">
-							<h4>Как хотите платить?</h4>
-							<div class="form-wrap">
-									<div>
-										<label class="metod-radio"><input class="metod-radio__input" type="radio" name="payment"/><span class="metod-radio__lab"></span><span class="metod-radio__title">Оплата банковской картой</span>
-										</label>
-									</div>
-									<div>
-										<label class="metod-radio"><input class="metod-radio__input" type="radio" name="payment"/><span class="metod-radio__lab"></span><span class="metod-radio__title">Банковский платеж для юр. лиц</span>
-										</label>
-									</div>
-									<div>
-										<label class="metod-radio"><input class="metod-radio__input" type="radio" name="payment"/><span class="metod-radio__lab"></span><span class="metod-radio__title">Перевод на карту Сбербанка</span>
-										</label>
-									</div>
-									<div>
-										<label class="metod-radio"><input class="metod-radio__input" type="radio" name="payment"/><span class="metod-radio__lab"></span><span class="metod-radio__title">Наличными</span><span class="attention">Только при покупке <br>из магазина</span>
-										</label>
-									</div>
+							<div class="final-order__final-price">
+								<table>
+									<tr>
+										<td>Сумма</td>
+										<td>2 000 Р</td>
+									</tr>
+									<tr>
+										<td>Доставка</td>
+										<td>700 Р</td>
+									</tr>
+									<tr>
+										<td>Итого</td>
+										<td>2 700 Р</td>
+									</tr>
+								</table>
 							</div>
-						</div>
-					</div>
-					<div class="contact-information row">
-						<div class="col-lg-6">
-							<h4>Введите адрес доставки</h4>
 							<div class="form-wrap">
-								<form>
-									<input class="order" type="hidden" name="order"/>
-									<div class="form-wrap__input-wrap form-group">
-										<label><span class="form-wrap__title">Имя и фамилия</span><input class="form-wrap__input form-control" type="text" placeholder="Иван" name="name" required="required"/>
-										</label>
-									</div>
-									<!-- +e.input-wrap-->
-									<h5>Введите адрес доставки</h5>
-									<textarea class="address" placeholder="г. Магнитогосрк, 50 Лет Октября пр., д.118, кв.124"></textarea>
-									<h5>Напишите комментарий, если хотите</h5>
-									<textarea placeholder="Например, можно ли заказать доставку в нерабочее время"></textarea>
-								</form>
-							</div>
-						</div>
-					</div>
-					<div class="row justify-content-center">
-						<div class="col-lg-5">
-							<div class="form-wrap bottom-button">
-								<button class="form-wrap__btn" type="submit">Перейти к подтверждению заказа
+								<button class="form-wrap__btn" type="submit">Подтвердить заказ
 								</button>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- end s-step2-->
+			<!-- end s-step3-->
 			<!-- +s-form2()-->
 			<!-- +s-video-->
 			<footer class="footer block-with-lazy">

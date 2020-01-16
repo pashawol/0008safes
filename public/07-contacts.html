@@ -245,7 +245,12 @@
 						<div class="col-md-5">
 							<div class="s-contact__connection">
 								<h4>Звоните:</h4>
-								<div class="s-contact__connection-item"><img class="lazy" src="#" data-src="img/svg/telephone.svg" alt=""/>
+								<div class="s-contact__connection-item">
+									<div class="img-wrap">
+										<svg class="icon icon-telephone ">
+											<use xlink:href="img/svg/sprite.svg#telephone"></use>
+										</svg>
+									</div>
 									<ul>
 										<li><a href="tel:+7(3519)22-00-00">+7 (3519) 22-00-22</a></li>
 										<li><a href="tel:+7(3519)42-15-11">+7 (3519) 42-15-11</a></li>
@@ -256,7 +261,13 @@
 						<div class="col-md-3">
 							<div class="s-contact__connection">
 								<h4>Пишите:</h4>
-								<div class="s-contact__connection-item"><img class="lazy" src="#" data-src="img/svg/envelope-shape.svg" alt=""/>
+								<div class="s-contact__connection-item">
+									<div class="img-wrap">
+										<svg class="icon icon-envelope-shape ">
+											<use xlink:href="img/svg/sprite.svg#envelope-shape"></use>
+										</svg>
+										<!-- img(src="img/svg/envelope-shape.svg" data-src="", alt="")-->
+									</div>
 									<ul>
 										<li><a href="mailto:abcde1135@mail.ru">abcde1135@mail.ru</a></li>
 										<li><a href="mailto:abcde1135@yandex.ru">abcde1135@yandex.ru</a></li>
@@ -264,27 +275,17 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-9">
-							<div class="messanger-block">
-								<div class="row">
-									<div class="col-md-4">
-										<div class="messanger-block__question">
-											<h4>Задавайте вопросы, мы всегда на связи</h4>
-										</div>
-									</div>
-									<div class="col-sm-4"><a class="messanger-block__item messanger-block__item--whatsapp" href="#">
-										<svg class="icon icon-whatsapp ">
-											<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
-										</svg><span>WhatsApp</span></a>
-									</div>
-									<div class="col-sm-4"><a class="messanger-block__item messanger-block__item--viber" href="#">
-										<svg class="icon icon-viber ">
-											<use xlink:href="img/svg/sprite.svg#viber"></use>
-										</svg><span>Viber</span></a>
-									</div>
-								</div>
-							</div>
-						</div>
+					</div>
+					<div class="ask-questin">
+						<div class="ask-questin__question">
+							<h4>Задавайте вопросы, мы всегда на связи</h4>
+						</div><a class="ask-questin__item ask-questin__item--whatsapp" href="#">
+						<svg class="icon icon-whatsapp ">
+							<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+						</svg><span>WhatsApp</span></a><a class="ask-questin__item ask-questin__item--viber" href="#">
+						<svg class="icon icon-viber ">
+							<use xlink:href="img/svg/sprite.svg#viber"></use>
+						</svg><span>Viber</span></a>
 					</div>
 					<div class="s-contact__warehouse text-center">
 						<h2>Наш склад-магазин в Магнитогорске</h2>
@@ -304,7 +305,37 @@
 									<li>
 										 Работаем: <br><span>пн-пт, с 10:00 до 18:00</span><img class="lazy" src="#" data-src="img/svg/clock-circular-outline.svg" alt=""/></li>
 								</ul>
-							</div><iframe src="https://yandex.ua/map-widget/v1/?um=constructor%3Adb87e64c101c358488e2d4335179bc5033ea071ebbe8c26551fe3a6251514200&amp;source=constructor" width="100%" height="578" frameborder="0"></iframe>
+							</div>
+							<div class="map-wrap" id="map"></div><script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+							<script>
+								ymaps.ready(function () {
+								var myMap = new ymaps.Map('map', {
+												center: [53.41837457105317,58.993155499999965],
+												zoom: 16
+										}, {
+												searchControlProvider: 'yandex#search'
+										}),
+								
+										myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+												hintContent: 'Собственный значок метки',
+												balloonContent: 'Это красивая метка'
+										}, {
+												// Опции.
+												// Необходимо указать данный тип макета.
+												iconLayout: 'default#image',
+												// Своё изображение иконки метки.
+												iconImageHref: 'img/@2x/mark.png',
+												// Размеры метки.
+												iconImageSize: [185, 165],
+												// Смещение левого верхнего угла иконки относительно
+												// её "ножки" (точки привязки).
+												iconImageOffset: [-95, -80]
+										});
+								
+								myMap.geoObjects
+										.add(myPlacemark);
+								});
+							</script>
 						</div>
 					</div>
 				</div>

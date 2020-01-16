@@ -11,28 +11,22 @@ include ../blocks/s-video/_s-video.pug
 include ../blocks/s-shipping/_s-shipping.pug
 include ../blocks/s-shipping-and-payment/_s-shipping-and-payment.pug
 include ../blocks/s-filter/_s-filter.pug
-include ../blocks/s-other-products/_s-other-products.pug
+include ../blocks/s-error/_s-error.pug
 
 block variables
-	- let  mainPage= null
+	- let  mainPage= 'inner-page'
 block title
-	- let  title= 'Поиск по назначению'
+	- let  title= 'Поиск'
 	title= title
 block pagecontent 
 	//- +mob-mnu()
 	+header()
 		+top-line()
 		+top-nav()
-	+b.page-head
-		.container
-			+e.title-search Найдено #[span.text-primary.fw-500 3 товара]
-	+b.main-container.container
-		.row
-			.col-xl-3.col-lg-4
-				+s-filter
-			.col-xl-9.col-lg-8
-				+s-catalog-08("Взломостойкие сейфы")
-	//- +s-other-products()
-	//- +s-form-08()
+		+page-head("Главная","Каталог ", title)
+		// .container
+				+e.title-search Найдено #[span.text-primary.fw-500 3 товара]
+	+s-error2
+	+s-form-19()
 	//- +s-video
 	+footer()

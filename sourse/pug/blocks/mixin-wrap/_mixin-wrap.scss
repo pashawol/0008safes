@@ -230,3 +230,10 @@
  		padding-top: rem(45);
  	}
  }
+ .inner-page {
+	 h1 {
+		@include media-breakpoint-down(sm) {
+			margin-top: 0;
+		}
+	}
+ }

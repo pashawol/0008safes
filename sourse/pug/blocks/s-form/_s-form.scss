@@ -1,6 +1,11 @@
 .s-form,
 .s-form2 {
 	background-color: #f7f7f7;
+
+	.col-lg-7 {
+		align-self: flex-end
+	}
+
 	@extend .section-border;
 
 	@include media-breakpoint-up(lg) {
@@ -113,6 +118,15 @@
 			padding: rem(20);
 			line-height: 1.5;
 			margin-bottom: rem(25);
+			border: 1px solid #ced4da;
+			@include mt;
+
+			&:focus {
+				border-color: #2177f0;
+				box-shadow: 0 0 0 0.2rem rgba(9, 62, 137, .25);
+				outline: 0;
+				border-radius: rem(3);
+			}
 		}
 
 		.form-wrap {
@@ -181,4 +195,12 @@
 
 	@include media-breakpoint-down(xs) {}
 
+}
+
+.inner-page {
+	.form-wrap__group-title {
+		color: $body-color;
+		letter-spacing: 0.4px;
+		padding-top: rem(40);
+	}
 }

@@ -41,7 +41,7 @@ mixin s-form2()
 							+e.label-name Александр Сикерин
 							+e.label-prof руководитель 
 				.col
-					h2 Есть вопросы  по&nbsp;доставке и&nbsp;сборке?
+					h2 Есть вопросы <br>по&nbsp;доставке и&nbsp;сборке?
 					h5 Напишите ваш вопрос
 					+form-wrap("Получить каталог и прайс")
 						textarea
@@ -72,5 +72,24 @@ mixin s-form-08()
 						+e.btn(type="submit") Получить помощь  в&nbsp;подборе&nbsp;сейфа
 						+polite
 
+mixin s-form-19()
+	// start s-form2
+	+b.s-form.section.block-with-lazy#s-form&attributes(attributes)
+		.container
+			.row
 
+				.col-lg-7.align-self-end
+					+e.img-wrap.d-none.d-lg-block
+						img.lazy.res-i(src="#" data-src="img/@2x/man.png", alt="")
+						+e.label
+							+e.label-name Александр Сикерин
+							+e.label-prof руководитель 
+				.col
+					h2 Нужна консультация в&nbsp;подборе сейфа?
+					h5 Руководитель компании проконсультирует вас, ответит на&nbsp;все вопросы
+					+form-wrap("Получить каталог и прайс")
+						+form-tabs() 
+						+inputName()
+						+e.btn(type="submit") Получить консультацию в&nbsp;подборе&nbsp;сейфа
+						+polite
 	// end s-form

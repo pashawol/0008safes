@@ -14,3 +14,19 @@ mixin s-error()
 						+icon("search")
 			h5 Удачи!
 	// end s-error
+
+mixin s-error2()
+	// start s-error2
+	+b.s-error.not-found#s-error&attributes(attributes)
+		.container.text-center
+			h4 По&nbsp;вашему запросу &laquo;взломастойкие&raquo; ничего на&nbsp;найдено. Попробуйте еще раз.
+			+b.form-search.d-lg-block
+				form
+					input(type="text" placeholder="Поиск по названию или назначению") 
+					+e.BUTTON.btn(type="button")
+						+icon("search")
+				ul
+					li: a(href="#") взломостойкие
+					li: a(href="#") Aiko
+					li: a(href="#") айко
+	// end s-error2

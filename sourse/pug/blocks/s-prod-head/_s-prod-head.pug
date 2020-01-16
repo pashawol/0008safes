@@ -75,21 +75,16 @@ mixin s-prod-head-basket()
 	+b.s-prod-head.s-prod-head-basket&attributes(attributes)
 		.container
 			.row
-				.col-lg-4.col-md-6
+				.col-lg-4.col-md-6#first-mobile-order
 					+b.s-prod-head-images
 						+e.inner
-							+e.slider--lg.--lg-js
+							+e.slider--lg.--js
 								- for (var x = 0; x < 5; x++)
-									+e.slide--lg
+									+e.slide
 										a(href= src data-fancybox="prod-gal")
 											+img()
-											// возможно я не правильно убрал слайдер
-							// +e.slider--sm.--sm-js
-								// - for (var x = 0; x < 5; x++)
-									+e.slide
-										+e.img-wrap
-											+img()
-				.col-lg-4.col-md-6
+
+				.col-lg-4.col-md-6#third-mobile-order
 					h1 Сейф Aiko T-17 EL
 					+e.type Взломостойкий
 					p  #[strong Характеристики]
@@ -105,7 +100,7 @@ mixin s-prod-head-basket()
 						+tr("Вес:","7,0 кг")
 						+tr("Объем:","3,0 л")
 						+tr("Взломостойкость:","S1 класс")
-				.col-lg-4
+				.col-lg-4#second-mobile-order
 					+b.s-prod-head-sidebar
 						+e.number
 							button 

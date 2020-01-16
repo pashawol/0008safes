@@ -2,22 +2,22 @@ mixin s-step1()
 	// start s-step1
 	+b.s-step1#s-step1&attributes(attributes)
 		.container
-			+b.order-steps.row
+			+b.order-steps.row.text-center
 				.col-sm-4
-					h5.active.text-center Контактные данные
+					a.active(href='#') Контактные данные
 				.col-sm-4
-					h5.text-center Доставка и оплата
+					a(href='#') Доставка и оплата
 				.col-sm-4
-					h5.text-center Подтверждение заказа
+					a(href='#') Подтверждение заказа
 			+b.data.row
-				.col-md-4
+				.col-lg-4.col-md-6
 					h4 Введите данные получателя
 					+form-wrap("Получить каталог и прайс")
 						+input("Иван","text",'Как к вам обращаться?',"name")(required)
 						+input("+7 (999) 999-99-99","tel",'Введите телефон:',"tel")(required)
 						+input("hello@mail.ru","email",'Укажите вашу почту:',"email")(required)
 						+e.btn(type="submit") Перейти к выбору <br>способа доставки
-				.col-md-8.col-xl-5
+				.col-md-6.col-lg-8.col-xl-5
 					+e.inform
 						img.lazy(src="#" data-src="img/svg/info.svg", alt="")
 						p Ваши данные нужны только для оформления заказа. Мы&nbsp;не&nbsp;передаем их&nbsp;третьим лицам и&nbsp;не&nbsp;рассылаем спам.

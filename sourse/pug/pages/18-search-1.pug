@@ -26,7 +26,11 @@ block pagecontent
 	+b.page-head
 		.container
 			+e.title-search Найдено #[span.text-primary.fw-500 3 товара]
-	.section.container
-		h4 По&nbsp;вашему запросу &laquo;взломастойкие&raquo; ничего на&nbsp;найдено. Попробуйте еще раз.
+	+b.main-container.container
+		.row
+			.col-xl-3.col-lg-4
+				+s-filter
+			.col-xl-9.col-lg-8
+				+s-catalog-08("Взломостойкие сейфы")
 		+search()
 	+footer()

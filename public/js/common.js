@@ -126,7 +126,7 @@ function eventHandler() {
 	JSCCommon.inputMask(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/14.png);"></div>'); // /добавляет подложку для pixel perfect
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/7.png);"></div>'); // /добавляет подложку для pixel perfect
 	// /закрыть/открыть мобильное меню
 	// листалка по стр
 
@@ -181,6 +181,12 @@ function eventHandler() {
 		slidesToScroll: 1,
 		asNavFor: '.s-prod-head-images__slider--lg-js',
 		focusOnSelect: true
+	})); // слайдер конзины
+
+	$('.s-prod-head-images__slider--js').slick(_objectSpread({}, defaultSlide, {
+		// arrows: false,
+		dots: false // asNavFor: '.s-prod-head-images__slider--sm-js'
+
 	})); //    const wow = new WOW({ mobile: false });
 	//         wow.init();
 

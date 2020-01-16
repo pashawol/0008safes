@@ -7,7 +7,8 @@ mixin s-contact()
 					+e.connection
 						h4 Звоните:
 						+e.connection-item
-							img.lazy(src="#" data-src="img/svg/telephone.svg", alt="")
+							.img-wrap
+								+icon("telephone")
 							ul
 								li
 									a(href="tel:+7(3519)22-00-00") +7 (3519) 22-00-22
@@ -17,26 +18,23 @@ mixin s-contact()
 					+e.connection
 						h4 Пишите:
 						+e.connection-item
-							img.lazy(src="#" data-src="img/svg/envelope-shape.svg", alt="")
+							.img-wrap
+								+icon("envelope-shape")
+								// img(src="img/svg/envelope-shape.svg" data-src="", alt="")
 							ul
 								li
 									a(href="mailto:abcde1135@mail.ru") abcde1135@mail.ru
 								li
 									a(href="mailto:abcde1135@yandex.ru") abcde1135@yandex.ru
-				.col-lg-9
-					+b.messanger-block
-						.row
-							.col-md-4
-								+e.question
-									h4 Задавайте вопросы, мы всегда на связи
-							.col-sm-4
-								+e.item--whatsapp(href="#")
-									+icon("whatsapp") 
-									span WhatsApp
-							.col-sm-4
-								+e.item--viber(href="#")
-									+icon("viber")
-									span Viber
+			+b.ask-questin
+				+e.question
+					h4 Задавайте вопросы, мы всегда на связи
+				+e.item--whatsapp(href="#")
+					+icon("whatsapp") 
+					span WhatsApp
+				+e.item--viber(href="#")
+					+icon("viber")
+					span Viber
 			+e.warehouse.text-center
 				h2 Наш склад-магазин в Магнитогорске
 				h5 К нам можно доехать за 15 минут из любой точки города
@@ -62,7 +60,37 @@ mixin s-contact()
 								| Работаем: <br>
 								span пн-пт, с 10:00 до 18:00
 								img.lazy(src="#" data-src="img/svg/clock-circular-outline.svg", alt="")
-					<iframe src="https://yandex.ua/map-widget/v1/?um=constructor%3Adb87e64c101c358488e2d4335179bc5033ea071ebbe8c26551fe3a6251514200&amp;source=constructor" width="100%" height="578" frameborder="0"></iframe>
+					.map-wrap#map
+						
+					//- <iframe src="https://yandex.ua/map-widget/v1/?um=constructor%3Adb87e64c101c358488e2d4335179bc5033ea071ebbe8c26551fe3a6251514200&amp;source=constructor" height="578"></iframe>
+					<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 
+					script.
+						ymaps.ready(function () {
+						var myMap = new ymaps.Map('map', {
+										center: [53.41837457105317,58.993155499999965],
+										zoom: 16
+								}, {
+										searchControlProvider: 'yandex#search'
+								}),
+ 
+								myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+										hintContent: 'Собственный значок метки',
+										balloonContent: 'Это красивая метка'
+								}, {
+										// Опции.
+										// Необходимо указать данный тип макета.
+										iconLayout: 'default#image',
+										// Своё изображение иконки метки.
+										iconImageHref: 'img/@2x/mark.png',
+										// Размеры метки.
+										iconImageSize: [185, 165],
+										// Смещение левого верхнего угла иконки относительно
+										// её "ножки" (точки привязки).
+										iconImageOffset: [-95, -80]
+								});
 
+						myMap.geoObjects
+								.add(myPlacemark);
+						});
 	// end s-contact
