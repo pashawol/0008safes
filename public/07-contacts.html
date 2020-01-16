@@ -305,7 +305,37 @@
 									<li>
 										 Работаем: <br><span>пн-пт, с 10:00 до 18:00</span><img class="lazy" src="#" data-src="img/svg/clock-circular-outline.svg" alt=""/></li>
 								</ul>
-							</div><iframe src="https://yandex.ua/map-widget/v1/?um=constructor%3Adb87e64c101c358488e2d4335179bc5033ea071ebbe8c26551fe3a6251514200&amp;source=constructor" height="578"></iframe>
+							</div>
+							<div class="map-wrap" id="map"></div><script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+							<script>
+								ymaps.ready(function () {
+								var myMap = new ymaps.Map('map', {
+												center: [53.41837457105317,58.993155499999965],
+												zoom: 16
+										}, {
+												searchControlProvider: 'yandex#search'
+										}),
+								
+										myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+												hintContent: 'Собственный значок метки',
+												balloonContent: 'Это красивая метка'
+										}, {
+												// Опции.
+												// Необходимо указать данный тип макета.
+												iconLayout: 'default#image',
+												// Своё изображение иконки метки.
+												iconImageHref: 'img/@2x/mark.png',
+												// Размеры метки.
+												iconImageSize: [185, 165],
+												// Смещение левого верхнего угла иконки относительно
+												// её "ножки" (точки привязки).
+												iconImageOffset: [-95, -80]
+										});
+								
+								myMap.geoObjects
+										.add(myPlacemark);
+								});
+							</script>
 						</div>
 					</div>
 				</div>
