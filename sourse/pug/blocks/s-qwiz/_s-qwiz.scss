@@ -19,7 +19,18 @@
 
 		&__img-wrap {
 			position: relative;
-			bottom: rem(-68);
+
+			@include media-breakpoint-up(xl) {
+
+				bottom: rem(-68);
+			}
+
+			@include media-breakpoint-up(lg) {
+
+				bottom: rem(-34);
+			}
+
+			bottom: rem(-27);
 		}
 
 		&__label {

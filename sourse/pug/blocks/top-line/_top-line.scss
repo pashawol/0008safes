@@ -1,10 +1,12 @@
 .top-line {
   padding-top: rem(17);
   padding-bottom: rem(10);
-  z-index: 2;
+  z-index: 1000;
+  position: relative;
 
   &__basket {
     z-index: 4;
+    cursor: pointer;
 
     .icon {
       font-size: rem(35);
@@ -105,9 +107,25 @@
 
   @include media-breakpoint-down(lg) {}
 
-  @include media-breakpoint-down(md) {}
+  @include media-breakpoint-down(md) {
+    .form-search {
+      margin-top: rem(20);
+    }
 
-  @include media-breakpoint-down(sm) {}
+    .logo a,
+    .row {
+      // justify-content: flex-end;
+      justify-content: center;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+
+
+
+
+    padding-bottom: rem(20);
+  }
 
   @include media-breakpoint-down(xs) {}
 
@@ -122,15 +140,16 @@
 
     justify-content: flex-end;
 
-    a {
+    .link {
       text-decoration: none !important;
       border-bottom: 1px solid;
       @extend .text-secondary;
       font-weight: 300;
       font-size: rem(14);
+      display: inline;
 
       &:hover {
-        border-color: transparent;
+        // border-color: transparent;
       }
     }
   }

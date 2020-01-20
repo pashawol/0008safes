@@ -12,7 +12,8 @@ mixin s-qwiz()
 							mixin item(i,v, t, not )
 								+b.qwiz-item
 									+b.qwiz-progress
-										+e.inner= v
+										+e.inner
+											+e.text= v
 											+e.bar(style=`width:${i}%`)
 									+e.body
 										+e.title= t
@@ -20,11 +21,11 @@ mixin s-qwiz()
 											block
 									+e.footer
 										.row
-											.col-auto
+											.col-sm-auto.order-sm-last
+												+e.btn--next(type="button") Далее
+											.col-sm-auto
 												if !not
 													+e.btn--back(type="button") Предыдущий вопрос
-											.col-auto
-												+e.btn--next(type="button") Далее
 								
 								// /+b.qwiz-item
 							mixin radio(t, n)
@@ -34,25 +35,34 @@ mixin s-qwiz()
 										+e.lab
 										+e.SPAN.title= t
 										block
+							mixin radioch(t, n)
+								div&attributes(attributes)
+									+b.LABEL.qwiz-radio
+										+e.INPUT.input(type="checkbox" name=n)
+										+e.lab
+										+e.SPAN.title= t
+										block
 
 							+item("10","Вопрос 1 из 4","Что планируете хранить в сейфе?", "not")
-								+radio("Деньги и драгоценности","qwiz-1")(class="col-sm-6")
-								+radio("Оружие","qwiz-1")(class="col-6")
-								+radio("Документы","qwiz-1")(class="col-sm-6")
-								+radio("Другое","qwiz-1")(class="col-sm-6")
+								+radioch("Деньги и драгоценности","qwiz-1")(class="col-sm-6")
+								+radioch("Оружие","qwiz-1")(class="col-6")
+								+radioch("Документы","qwiz-1")(class="col-sm-6")
+								+radioch("Другое","qwiz-1")(class="col-sm-6")
 							+item("20","Вопрос 2 из 4","От чего хотите защитить содержимое сейфа?")
 								+radio("От пожара ","qwiz-2")(class="col-sm-6")
 								+radio("От взлома ","qwiz-2")(class="col-sm-6")
 								+radio("От пожара и взлома ","qwiz-2")(class="col-sm-6")
 								+radio(" Другое","qwiz-2")(class="col-sm-6")
 							+item("60","Вопрос 3 из 4","Какой размер сейфа вам больше подходит?")
-								+radio("Большой","qwiz-3")(class="col-lg-4 col-sm-6")
+								+radio("Большой","qwiz-3")(class="col-md-4 col-sm-6")
 									+e.SPAN.text Высотой более 1&nbsp;м&nbsp;&mdash;  чаще устанавливается открыто там, где есть  под него место.
-								+radio("Средний","qwiz-3")(class="col-lg-4 col-sm-6")
+								+radio("Средний","qwiz-3")(class="col-md-4 col-sm-6")
 									+e.SPAN.text Высотой менее 80&nbsp;см&nbsp;&mdash; уместится под стол и&nbsp;в&nbsp;шкаф.
-								+radio("Маленький","qwiz-3")(class="col-lg-4 col-sm-6")
+								+radio("Маленький","qwiz-3")(class="col-md-4 col-sm-6")
 									+e.SPAN.text Высотой менее 50&nbsp;см&nbsp;&mdash;  можно &laquo;спрятать&raquo;  в&nbsp;стену, убрать в&nbsp;шкаф  или поставить на&nbsp;стеллаж.
 							+item("80","Вопрос 4 из 4","Выберите сумму, которую готовы потратить на покупку сейфа?")
+								+radio("До 5000 Р","qwiz-price")(class="col-sm-6")
+								+radio("От 5.000 до 10.000 Р","qwiz-price")(class="col-sm-6")
 						.col-lg-auto.d-none.d-lg-block
 							+b.qwiz-sidebar
 								+e.header
@@ -69,15 +79,15 @@ mixin s-qwiz()
 									+e.link.link-modal(href="#modal-call")  Получить консультацию
 				+b.form-wrap
 					.row
-						.col-lg-6
-							.h5 Мы&nbsp;уже подбираем для вас подходящие сейфы
-							.h4.strong Выберите, куда прислать подборку?
+						.col-lg-6.col-md-7
+							.h5.pb-1 Мы&nbsp;уже подбираем для вас подходящие сейфы
+							.h4.strong.mb-3 Выберите, куда прислать подборку?
 							+form-tabs-qwiz()
 							+inputName()
 							+e.btn(type="submit") Получить консультацию
 							+polite
 
-						.col.d-none.d-lg-block 
+						.col.d-none.d-md-block.align-self-end
 							+e.img-wrap
 								img.lazy.res-i(src="#" data-src="img/@2x/man.png", alt="")
 								+e.label

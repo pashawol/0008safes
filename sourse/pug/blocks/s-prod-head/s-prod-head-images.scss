@@ -38,6 +38,10 @@
 
 	}
 
+	&__slider--sm &__img-wrap {
+		cursor: pointer;
+	}
+
 	&__slider--sm {
 		margin-left: rem(-7px);
 		margin-right: rem(-7);

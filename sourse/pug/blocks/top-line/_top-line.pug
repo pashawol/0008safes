@@ -3,8 +3,8 @@ mixin top-line()
 	+b.top-line.block-with-lazy
 		.container
 			.row 
-				+logo()(class="col-lg-auto col")
-				.col-auto.order-lg-last
+				+logo()(class="col-lg-auto col-md")
+				.col-auto.order-last
 					+e.basket
 						+icon("cart")
 						+e.basket-count 99
@@ -12,12 +12,12 @@ mixin top-line()
 				.col-auto.order-lg-last
 					+contact-block()
 							
-				.col-lg.d-lg-flex.flex-lg-column-reverse
+				.col-lg.d-lg-flex.flex-lg-column-reverse.order-lg-0.order-last
 
-					ul
-						li: a(href="#") взломостойкие
-						li: a(href="#") Aiko
-						li: a(href="#") айко
+					ul.d-none.d-lg-flex
+						li: .link взломостойкие
+						li: .link Aiko
+						li: .link айко
 					+search()
 							
 	// end .top-line

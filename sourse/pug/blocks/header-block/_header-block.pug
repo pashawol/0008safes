@@ -3,9 +3,17 @@ mixin header-block()
 	+b.header-block#header-block
 		.container
 			.row
-				.col.order-md-last
+				.col-lg-6.col-md-8
+					h1 Сейфы для денег, ценностей, документов и&nbsp;оружия&nbsp;&mdash; более  100&nbsp;вариантов
+					p Самые  #[strong востребованные модели всегда в&nbsp;наличии], другие доставим  в&nbsp;течение недели
+					.d-none.d-md-block
+						+e.btn.scroll-link(href="#s-qwiz") Подобрать сейф по параметрам
+				.col-lg-6.col-md-4
 					+e.img-wrap
-						img.res-i(src="img/@2x/header-img.png", alt="")
+						.header-slider-js
+							div: img.res-i(src="#"  data-lazy="img/@2x/header-img.png", alt="")
+							div: img.res-i(src="#"  data-lazy="img/@2x/header-img.png", alt="")
+							div: img.res-i(src="#"  data-lazy="img/@2x/header-img.png", alt="")
 						+b.garanty.d-none.d-sm-block
 							+icon('garanty')
 							+e.title Гарантнии
@@ -13,9 +21,7 @@ mixin header-block()
 								br
 								| на замки #[strong 1 год]
 						+e.price от 2.500 Р.
-				.col-lg-6.col-md-8
-					h1 Сейфы для денег, ценностей, документов и&nbsp;оружия&nbsp;&mdash; более  100&nbsp;вариантов
-					p Самые  #[strong востребованные модели всегда в&nbsp;наличии], другие доставим  в&nbsp;течение недели
-					+e.btn.scroll-link(href="#s-qwiz") Подобрать сейф по параметрам
+					.d-md-none
+						+e.btn.scroll-link(href="#s-qwiz") Подобрать сейф по параметрам
 		 
 	// end header-block

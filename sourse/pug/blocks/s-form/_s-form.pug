@@ -1,30 +1,36 @@
 //- -
 //- 	const json = require('./s-form.json');
-
+mixin man()
+	.col-xl-7.col-lg-6.align-self-end.order-lg-first.order-last
+		block
+		+e.img-wrap
+			img.lazy.res-i(src="#" data-src="img/@2x/man.png", alt="")
+			+e.label
+				+e.label-name Александр Сикерин
+				+e.label-prof руководитель 
 mixin s-form()
 	// start s-form
 	+b.s-form.section.block-with-lazy#s-form&attributes(attributes)
 		.container
 			.row
 
-				.col-lg-7.align-self-end
-					+b.section-title
+				+man()
+					+b.section-title.d-none.d-lg-block
 						h2 Получите консультацию по&nbsp;интересующим моделям  сейфов
-					+e.img-wrap.d-none.d-lg-block
-						img.lazy.res-i(src="#" data-src="img/@2x/man.png", alt="")
-						+e.label
-							+e.label-name Александр Сикерин
-							+e.label-prof руководитель 
 				.col
-					p Здравствуйте! Меня зовут Александр, я&nbsp;директор ООО &laquo;Комплексные технологии&raquo;. Мы&nbsp;реализуем сейфы с&nbsp;1990&nbsp;года, знаем о&nbsp;них все. 
+					+e.head-text
+						+b.section-title.d-lg-none
+							.h2 Получите консультацию по&nbsp;интересующим моделям  сейфов
+					
+						p Здравствуйте! Меня зовут Александр, я&nbsp;директор ООО &laquo;Комплексные технологии&raquo;. Мы&nbsp;реализуем сейфы с&nbsp;1990&nbsp;года, знаем о&nbsp;них все. 
 
-					p Готовы ответить на&nbsp;любой ваш вопрос по&nbsp;будням с&nbsp;10:00 до&nbsp;18:00. Оставьте номер телефона, наш специалист вам перезвонит.
-					p И&nbsp;обещаю: мы&nbsp;не&nbsp;присылаем смс с&nbsp;рекламой и&nbsp;не&nbsp;докучаем звонками:) Только консультация.
-					+form-wrap("Получить каталог и прайс")
-						+form-tabs() 
-						+inputName()
-						+e.btn(type="submit") Получить консультацию
-						+polite
+						p Готовы ответить на&nbsp;любой ваш вопрос по&nbsp;будням с&nbsp;10:00 до&nbsp;18:00. Оставьте номер телефона, наш специалист вам перезвонит.
+						p И&nbsp;обещаю: мы&nbsp;не&nbsp;присылаем смс с&nbsp;рекламой и&nbsp;не&nbsp;докучаем звонками:) Только консультация.
+						+form-wrap("Получить каталог и прайс")
+							+form-tabs() 
+							+inputName()
+							+e.btn(type="submit") Получить консультацию
+							+polite
 
 	// end s-form
 
@@ -34,21 +40,17 @@ mixin s-form2()
 		.container
 			.row
 
-				.col-lg-7.align-self-end
-					+e.img-wrap.d-none.d-lg-block
-						img.lazy.res-i(src="#" data-src="img/@2x/man.png", alt="")
-						+e.label
-							+e.label-name Александр Сикерин
-							+e.label-prof руководитель 
+				+man()
 				.col
-					h2 Есть вопросы <br>по&nbsp;доставке и&nbsp;сборке?
-					h5 Напишите ваш вопрос
-					+form-wrap("Получить каталог и прайс")
-						textarea.form-control
-						+form-tabs2() 
-						//- +inputName()
-						+e.btn(type="submit") Задать вопрос
-						+polite
+					+e.head-text
+						h2 Есть вопросы <br>по&nbsp;доставке и&nbsp;сборке?
+						h5 Напишите ваш вопрос
+						+form-wrap("Получить каталог и прайс")
+							textarea.form-control
+							+form-tabs2() 
+							//- +inputName()
+							+e.btn(type="submit") Задать вопрос
+							+polite
 
 	// end s-form2
 mixin s-form-08()
@@ -57,20 +59,16 @@ mixin s-form-08()
 		.container
 			.row
 
-				.col-lg-7.align-self-end
-					+e.img-wrap.d-none.d-lg-block
-						img.lazy.res-i(src="#" data-src="img/@2x/man.png", alt="")
-						+e.label
-							+e.label-name Александр Сикерин
-							+e.label-prof руководитель 
+				+man()
 				.col
-					h2 Нужна помощь в&nbsp;подборе  сейфа?
-					h5 Наш специалист проконсультирует  вас, ответит на&nbsp;все вопросы  и&nbsp;поможет подобрать сейф
-					+form-wrap("Получить каталог и прайс")
-						+form-tabs() 
-						+inputName()
-						+e.btn(type="submit") Получить помощь  в&nbsp;подборе&nbsp;сейфа
-						+polite
+					+e.head-text
+						h2 Нужна помощь в&nbsp;подборе  сейфа?
+						h5 Наш специалист проконсультирует  вас, ответит на&nbsp;все вопросы  и&nbsp;поможет подобрать сейф
+						+form-wrap("Получить каталог и прайс")
+							+form-tabs() 
+							+inputName()
+							+e.btn(type="submit") Получить помощь  в&nbsp;подборе&nbsp;сейфа
+							+polite
 
 mixin s-form-19()
 	// start s-form2
@@ -78,18 +76,14 @@ mixin s-form-19()
 		.container
 			.row
 
-				.col-lg-7.align-self-end
-					+e.img-wrap.d-none.d-lg-block
-						img.lazy.res-i(src="#" data-src="img/@2x/man.png", alt="")
-						+e.label
-							+e.label-name Александр Сикерин
-							+e.label-prof руководитель 
+				+man()
 				.col
-					h2 Нужна консультация в&nbsp;подборе сейфа?
-					h5 Руководитель компании проконсультирует вас, ответит на&nbsp;все вопросы
-					+form-wrap("Получить каталог и прайс")
-						+form-tabs() 
-						+inputName()
-						+e.btn(type="submit") Получить консультацию в&nbsp;подборе&nbsp;сейфа
-						+polite
+					+e.head-text
+						h2 Нужна консультация в&nbsp;подборе сейфа?
+						h5 Руководитель компании проконсультирует вас, ответит на&nbsp;все вопросы
+						+form-wrap("Получить каталог и прайс")
+							+form-tabs() 
+							+inputName()
+							+e.btn(type="submit") Получить консультацию в&nbsp;подборе&nbsp;сейфа
+							+polite
 	// end s-form

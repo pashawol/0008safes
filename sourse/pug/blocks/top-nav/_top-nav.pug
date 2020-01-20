@@ -21,13 +21,13 @@ mixin top-nav()
 							+e.toggle-text 
 								span
 								| Каталог
-						+e.dropdown--tabs.tabs
-							.tabs__caption
-								.tabs__btn.active Сейфы
-								.tabs__btn Стеллажи
-							.tabs__wrap
+						+e.dropdown--tabs.tabss
+							.tabss__caption
+								.tabss__btn.active Сейфы
+								a.tabss__btn(class="link-modal" href="#modal-pdf") Стеллажи
+							.tabss__wrap
 								mixin tab()
-									.tabs__content&attributes(attributes)
+									.tabss__content&attributes(attributes)
 										.row
 											mixin item(t, ...items)
 												.col-lg-3.col-sm-6
@@ -39,19 +39,16 @@ mixin top-nav()
 											+item("Взломостойкость:",'0 класс','1 класс','2 класс','3 класс')
 											+item("Огнестойкость:",'60Б — 60 минут','30Б — 30 минут')
 											+item("Тип замка:",'Ключевой','Кодовый электронный','Кодовый механический')
-								+tab()(class="active")
-								+tab()(class="")
+								+tab()(class="active") 
 
 				.col-md.col-6
 					+b.catalog-menu
 						+e.toggle.d-md-none
-							+e.toggle-text 
-								span
-								| Меню
+							+e.toggle-text.pl-0 Меню
 						+e.dropdown--menu-top
 							+b.menu-top
 								ul
-									li.current-menu-item: a.scroll-link(href="#s-qwiz") 
+									li: a.scroll-link(href="#s-qwiz") 
 										+icon("safety-box")
 										| Подобрать сейф
 									li: a(href="#") Доставка и оплата

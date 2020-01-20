@@ -32,14 +32,14 @@
 				<div class="top-line block-with-lazy">
 					<div class="container">
 						<div class="row"> 
-							<div class="logo col-lg-auto col"><a href="#">
+							<div class="logo col-lg-auto col-md"><a href="#">
 									<div><img src="img/@2x/logo.png" alt=""/></div>
-									<div class="d-none d-md-block">
+									<div class="logo__text">
 										<div class="logo__title">Комплексные системы
 										</div>Продажа сейфов   и&nbsp;металлических&nbsp;стеллажей  с&nbsp;доставкой по&nbsp;Магнитогорску
 									</div></a>
 							</div>
-							<div class="col-auto order-lg-last">
+							<div class="col-auto order-last">
 								<div class="top-line__basket">
 									<svg class="icon icon-cart ">
 										<use xlink:href="img/svg/sprite.svg#cart"></use>
@@ -72,11 +72,17 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-lg d-lg-flex flex-lg-column-reverse">
-								<ul>
-									<li><a href="#">взломостойкие</a></li>
-									<li><a href="#">Aiko</a></li>
-									<li><a href="#">айко</a></li>
+							<div class="col-lg d-lg-flex flex-lg-column-reverse order-lg-0 order-last">
+								<ul class="d-none d-lg-flex">
+									<li>
+										<div class="link">взломостойкие</div>
+									</li>
+									<li>
+										<div class="link">Aiko</div>
+									</li>
+									<li>
+										<div class="link">айко</div>
+									</li>
 								</ul>
 								<div class="form-search d-lg-block">
 									<form>
@@ -103,55 +109,12 @@
 										<div class="catalog-menu__toggle-text"> <span></span>Каталог
 										</div>
 									</div>
-									<div class="catalog-menu__dropdown catalog-menu__dropdown--tabs tabs">
-										<div class="tabs__caption">
-											<div class="tabs__btn active">Сейфы</div>
-											<div class="tabs__btn">Стеллажи</div>
+									<div class="catalog-menu__dropdown catalog-menu__dropdown--tabs tabss">
+										<div class="tabss__caption">
+											<div class="tabss__btn active">Сейфы</div><a class="tabss__btn link-modal" href="#modal-pdf">Стеллажи</a>
 										</div>
-										<div class="tabs__wrap">
-												<div class="tabs__content active">
-													<div class="row">
-																	<div class="col-lg-3 col-sm-6">
-																		<div class="h6 strong">Категории:</div>
-																		<ul>
-																			<li><a href="#">Офисные и бухгалтерские</a></li>
-																			<li><a href="#">Взломостойкие</a></li>
-																			<li><a href="#">Огнестойкие</a></li>
-																			<li><a href="#">Взломо-огнестойкие</a></li>
-																			<li><a href="#">Мебельные</a></li>
-																			<li><a href="#">Встраиваемые</a></li>
-																			<li><a href="#">Оружейные</a></li>
-																			<li><a href="#">Мини-сейфы для дома</a></li>
-																			<li><a href="#">Автомобильные</a></li>
-																		</ul>
-																	</div>
-																	<div class="col-lg-3 col-sm-6">
-																		<div class="h6 strong">Взломостойкость:</div>
-																		<ul>
-																			<li><a href="#">0 класс</a></li>
-																			<li><a href="#">1 класс</a></li>
-																			<li><a href="#">2 класс</a></li>
-																			<li><a href="#">3 класс</a></li>
-																		</ul>
-																	</div>
-																	<div class="col-lg-3 col-sm-6">
-																		<div class="h6 strong">Огнестойкость:</div>
-																		<ul>
-																			<li><a href="#">60Б — 60 минут</a></li>
-																			<li><a href="#">30Б — 30 минут</a></li>
-																		</ul>
-																	</div>
-																	<div class="col-lg-3 col-sm-6">
-																		<div class="h6 strong">Тип замка:</div>
-																		<ul>
-																			<li><a href="#">Ключевой</a></li>
-																			<li><a href="#">Кодовый электронный</a></li>
-																			<li><a href="#">Кодовый механический</a></li>
-																		</ul>
-																	</div>
-													</div>
-												</div>
-												<div class="tabs__content">
+										<div class="tabss__wrap">
+												<div class="tabss__content active">
 													<div class="row">
 																	<div class="col-lg-3 col-sm-6">
 																		<div class="h6 strong">Категории:</div>
@@ -200,13 +163,13 @@
 							<div class="col-md col-6">
 								<div class="catalog-menu">
 									<div class="catalog-menu__toggle d-md-none">
-										<div class="catalog-menu__toggle-text"> <span></span>Меню
+										<div class="catalog-menu__toggle-text pl-0">Меню
 										</div>
 									</div>
 									<div class="catalog-menu__dropdown catalog-menu__dropdown--menu-top">
 										<div class="menu-top">
 											<ul>
-												<li class="current-menu-item"><a class="scroll-link" href="#s-qwiz"> 
+												<li><a class="scroll-link" href="#s-qwiz"> 
 														<svg class="icon icon-safety-box ">
 															<use xlink:href="img/svg/sprite.svg#safety-box"></use>
 														</svg>Подобрать сейф</a></li>
@@ -250,7 +213,7 @@
 					<div class="row">
 						<div class="logo col-lg-5 col"><a href="#">
 								<div><img src="img/@2x/logo.png" alt=""/></div>
-								<div class="d-none d-md-block">
+								<div class="logo__text">
 									<div class="logo__title">Комплексные системы
 									</div>Продажа сейфов   и&nbsp;металлических&nbsp;стеллажей  с&nbsp;доставкой по&nbsp;Магнитогорску
 								</div></a>
@@ -295,8 +258,8 @@
 						</div>
 						<div class="col-sm-auto order-sm-0 order-last">
 							<div class="develop-block">
-								<div class="develop-block__text">Создание и&nbsp;продвижение  сайта: <a href="#"> Студия &laquo;Барс&raquo;</a>
-								</div><img class="lazy res-i" src="#" data-src="img/@2x/develop.png" alt=""/>
+								<div class="develop-block__text">Создание и&nbsp;продвижение  сайта: <a href="#" target="_blank"> Студия &laquo;Барс&raquo;</a> 
+								</div><a class="develop-block__img-link" href="#" target="_blank"><img class="lazy res-i" src="#" data-src="img/@2x/develop.png" alt=""/></a>
 							</div>
 						</div>
 						<div class="col-lg-5 order-lg-first">

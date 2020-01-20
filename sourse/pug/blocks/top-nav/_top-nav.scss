@@ -306,7 +306,7 @@
 		}
 	}
 
-	.tabs {
+	.tabss {
 		&__caption {
 			display: flex;
 			border-bottom: 1px solid #e9e9e9;
@@ -320,6 +320,7 @@
 			border-bottom: 1px solid transparent;
 			margin-bottom: -1px;
 			color: $secondary;
+			text-decoration: none !important;
 
 			&:hover {
 

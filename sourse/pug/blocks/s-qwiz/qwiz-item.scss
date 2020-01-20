@@ -37,7 +37,13 @@
 	&__title {
 		@extend .h3;
 		font-weight: 500;
-		margin-bottom: rem(80);
+
+		@include media-breakpoint-up(sm) {
+
+			margin-bottom: rem(80);
+		}
+
+		margin-bottom: rem(40);
 	}
 
 	&__footer {
@@ -71,10 +77,11 @@
 
 		&--next {
 			@include media-breakpoint-up(sm) {
-
-				width: rem(239);
+				margin-bottom: 0;
 			}
 
+			margin-bottom: rem(15);
+			width: rem(239);
 			padding-left: rem(15);
 			padding-right: rem(15);
 			@extend .btn-blue;
@@ -147,6 +154,16 @@
 		background-image: repeating-linear-gradient(-60deg, $accent 0%, $accent rem(4), #f99629 rem(4), #f99629 rem(4 * 2));
 		// background-image: repeating-linear-gradient(-60deg, #f99629 0, transparent 0, transparent 4px, #f99629 4px);
 	}
+
+	text-align: center;
+
+	&__text {
+		background-color: #ffffff;
+		border-radius: rem(10);
+		display: inline-block;
+		padding: rem(1) rem(5);
+		line-height: 1;
+	}
 }
 
 .qwiz-radio {
@@ -212,11 +229,22 @@
 	}
 
 	&__text {
-		text-align: center;
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
+		@include media-breakpoint-up(md) {
+
+			text-align: center;
+			// max-width: rem(240);
+		}
+
+		@include media-breakpoint-up(sm) {
+			// margin-left: 0;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		margin-left: rem(50);
 		max-width: rem(190);
+
+		display: block;
 		font-size: rem(14);
 	}
 }

@@ -18,8 +18,9 @@ mixin footer()
 						| Подобрать сейф
 				.col-sm-auto.order-sm-0.order-last
 					+b.develop-block
-						+e.text Создание и&nbsp;продвижение  сайта: #[a(href="#")  Студия &laquo;Барс&raquo;]
-						img.lazy.res-i(src="#" data-src="img/@2x/develop.png", alt="")
+						+e.text Создание и&nbsp;продвижение  сайта: #[a(href="#" target="_blank")  Студия &laquo;Барс&raquo;] 
+						+e.img-link(href="#" target="_blank")
+							img.lazy.res-i(src="#" data-src="img/@2x/develop.png", alt="")
 
 				.col-lg-5.order-lg-first
 					+e.secondary-menu
