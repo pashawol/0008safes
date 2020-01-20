@@ -18,6 +18,7 @@ var JSCCommon = {
 			infobar: false,
 			touch: false,
 			type: 'inline',
+			autoFocus: false,
 			i18n: {
 				en: {
 					CLOSE: "Закрыть",
@@ -143,7 +144,7 @@ function eventHandler() {
 			arrr2 = ' <div class="l">' + icon; // // карусель
 
 	var defaultSlide = {
-		speed: 600,
+		speed: 450,
 		infinite: true,
 		arrows: true,
 		mobileFirst: true,
@@ -183,15 +184,37 @@ function eventHandler() {
 		focusOnSelect: true
 	})); // слайдер конзины
 
-	$('.s-prod-head-images__slider--js').slick(_objectSpread({}, defaultSlide, {
+	$('.s-prod-head-images__slider--js ').slick(_objectSpread({}, defaultSlide, {
 		// arrows: false,
 		dots: false // asNavFor: '.s-prod-head-images__slider--sm-js'
 
+	}));
+	$(' .header-slider-js').slick(_objectSpread({}, defaultSlide, {
+		// arrows: false,
+		dots: false,
+		arrows: false,
+		autoplay: true // asNavFor: '.s-prod-head-images__slider--sm-js'
+
+	})); //    const wow = new WOW({ mobile: false });
+
+	$(' .breadcrumb').slick(_objectSpread({}, defaultSlide, {
+		// arrows: false,
+		dots: false,
+		arrows: false,
+		variableWidth: true,
+		infinite: false
 	})); //    const wow = new WOW({ mobile: false });
 	//         wow.init();
 
 	$(".catalog-menu__toggle").click(function () {
 		$(this).parent().toggleClass('active');
+	});
+	$(document).mouseup(function (e) {
+		var container = $(".catalog-menu.active");
+
+		if (container.has(e.target).length === 0) {
+			container.removeClass('active');
+		}
 	});
 	$(".messanger-block__item--search").click(function () {
 		$(".form-search").slideToggle().find("input").focus();

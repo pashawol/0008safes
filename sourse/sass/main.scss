@@ -41,18 +41,28 @@ $output-bourbon-deprecation-warnings: false;
 .breadcrumb {
   padding-left: 0;
   padding-right: 0;
-  @include media-breakpoint-down(md) {
-    padding-bottom: 0;
+
+  @include media-breakpoint-up(xl) {
+    .slick-track {
+      transform: translate3d(0px, 0px, 0px) !important;
+    }
   }
+
+  @include media-breakpoint-down(md) {
+    padding-bottom: rem(10);
+  }
+
   a {
     &:hover {
       text-decoration: none;
       color: #398bff;
     }
+
     &:active {
       color: #1c61c1;
     }
   }
+
   .active {
     a {
       color: $breadcrumb-active-color;
@@ -65,19 +75,22 @@ $output-bourbon-deprecation-warnings: false;
   ol.breadcrumb {
     padding-bottom: rem(0);
     // margin-bottom: rem(0);
-    
+
   }
+
   .back-to-main {
-    @include media-breakpoint-down(lg){
+    @include media-breakpoint-down(lg) {
       padding-bottom: rem(30);
       padding-top: rem(10);
     }
-    a{
+
+    a {
       letter-spacing: rem(0.32);
       color: $secondary;
       position: relative;
       padding-bottom: rem(3);
       border-bottom: 1px solid #dedede;
+
       &::after {
         content: '';
         width: rem(10);
@@ -89,21 +102,26 @@ $output-bourbon-deprecation-warnings: false;
         border-left: solid 1px #808080;
         transform: rotate(45deg);
       }
+
       &:hover {
         text-decoration: none;
       }
     }
   }
 }
+
 .return-beginning {
   padding-top: rem(25);
+
   @include media-breakpoint-up(md) {
     padding-left: rem(45);
   }
+
   a {
     text-decoration: underline;
   }
 }
+
 @import "./node_modules/bootstrap/scss/pagination";
 
 .pagination-wrapper ul {

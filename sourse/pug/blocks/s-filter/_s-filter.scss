@@ -1,6 +1,8 @@
 .s-filter {
 	margin-bottom: rem(47);
 
+	&__btn--js {}
+
 	&-wrap {
 
 		// min-height: calc(100% - 28px);
@@ -219,13 +221,15 @@
 
 	&__btn {
 		@extend .btn;
-		@extend .btn-sm;
-		font-weight: 500;
+		// @extend .btn-sm;
+		// font-weight: 500;
 		font-size: rem(16);
 		padding: rem(14) rem(10);
 		// @extend .btn-dark;
 		@include mt;
-		@extend .btn-block;
+		// @extend .btn-block;
+
+		width: rem(240);
 
 		&--outline {
 			background-color: transparent;
@@ -251,10 +255,17 @@
 	}
 
 	&__btn--js {
-		border: 2px solid $primary !important;
+		// border: 2px solid $primary !important;
+		border: 2px solid #398bff;
+		text-transform: none;
+		color: $primary;
 
+		&:hover,
 		&.active {
-			background-color: transparent;
+			// background-color: #398bff;
+			border-color: $primary;
+			// color: #ffffff;
+
 
 			&::before,
 			&::after {

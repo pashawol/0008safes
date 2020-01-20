@@ -11,6 +11,7 @@ const JSCCommon = {
 			infobar: false,
 			touch: false,
 			type: 'inline',
+			autoFocus: false,
 			i18n: {
 				en: {
 					CLOSE: "Закрыть",
@@ -153,12 +154,13 @@ function eventHandler() {
 	// // карусель
 
 	const defaultSlide = {
-		speed: 600,
+		speed: 450,
 		infinite: true,
 		arrows: true,
 		mobileFirst: true,
 		prevArrow: arrr2,
 		nextArrow: arrl2,
+
 		// autoplay: true,
 		autoplaySpeed: 6000,
 		lazyLoad: 'progressive',
@@ -202,13 +204,33 @@ function eventHandler() {
 
 		focusOnSelect: true
 	});
-	
+
 	// слайдер конзины
-	$('.s-prod-head-images__slider--js').slick({
+	$('.s-prod-head-images__slider--js ').slick({
 		...defaultSlide,
 		// arrows: false,
 		dots: false,
+
 		// asNavFor: '.s-prod-head-images__slider--sm-js'
+	});
+
+	$(' .header-slider-js').slick({
+		...defaultSlide,
+		// arrows: false,
+		dots: false,
+		arrows: false,
+		autoplay: true,
+		// asNavFor: '.s-prod-head-images__slider--sm-js'
+	});
+
+	//    const wow = new WOW({ mobile: false });
+	$(' .breadcrumb').slick({
+		...defaultSlide,
+		// arrows: false,
+		dots: false,
+		arrows: false,
+		variableWidth: true,
+		infinite: false
 	});
 
 	//    const wow = new WOW({ mobile: false });
@@ -216,6 +238,13 @@ function eventHandler() {
 	$(".catalog-menu__toggle").click(function () {
 		$(this).parent().toggleClass('active');
 	})
+
+	$(document).mouseup(function (e) {
+		var container = $(".catalog-menu.active");
+		if (container.has(e.target).length === 0) {
+			container.removeClass('active');
+		}
+	});
 	$(".messanger-block__item--search").click(function () {
 		$(".form-search").slideToggle().find("input").focus();
 	})

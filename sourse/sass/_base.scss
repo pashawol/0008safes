@@ -22,7 +22,7 @@ body,
 html {
 	// min-height: 8000px;
 
-	@media (min-width: 1200px) {
+	@media (min-width: 992px) {
 
 		font-size: $em-base;
 	}
@@ -68,6 +68,7 @@ html {
 
 	padding-bottom: rem(85 / 2);
 
+	.h2,
 	h2 {
 		line-height: 1.4;
 
@@ -327,7 +328,9 @@ body {
 		}
 
 		svg {
+
 			path {
+				@include mt;
 				fill: #fff !important;
 			}
 		}
@@ -508,7 +511,7 @@ input::-webkit-inner-spin-button {
 				&::after {
 					content: 'Назад';
 					left: 100%;
-					margin-left: rem(10);
+					padding-left: rem(10);
 				}
 			}
 
@@ -516,57 +519,10 @@ input::-webkit-inner-spin-button {
 				&::after {
 					content: 'Вперед';
 					right: 100%;
-					margin-right: rem(10);
+					padding-right: rem(10);
 				}
 			}
 
-		}
-	}
-}
-
-.swiper-button-hand {
-	width: 45px;
-	height: 16px;
-	@include bgs;
-	z-index: 300;
-	outline: none !important;
-	// margin-bottom: 0;
-	background-image: none;
-	margin: 0;
-	@include a-cent(y);
-
-	&-next {
-		// background-image: url(../img/arr-right.png);
-		right: 0;
-	}
-
-	&-prev {
-		left: 0;
-		// background-image: url(../img/arr-left.png);
-
-	}
-
-}
-
-.swiper-pagination {
-	width: 100%;
-	text-align: center;
-
-	&-bullet {
-		opacity: 1;
-		width: 8px;
-		height: 8px;
-		border-radius: 50%;
-		background-color: $secondary;
-		outline: none !important;
-		@include mt;
-		margin-left: rem(8);
-		// padding-right: rem(8);
-		margin-right: rem(5);
-
-		&-active,
-		&:hover {
-			background-color: $primary;
 		}
 	}
 }
