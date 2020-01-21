@@ -11,16 +11,20 @@
 			padding-bottom: rem(12);
 			margin-bottom: rem(35);
 			a {
-				@extend h4;
+				font-size: rem(17);
+				@include media-breakpoint-up(lg){
+					font-size: rem(22);
+				}
 				display: inline-block;
 				color: #a2a2a2;
 				border-bottom: 1px dashed transparent;
 				@include media-breakpoint-down(sm) {
 					padding-top: rem(10);
+					padding-bottom: rem(10);
 				}
 				&:hover {
 					text-decoration: none;
-					border-bottom: 1px dashed $secondary;
+					border-bottom: 1px dashed transparent;
 				}
 			}
 			.active {

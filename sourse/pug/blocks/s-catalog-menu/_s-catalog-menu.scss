@@ -33,7 +33,7 @@
 		padding-left: rem(15);
 		padding-right: rem(15);
 		padding-bottom: rem(44);
-		@include mt;
+		@include mt(1);
 	}
 
 	&__item:hover &__hover-block {
@@ -46,8 +46,9 @@
 	}
 
 	&__item {
-
-		box-shadow: 3px 2px 35px rgba(154, 187, 206, 0.17);
+		max-width: rem(361);
+		margin: 0 auto;
+		box-shadow: 3px 2px rem(35) rgba(154, 187, 206, 0.17);
 		display: block;
 		overflow: hidden;
 		margin-bottom: rem(27);
@@ -61,7 +62,7 @@
 		h3 {
 			padding-top: rem(30);
 			// padding-bottom: rem(30);
-			letter-spacing: 0.48px;
+			letter-spacing: rem(0.48);
 		}
 
 		img {
