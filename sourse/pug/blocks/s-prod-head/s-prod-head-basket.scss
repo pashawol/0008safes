@@ -20,7 +20,9 @@
 			order: 3;
 		}
 	}
-
+	.s-prod-head-images {
+		max-width: rem(415);
+	}
 	.s-prod-head-sidebar {
 		background-color: transparent;
 		display: flex;
@@ -162,11 +164,16 @@
 			letter-spacing: 0.48px;
 		}
 		button {
-			margin-bottom: rem(37);
+			margin-bottom: rem(30);
 			@extend .btn-blue;
 			width: 100%;
 			min-height: rem(75);
-			margin-bottom: rem(30);
+			@include media-breakpoint-down(sm){
+				max-width: rem(332);
+				margin: 0 auto;
+				margin-top: rem(20);
+				margin-bottom: rem(40);
+			}
 
 		}
 
