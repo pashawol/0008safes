@@ -180,10 +180,8 @@
 	}
 
 	.how-to-get {
-		max-width: rem(390);
-		@include media-breakpoint-down(md){
-			margin: 0 auto;
-		}
+
+
 		h2 {
 			@extend h2;
 			padding-bottom: rem(40);
@@ -232,10 +230,10 @@
 			}
 
 			ul {
-
+				max-width: rem(390);
 				padding: rem(54) rem(45) rem(46) rem(33);
 				background-color: #fff;
-				box-shadow: 3px 2px 35px rgba(154, 187, 206, 0.17);
+				box-shadow: 3px 2px rem(35) rgba(154, 187, 206, 0.17);
 				border-radius: $border-radius-lg;
 
 				li {

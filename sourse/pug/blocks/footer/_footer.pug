@@ -19,8 +19,10 @@ mixin footer()
 				.col-sm-auto.order-sm-0.order-last
 					+b.develop-block
 						+e.text Создание и&nbsp;продвижение  сайта: #[a(href="#" target="_blank")  Студия &laquo;Барс&raquo;] 
-						+e.img-link(href="#" target="_blank")
-							img.lazy.res-i(src="#" data-src="img/@2x/develop.png", alt="")
+						+b.develop-link(href="#" target="_blank")
+							+e.panel
+								img.img-1(src="img/svg/hand.svg", alt="")
+								img.img-2(src="img/svg/logo-text.svg", alt="")
 
 				.col-lg-5.order-lg-first
 					+e.secondary-menu
