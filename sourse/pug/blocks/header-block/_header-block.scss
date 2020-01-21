@@ -44,6 +44,8 @@
 	&__price {
 		text-align: center;
 		@extend .h5;
+		z-index: 10;
+		position: relative;
 		letter-spacing: rem(0.4px);
 		line-height: 1.4;
 
