@@ -226,6 +226,11 @@
 	.form-wrap__group-title {
 		color: $body-color;
 		letter-spacing: 0.4px;
-		padding-top: rem(40);
+		padding-top: rem(10);
+	}
+	.corrective-margin {
+		h5 {
+			margin-bottom: rem(7);
+		}
 	}
 }
