@@ -180,6 +180,10 @@
 	}
 
 	.how-to-get {
+		max-width: rem(390);
+		@include media-breakpoint-down(md){
+			margin: 0 auto;
+		}
 		h2 {
 			@extend h2;
 			padding-bottom: rem(40);

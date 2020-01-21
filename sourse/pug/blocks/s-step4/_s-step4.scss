@@ -46,6 +46,9 @@
 			}
 			h3 {
 				padding-top: rem(8);
+				@include media-breakpoint-down (md){
+					padding-bottom: rem(35);
+				}
 			}
 			.form-wrap {
 				margin-right: rem(20);
@@ -68,6 +71,7 @@
 			margin: 0 auto;
 			a {
 				color: $body-color;
+				display: inline-block;
 				&:hover {
 					text-decoration: none;
 					color: #398bff;
