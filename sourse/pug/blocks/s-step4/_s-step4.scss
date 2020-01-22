@@ -61,7 +61,7 @@
 		}
 		h4 {
 			padding-bottom: rem(10);
-			letter-spacing: 0.44px;
+			letter-spacing: rem(0.44);
 		}
 		p {
 			font-family: "Open Sans";
@@ -90,7 +90,7 @@
 			&__name {
 				// display: inline-block;
 				background-color: $accent;
-				border-radius: 5px;
+				border-radius: rem(5);
 				color: #ffffff;
 				padding: rem(18) rem(69);
 			}
@@ -98,7 +98,7 @@
 				padding: rem(20) rem(36) rem(13);
 				background-color: #f1f1f1;
 				display: block;
-				border-radius: 5px;
+				border-radius: rem(5);
 				color: #404040;
 				min-width: rem(300);
 				position: absolute;

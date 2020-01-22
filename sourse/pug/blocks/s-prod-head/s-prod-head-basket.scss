@@ -48,6 +48,7 @@
 				background-color: #fdfdfd;
 				margin-left: rem(7);
 				margin-right: rem(7);
+				@include mt;
 				&:hover {
 					border: 1px solid #398bff;
 				}
@@ -63,6 +64,7 @@
 				height: rem(40);
 				border: 1px solid transparent;
 				border-radius: 2px;
+				@include mt;
 				&:hover {
 					border: 1px solid #398bff;
 				}
@@ -94,7 +96,7 @@
 		&__amount {
 			font-size: rem(24);
 			font-weight: 700;
-			letter-spacing: 0.48px;
+			letter-spacing: rem(0.48);
 			line-height: 1.7;
 		}
 		&__remove {
@@ -142,7 +144,7 @@
 	}
 	.to-order {
 		font-size: rem(20);
-		letter-spacing: 0.4px;
+		letter-spacing: rem(0.4);
 		text-align: center;
 		h5 {
 			padding-top: rem(8);
@@ -161,7 +163,7 @@
 			@include media-breakpoint-down(sm) {
 				text-align: center;
 			}
-			letter-spacing: 0.48px;
+			letter-spacing: rem(0.48);
 		}
 		button {
 			margin-bottom: rem(30);
