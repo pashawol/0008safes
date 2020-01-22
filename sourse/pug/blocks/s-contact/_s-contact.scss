@@ -28,7 +28,7 @@
 				li {
 					list-style: none;
 					// padding-bottom: rem(5);
-					letter-spacing: 0.5px;
+					letter-spacing: rem(0.5);
 					@extend h3;
 
 					a {
@@ -75,7 +75,7 @@
 
 			h4 {
 				line-height: 1.36;
-				letter-spacing: 0.44px;
+				letter-spacing: rem(0.44);
 
 				@include media-breakpoint-down(sm) {
 					padding-bottom: rem(10);
@@ -159,13 +159,13 @@
 
 	&__warehouse {
 		h2 {
-			letter-spacing: 0.66px;
+			letter-spacing: rem(0.66);
 			// line-height: 0.67;
 			padding-bottom: rem(13);
 		}
 
 		h5 {
-			letter-spacing: 0.4px;
+			letter-spacing: rem(0.4);
 			padding-bottom: rem(35);
 		}
 
@@ -250,7 +250,7 @@
 
 					span {
 						font-weight: 400;
-						letter-spacing: 0.36px;
+						letter-spacing: rem(0.36);
 
 					}
 

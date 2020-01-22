@@ -162,14 +162,12 @@
 			padding: rem(20) rem(25);
 			border: 1px solid #ced4da;
 			font-size: rem(20);
-			font-family: "Open Sans";
-			font-weight: 400;
 		}
 
 		.address {
 			height: rem(100);
 			line-height: 1.4;
-			letter-spacing: 0.4px;
+			letter-spacing: rem(0.4);
 			margin-bottom: rem(20);
 		}
 

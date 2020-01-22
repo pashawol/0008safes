@@ -45,9 +45,9 @@ mixin s-step2()
 					+form-wrap
 						+input("Иван","text",'Имя и фамилия',"name")(required)
 						h5 Введите адрес доставки
-						textarea.address(placeholder="г. Магнитогосрк, 50 Лет Октября пр., д.118, кв.124")
+						+input('г. Магнитогосрк, 50 Лет Октября пр., д.118, кв.124', 'textarea')(class="address")
 						h5 Напишите комментарий, если хотите
-						textarea(placeholder="Например, можно ли заказать доставку в нерабочее время")
+						+input("Например, можно ли заказать доставку в нерабочее время" ,'textarea')
 			.row.justify-content-center.bottom-button
 				.col-lg-5
 					+b.form-wrap
