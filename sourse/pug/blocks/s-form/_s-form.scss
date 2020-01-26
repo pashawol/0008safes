@@ -2,6 +2,20 @@
 .s-form2 {
 	background-color: #f7f7f7;
 
+	&--main {
+		.col-xl-7 {
+			display: flex;
+			flex-direction: column;
+			align-self: initial !important;
+			justify-content: space-between;
+			// height: 100%;
+		}
+	}
+
+	.section-title.d-none.d-lg-block {
+		margin-bottom: auto;
+	}
+
 	h5 {
 		font-weight: normal;
 		line-height: 1.4;
@@ -228,6 +242,7 @@
 		letter-spacing: 0.4px;
 		padding-top: rem(10);
 	}
+
 	.corrective-margin {
 		h5 {
 			margin-bottom: rem(7);

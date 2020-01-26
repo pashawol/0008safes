@@ -139,11 +139,32 @@
 
   @include media-breakpoint-down(lg) {}
 
-  @include media-breakpoint-down(md) {}
+  @include media-breakpoint-down(md) {
+    .messanger-block {
+      justify-content: initial;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+  }
 
   @include media-breakpoint-down(sm) {}
 
-  @include media-breakpoint-down(xs) {}
+  @include media-breakpoint-down(xs) {
+    .logo {
+      img {
+        max-width: 75px;
+      }
+
+      &__title {
+        padding-top: 15px;
+      }
+    }
+
+    .logo__text-inner {
+      display: none;
+    }
+  }
 }
 
 .develop-block {
