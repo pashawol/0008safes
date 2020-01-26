@@ -75,7 +75,9 @@
 	//
 	@include media-breakpoint-down(xl) {}
 
-	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-only(md) {
+		margin-left: auto;
+	}
 
 	@include media-breakpoint-down(md) {}
 
@@ -86,3 +88,10 @@
 }
 
 // end.s-prod-head
+.s-prod-head__footer-text {
+	@include media-breakpoint-only(md) {
+		margin-left: auto;
+		max-width: 23.75rem;
+		padding-right: rem(40);
+	}
+}
