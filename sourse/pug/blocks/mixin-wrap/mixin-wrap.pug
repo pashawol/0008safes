@@ -24,7 +24,7 @@ mixin page-head(...items)
 		.container
 			+breadcrumb(...items)
 			block
-		
+ 
 //- pugination
 mixin pugin()
  
@@ -229,6 +229,7 @@ mixin ie11()
 	//- modernizer and for ie11
 	 
 	<!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
+
 mixin logo()
 	+b.logo&attributes(attributes)
 		a(href="#")
@@ -236,7 +237,7 @@ mixin logo()
 				img(src="img/@2x/logo.png", alt="")
 			+e.DIV.text
 				+e.DIV.title Комплексные системы
-				| Продажа сейфов   и&nbsp;металлических&nbsp;стеллажей  с&nbsp;доставкой по&nbsp;Магнитогорску
+				+e.DIV.text-inner  Продажа сейфов   и&nbsp;металлических&nbsp;стеллажей  с&nbsp;доставкой по&nbsp;Магнитогорску
 mixin search()
 	+b.form-search.d-lg-block
 		form
@@ -244,10 +245,14 @@ mixin search()
 			+e.BUTTON.btn(type="button")
 				+icon("search")
 
-mixin contact-block()
+mixin contact-block(t)
 	+b.contact-block
-		.d-lg-block.d-none
-			+e.tel(href="tel:+7(3519)22-00-00") +7 (3519) 22-00-00
+		if !t
+			.d-lg-block.d-none
+				+e.tel(href="tel:+7(3519)22-00-00") +7 (3519) 22-00-00
+		else
+			div
+				+e.tel(href="tel:+7(3519)22-00-00") +7 (3519) 22-00-00
 		
 		+e.link.link-modal(href="#modal-call") Заказать звонок
 		+b.messanger-block
@@ -256,9 +261,10 @@ mixin contact-block()
 			
 			+e.item--whatsapp(href="#")
 				+icon("whatsapp")
+			if !t
+				+e.item--tel.d-lg-none(href="tel:+7(3519)22-00-00")
+					+icon("tel")
 			
-			+e.item--tel.d-lg-none(href="tel:+7(3519)22-00-00")
-				+icon("tel")
-			
-			+e.item--search.d-lg-none(type="button")
-				+icon("search")
+			if !t
+				+e.item--search.d-lg-none(type="button")
+					+icon("search")

@@ -48,7 +48,7 @@
 		font-weight: normal;
 		// color: #5d5d5d;
 		display: block;
-		padding-bottom: rem(19);
+		padding-bottom: rem(8);
 
 		@include media-breakpoint-up(md) {
 
@@ -210,7 +210,7 @@
 
 .toggle-wrap-input-js {
 	display: none;
-	padding-top: rem(10);
+	padding-top: rem(30);
 }
 
 
