@@ -1,5 +1,11 @@
 // start .s-prod-head
 .s-prod-head {
+	@include media-breakpoint-only(md) {
+		&__sidebar-wrap {
+			margin-left: auto;
+			max-width: rem(380);
+		}
+	}
 
 	@include media-breakpoint-up(sm) {
 

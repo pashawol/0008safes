@@ -96,7 +96,6 @@
 
   @include media-breakpoint-only(sm) {}
 
-  @include media-breakpoint-only(md) {}
 
   @include media-breakpoint-only(lg) {}
 
@@ -123,6 +122,12 @@
 
   @include media-breakpoint-down(sm) {
 
+
+    .logo {
+      img {
+        max-width: 60px;
+      }
+    }
 
     .logo__title {
       display: none;
