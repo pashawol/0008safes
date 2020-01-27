@@ -161,6 +161,7 @@
       }
     }
 
+    .logo__title,
     .logo__text-inner {
       display: none;
     }
@@ -221,6 +222,7 @@
   position: relative;
   transform: scale(.96);
   backface-visibility: visible;
+  margin-top: rem(15);
 
   &:hover {
     transform: scale(1);

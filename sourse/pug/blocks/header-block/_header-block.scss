@@ -98,6 +98,29 @@
 		margin-right: rem(-20);
 	}
 
+	@media (min-width: 1200px) and (max-width: 1439.98px) {
+		padding-top: rem(20);
+
+		h1 {
+			font-size: 2.2rem;
+			margin-bottom: 1rem;
+		}
+
+		P {
+			font-size: 1.36rem;
+		}
+
+		&__img-wrap {
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		.garanty {
+			width: rem(168);
+			padding: rem(20) 0 rem(20);
+		}
+	}
+
 	// 
 	@include media-breakpoint-up(xl) {}
 
