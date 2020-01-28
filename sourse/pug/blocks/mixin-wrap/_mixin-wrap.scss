@@ -242,12 +242,13 @@
 
  		&--search {
  			border: 1px solid $secondary;
- 			background-color: transparent;
+ 			background-color: transparent !important;
  			// width: rem(32);
  			// height: rem(32);
+ 			outline: none !important;
 
  			.icon-loupe2 {
- 				color: $secondary;
+ 				color: $secondary !important;
 
  				font-size: rem(20);
  				// height: 1em;
