@@ -192,7 +192,8 @@
 
  		.icon {
  			color: #ffffff;
- 			font-size: rem(19);
+			 font-size: rem(19);
+			 flex-shrink: 0;
 
  		}
 
@@ -208,7 +209,11 @@
  		}
 
  		&--tel {
- 			background-color: var(--teal);
+			 background-color: var(--teal);
+			 .icon{
+
+				 font-size: rem(16);
+				}
 
  			&:hover {
  				// background-color: darken($color: #{var(--teal)}, $amount: 10);
@@ -232,7 +237,15 @@
  				background-color: darken($color: #25d366, $amount: 10);
 
  			}
- 		}
+		 }
+		 &--search{
+			.icon-loupe2{
+
+				font-size: rem(20);
+				// height: 1em;
+				// width: 30px;
+			 }
+		 }
 
  	}
  }
