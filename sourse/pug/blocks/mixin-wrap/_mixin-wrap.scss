@@ -192,8 +192,8 @@
 
  		.icon {
  			color: #ffffff;
-			 font-size: rem(19);
-			 flex-shrink: 0;
+ 			font-size: rem(19);
+ 			flex-shrink: 0;
 
  		}
 
@@ -209,11 +209,12 @@
  		}
 
  		&--tel {
-			 background-color: var(--teal);
-			 .icon{
+ 			background-color: var(--teal);
 
-				 font-size: rem(16);
-				}
+ 			.icon {
+
+ 				font-size: rem(16);
+ 			}
 
  			&:hover {
  				// background-color: darken($color: #{var(--teal)}, $amount: 10);
@@ -237,15 +238,22 @@
  				background-color: darken($color: #25d366, $amount: 10);
 
  			}
-		 }
-		 &--search{
-			.icon-loupe2{
+ 		}
 
-				font-size: rem(20);
-				// height: 1em;
-				// width: 30px;
-			 }
-		 }
+ 		&--search {
+ 			border: 1px solid $secondary;
+ 			background-color: transparent;
+ 			// width: rem(32);
+ 			// height: rem(32);
+
+ 			.icon-loupe2 {
+ 				color: $secondary;
+
+ 				font-size: rem(20);
+ 				// height: 1em;
+ 				// width: 30px;
+ 			}
+ 		}
 
  	}
  }
