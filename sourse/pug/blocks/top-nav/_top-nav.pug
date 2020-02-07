@@ -49,7 +49,10 @@ mixin top-nav()
 							+b.menu-top
 								ul
 									li: a.scroll-link(href="#s-qwiz") 
-										+icon("safety-box")
+										.menu-icon
+											.menu-image-hover-wrapper
+												img(src="img/svg/safety-box.svg", alt="")
+												img(src="img/svg/safety-box-blue.svg", alt="")
 										| Подобрать сейф
 									li: a(href="#") Доставка и оплата
 									li: a(href="#") Контакты
