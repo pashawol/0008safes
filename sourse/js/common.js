@@ -1,3 +1,4 @@
+var $ = jQuery;
 const JSCCommon = {
 	// часть вызов скриптов здесь, для использования при AJAX
 	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js")),
@@ -131,7 +132,7 @@ function eventHandler() {
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/7.png);"></div>')
+	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/7.png);"></div>')
 	// /добавляет подложку для pixel perfect
 
 

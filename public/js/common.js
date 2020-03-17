@@ -6,6 +6,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+var $ = jQuery;
 var JSCCommon = {
 	// часть вызов скриптов здесь, для использования при AJAX
 	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js")),
@@ -126,8 +127,8 @@ function eventHandler() {
 
 	JSCCommon.inputMask(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/7.png);"></div>'); // /добавляет подложку для pixel perfect
+	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/7.png);"></div>')
+	// /добавляет подложку для pixel perfect
 	// /закрыть/открыть мобильное меню
 	// листалка по стр
 

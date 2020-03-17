@@ -91,6 +91,7 @@ $output-bourbon-deprecation-warnings: false;
       padding-bottom: rem(3);
       border-bottom: 1px solid #dedede;
       @include mt(1);
+
       &::after {
         content: '';
         width: rem(10);
@@ -130,6 +131,7 @@ $output-bourbon-deprecation-warnings: false;
   justify-content: center;
   @extend .h4;
   vertical-align: bottom;
+
 
   @include media-breakpoint-up(sm) {
 
@@ -198,3 +200,21 @@ $output-bourbon-deprecation-warnings: false;
 @import "base";
 @import '../pug/blocks/**/*.scss';
 @import "media"; // Всегда в конце
+
+// @import "menu-image";
+
+.menu-image-hover-wrapper {
+  position: relative;
+  width: 32px;
+  height: 36px !important;
+  margin-right: 10px;
+  display: block;
+
+  img {
+    margin-right: 0 !important;
+    width: 32px !important;
+    height: 27px !important;
+    position: absolute;
+    @include a-cent(y);
+  }
+}
