@@ -287,7 +287,7 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-sm"><a class="footer__btn" href="#">
+						<div class="col-sm"><a class="footer__btn link-modal" href="#modal-call-other">
 							<svg class="icon icon-safety-box ">
 								<use xlink:href="img/svg/sprite.svg#safety-box"></use>
 							</svg>Подобрать сейф</a>
@@ -360,6 +360,77 @@
 				</div>
 			</div>
 			<!-- #modal-pdf-->
+			<div class="form-wrap modal-win modal-win--call modal-form" id="modal-call-other">
+				<form>
+					<input class="order" type="hidden" name="order"/> 
+					<div class="form-wrap__top-title">Для оформления заказа оставьте ваши контакты
+					</div>
+					<div class="form-wrap__text form-wrap__text--sm">Специалист компании Александр позвонит вам прямо сейчас или в&nbsp;другое рабочее время: мы&nbsp;работаем пн-пт с&nbsp;10:00 до&nbsp;18:00
+					</div>
+					<input type="hidden" name="formwithtime" value="formwithtime"/>
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__title">Как к вам обращаться?</span><input class="form-wrap__input form-control" type="text" placeholder="Иван" name="text"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="tabs">
+						<div class="form-wrap__group">
+							<div class="form-wrap__group-title">Как с вами связаться?
+							</div>
+							<div class="tabs__caption">
+								<div class="tabs__btn active">
+									<svg class="icon icon-tel ">
+										<use xlink:href="img/svg/sprite.svg#tel"></use>
+									</svg>Звонок 
+								</div>
+								<div class="tabs__btn">
+									<svg class="icon icon-viber ">
+										<use xlink:href="img/svg/sprite.svg#viber"></use>
+									</svg>Viber
+								</div>
+								<div class="tabs__btn">
+									<svg class="icon icon-whatsapp ">
+										<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+									</svg>WhatsApp
+								</div>
+							</div>
+						</div>
+						<div class="tabs__wrap">
+							<div class="tabs__content active">
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__title">Введите телефон:</span><input class="form-wrap__input form-control" type="tel" placeholder="+7 (999) 999-99-99" name="tel" required="required"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+							<div class="tabs__content">
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__title">Введите viber:</span><input class="form-wrap__input form-control" type="tel" placeholder="+7 (999) 999-99-99" name="viber"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+							<div class="tabs__content">
+								<div class="form-wrap__input-wrap form-group">
+									<label><span class="form-wrap__title">Введите whatsapp:</span><input class="form-wrap__input form-control" type="tel" placeholder="+7 (999) 999-99-99" name="whatsapp"/>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+						</div>
+					</div>
+					<div class="form-wrap__input-wrapper">
+						<label class="text-center">Напишите комментарии, если хотите</label>
+						<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" placeholder="Текст сообщения" name="textarea"></textarea>
+						</div>
+						<!-- +e.input-wrap-->
+					</div>
+					<button class="form-wrap__btn" type="submit">Заказать звонок
+					</button>
+					<div class="form-wrap__polite text-secondary"> Нажимая на&nbsp;кнопку, вы&nbsp;даете согласие на&nbsp;обработку своих персональных данных и&nbsp;соглашаетесь с&nbsp;<a class="tdu text-secondary" href="privacy-policy.pdf" target="_blank">Политикой конфиденциальности</a>
+					</div>
+				</form>
+			</div>
 			<!-- modal-->
 		</div>
 		<script src="js/lazy.js"></script>
