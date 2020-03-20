@@ -39,9 +39,16 @@
 			letter-spacing: inherit;
 		}
 
+		&__frame-wrapper {
+			@include block(560, 315);
+			position: relative;
+		}	
+
+		
 		iframe {
-			width: 100%;
-			height: rem(600);
+			width: 100% !important;
+			height: 100% !important;
+			@include a-cent;
 		}
 	}
 	@include media-breakpoint-up(xl) {

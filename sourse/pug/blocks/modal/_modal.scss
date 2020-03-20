@@ -182,30 +182,30 @@
 			margin-left: auto;
 		}
 
-		.form-wrap__input-wrapper {
-			label {
-				padding-bottom: rem(9);
-				margin-bottom: rem(23);
-				padding-top: rem(10);
-				max-width: rem(350);
-				display: block;
-				letter-spacing: rem(0.36px);
-				text-align: center;
-				@extend .h6;
-				font-weight: 500;
-				margin-left: auto;
-				margin-right: auto;
-				position: relative;
-				&::before {
-					content: '';
-					position: absolute;
-					bottom: 0;
-					display: block;
-					width: 100%;
-					height: 2px;
-					border-bottom: dashed 2px $body-color;
-				}
+		.form-wrap__comment {
+			padding-bottom: rem(9);
+			margin-bottom: rem(23);
+			padding-top: rem(10);
+			max-width: rem(350);
+			display: block;
+			letter-spacing: rem(0.36px);
+			text-align: center;
+			cursor: pointer;
+			@include mt;
+			@extend .h6;
+			font-weight: 500;
+			margin-left: auto;
+			margin-right: auto;
+			position: relative;
+			border-bottom: dashed 2px $body-color;
+
+			&:hover {
+				border-bottom: dashed 2px transparent;
 			}
+		}
+
+		.form-wrap__toggle-block {
+			display: none;
 		}
 	}
 }

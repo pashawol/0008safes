@@ -264,6 +264,11 @@ function eventHandler() {
 		$(".s-filter-wrap").toggle();
 	})
 
+	// 
+	$(".form-wrap__comment--js").click(function () {
+		$('.form-wrap__toggle-block--js').toggle();
+	});
+	
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

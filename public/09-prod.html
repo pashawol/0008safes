@@ -314,12 +314,10 @@
 												<use xlink:href="img/svg/sprite.svg#vault"></use>
 											</svg><strong>Помощь с установкой</strong>Если нужно, поможем установить  или встроить 
 										</li>
-									</ul>
-									<button class="s-prod-head-sidebar__btn" type="button">
-										<svg class="icon icon-cart ">
-											<use xlink:href="img/svg/sprite.svg#cart"></use>
-										</svg>В корзину
-									</button>
+									</ul><a class="s-prod-head-sidebar__btn link-modal" href="#modal-call-other">
+									<svg class="icon icon-cart ">
+										<use xlink:href="img/svg/sprite.svg#cart"></use>
+									</svg>В корзину</a>
 								</div>
 								<div class="s-prod-head__footer-text">*При оформлении заказа  уточняйте&nbsp;цену по&nbsp;т: <a href="tel:8(3519)22-00-22">8 (3519) 22-00-22</a>
 								</div>
@@ -581,7 +579,9 @@
 								</div>
 								<p>AIKO - очень популярная марка российского рынка домашних (мебельных) и&nbsp;офисных сейфов и&nbsp;шкафов которые также могут использоваться в&nbsp;качестве недорогих сейфов для хранения оружия, от&nbsp;крупнейшего Российского производителя. <br>Сейфы комплектуются замками, а&nbsp;также внутренними деталями и&nbsp;аксессуарами: полками, ложементами, трейзерами и&nbsp;тп.<br>Большое разнообразие сейфов и&nbsp;шкафов как по&nbsp;назначению так и&nbsp;по&nbsp;цене, оптом и&nbsp;в&nbsp;розницу с&nbsp;доставкой</p>
 							</div>
-							<div class="tabs__content"><iframe height="315" src="https://www.youtube.com/embed/9XaS93WMRQQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<div class="tabs__content">
+								<div class="tabs__frame-wrapper"><iframe src="https://www.youtube.com/embed/9XaS93WMRQQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -625,7 +625,7 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-sm"><a class="footer__btn link-modal" href="#modal-call-other">
+						<div class="col-sm"><a class="footer__btn" href="#">
 							<svg class="icon icon-safety-box ">
 								<use xlink:href="img/svg/sprite.svg#safety-box"></use>
 							</svg>Подобрать сейф</a>
@@ -758,10 +758,13 @@
 						</div>
 					</div>
 					<div class="form-wrap__input-wrapper">
-						<label class="text-center">Напишите комментарии, если хотите</label>
-						<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" placeholder="Текст сообщения" name="textarea"></textarea>
+						<div class="form-wrap__comment form-wrap__comment--js text-center">Напишите комментарии, если хотите
 						</div>
-						<!-- +e.input-wrap-->
+						<div class="form-wrap__toggle-block form-wrap__toggle-block--js">
+							<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" placeholder="Текст сообщения" name="textarea"></textarea>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
 					</div>
 					<button class="form-wrap__btn" type="submit">Заказать звонок
 					</button>

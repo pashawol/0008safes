@@ -37,8 +37,9 @@ mixin modal()
 			+input('Иван', 'text', 'Как к вам обращаться?')
 			+form-tabs3()
 			+e.input-wrapper
-				label.text-center Напишите комментарии, если хотите
-				+input('Текст сообщения', 'textarea')
+				+e.comment--js.text-center Напишите комментарии, если хотите
+				+e.toggle-block--js
+					+input('Текст сообщения', 'textarea')
 			+e.btn(type='submit') Заказать звонок
 			+polite
 		// modal
