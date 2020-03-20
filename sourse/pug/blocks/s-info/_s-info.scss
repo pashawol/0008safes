@@ -7,6 +7,9 @@
 	.tabs {
 		&__caption {
 			display: flex;
+			@include media-breakpoint-down(xs){
+				flex-direction: column;
+			}
 			padding-bottom: rem(37);
 		}
 
