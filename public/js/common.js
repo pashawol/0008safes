@@ -127,7 +127,7 @@ function eventHandler() {
 
 	JSCCommon.inputMask(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/7.png);"></div>')
+ 
 	// /добавляет подложку для pixel perfect
 	// /закрыть/открыть мобильное меню
 	// листалка по стр
@@ -230,6 +230,10 @@ function eventHandler() {
 	$(".s-filter__btn--js").click(function () {
 		$(this).toggleClass('active').find("strong").toggleClass("d-none");
 		$(".s-filter-wrap").toggle();
+	}); // 
+
+	$(".form-wrap__comment--js").click(function () {
+		$('.form-wrap__toggle-block--js').toggle();
 	});
 	var mySwiper = new Swiper('.swiper-container', {
 		speed: 400,

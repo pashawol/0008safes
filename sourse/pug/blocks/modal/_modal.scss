@@ -164,6 +164,50 @@
 		height: calc(100% - 12px);
 	}
 
+	&--call {
+		.form-wrap__text--sm {
+			margin-left: auto;
+			margin-right: auto;
+			max-width: rem(320);
+		}
+
+		.form-wrap__group-title,.form-wrap__title {
+			@extend .h6;
+			text-align: center;
+		}
+		
+		.form-wrap__polite {
+			display: block;
+			margin-right: auto;
+			margin-left: auto;
+		}
+
+		.form-wrap__comment {
+			padding-bottom: rem(9);
+			margin-bottom: rem(23);
+			padding-top: rem(10);
+			max-width: rem(350);
+			display: block;
+			letter-spacing: rem(0.36px);
+			text-align: center;
+			cursor: pointer;
+			@include mt;
+			@extend .h6;
+			font-weight: 500;
+			margin-left: auto;
+			margin-right: auto;
+			position: relative;
+			border-bottom: dashed 2px $body-color;
+
+			&:hover {
+				border-bottom: dashed 2px transparent;
+			}
+		}
+
+		.form-wrap__toggle-block {
+			display: none;
+		}
+	}
 }
 
 

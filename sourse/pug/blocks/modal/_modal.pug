@@ -29,5 +29,17 @@ mixin modal()
 				+e.tel(href="tel:+7(3519)22-00-22") +7 (3519) 22-00-22
 		// #modal-pdf
 
-	
+		+form-wrap()(id="modal-call-other" class="  modal-win--call modal-form" ) 
+			+e.top-title Для оформления заказа оставьте ваши контакты
+			//- +e.text.h6 Администратор Ольга позвонит вам прямо сейчас или в&nbsp;другое рабочее время:
+			+e.text--sm Специалист компании Александр позвонит вам прямо сейчас или в&nbsp;другое рабочее время: мы&nbsp;работаем пн-пт с&nbsp;10:00 до&nbsp;18:00
+			input(type="hidden" name="formwithtime" value="formwithtime") 
+			+input('Иван', 'text', 'Как к вам обращаться?')
+			+form-tabs3()
+			+e.input-wrapper
+				+e.comment--js.text-center Напишите комментарии, если хотите
+				+e.toggle-block--js
+					+input('Текст сообщения', 'textarea')
+			+e.btn(type='submit') Заказать звонок
+			+polite
 		// modal

@@ -63,7 +63,7 @@ mixin s-prod-head()
 									+icon('vault')
 									strong Помощь с установкой
 									| Если нужно, поможем установить  или встроить 
-							+e.btn(type="button")
+							+e.A.btn.link-modal(href="#modal-call-other")
 								+icon('cart')
 								| В корзину
 						+e.footer-text *При оформлении заказа  уточняйте&nbsp;цену по&nbsp;т: #[a(href="tel:8(3519)22-00-22") 8 (3519) 22-00-22]
