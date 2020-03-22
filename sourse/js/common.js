@@ -265,12 +265,16 @@ function eventHandler() {
 		$(".s-filter-wrap").toggle();
 	})
 
-
 	var mySwiper = new Swiper('.swiper-container', {
 		speed: 400,
 		spaceBetween: 100,
 		autoHeight: true,
 	});
+
+	$(".form-wrap__comment--js").click(function () {
+		$('.form-wrap__toggle-block--js').toggle();
+	});
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

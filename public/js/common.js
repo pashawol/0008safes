@@ -236,6 +236,9 @@ function eventHandler() {
 		spaceBetween: 100,
 		autoHeight: true
 	});
+	$(".form-wrap__comment--js").click(function () {
+		$('.form-wrap__toggle-block--js').toggle();
+	});
 }
 
 ;
