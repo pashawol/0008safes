@@ -129,6 +129,32 @@ mixin form-tabs2()
 				+input("+7 (999) 999-99-99","tel",'Введите whatsapp:',"whatsapp")
 		//- .h5.text-secondar Перезвоню в течение рабочего дня
 
+mixin form-tabs3()
+	.tabs
+		+e.group
+			+e.group-title Как с вами связаться?
+
+			.tabs__caption
+				.tabs__btn.active
+					+icon('tel')
+					| Звонок 
+				.tabs__btn
+					+icon('viber')
+					| Viber
+				.tabs__btn
+					+icon('whatsapp')
+					| WhatsApp
+		block
+		.tabs__wrap
+			.tabs__content.active
+				+input("+7 (999) 999-99-99","tel",'Введите телефон:',"tel")(required)
+ 
+			.tabs__content
+				+input("+7 (999) 999-99-99","tel",'Введите viber:',"viber")
+			.tabs__content
+				+input("+7 (999) 999-99-99","tel",'Введите whatsapp:',"whatsapp")
+		//- .h5.text-secondar Перезвоню в течение рабочего дня
+
 mixin form-tabs-qwiz()
 	.tabs
 		+e.group
@@ -180,6 +206,25 @@ mixin polite()
 
 
 mixin form-body()
+	
+	+input("+7 (900) 444-44-44","tel",'Введите телефон:')(required)
+	//- +e.title  Выберите время для звонка
+	+inputName()
+	+b.LABEL.custom-input-time
+		+e.INPUT.input(type='checkbox', name='scr8-time', )
+		+e.SPAN.lab
+		+e.SPAN.text--now 
+			span.d-none.d-sm-inline Позвонить сейчас
+			span.d-sm-none Сейчас
+		+e.SPAN.text--time 
+			span.d-none.d-sm-inline Позвонить по времени
+			span.d-sm-none По времени
+	//- +input(" Ваш номер телефона","tel",'Введите Ваш номер телефона для связи')
+
+	.toggle-wrap-input-js
+		+input("Например: во вторник в 14:00","text",'Когда позвонить?','time')
+
+mixin form-call()
 	
 	+input("+7 (900) 444-44-44","tel",'Введите телефон:')(required)
 	//- +e.title  Выберите время для звонка

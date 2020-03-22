@@ -3,9 +3,6 @@
 	font-weight: 500;
 	padding-bottom: rem(85);
 
-	iframe {
-		border: none;
-	}
 
 
 	&__connection {
@@ -301,4 +298,9 @@
 
 	@include media-breakpoint-down(xs) {}
 
+}
+
+
+iframe {
+	border: none;
 }

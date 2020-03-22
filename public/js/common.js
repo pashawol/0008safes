@@ -127,8 +127,6 @@ function eventHandler() {
 
 	JSCCommon.inputMask(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/7.png);"></div>')
-	// /добавляет подложку для pixel perfect
 	// /закрыть/открыть мобильное меню
 	// листалка по стр
 
