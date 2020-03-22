@@ -1,4 +1,53 @@
 mixin s-qwiz()
+	mixin right-bl()
+		.col-lg-auto.d-none.d-lg-block
+			+b.qwiz-sidebar
+				+e.header
+					+e.img-wrap
+						img.res-i(src="img/@2x/man.jpg", alt="")
+					div
+						+e.title Александр Сикерин
+						+e.sm руководитель компании
+				+e.body
+					+e.text Под любой из&nbsp;запросов  у&nbsp;нас всегда в&nbsp;наличии  3-4 популярных варианта сейфов.
+				+e.footer
+					+icon("chat")
+					.h6.fw-400 Нужна помощь специалиста?
+					+e.link.link-modal(href="#modal-call")  Получить консультацию
+	mixin item(i,v, t, not )
+		+b.qwiz-item
+			+b.qwiz-progress
+				+e.inner
+					+e.text= v
+					+e.bar(style=`width:${i}%`)
+			+e.body
+				+e.title= t
+				.row
+					block
+			+e.footer
+				.row
+					.col-sm-auto.order-sm-last
+						+e.btn--next(type="button") Далее
+					.col-sm-auto
+						if !not
+							+e.btn--back(type="button") Предыдущий вопрос
+		
+		// /+b.qwiz-item
+	mixin radio(t, n)
+		div&attributes(attributes)
+			+b.LABEL.qwiz-radio
+				+e.INPUT.input(type="radio" name=n)
+				+e.lab
+				+e.SPAN.title= t
+				block
+	mixin radioch(t, n)
+		div&attributes(attributes)
+			+b.LABEL.qwiz-radio
+				+e.INPUT.input(type="checkbox" name=n)
+				+e.lab
+				+e.SPAN.title= t
+				block
+
 	// start s-qwiz
 	+b.SECTION.s-qwiz.section#s-qwiz&attributes(attributes)
 		.container
@@ -6,93 +55,63 @@ mixin s-qwiz()
 				h2 Ответьте на&nbsp;4&nbsp;вопроса и&nbsp;#[strong получите подборку сейфов,]  подходящих именно вам
 				
 			+b.qwiz-block
-				+e.questions
-					.row
-						.col
-							mixin item(i,v, t, not )
-								+b.qwiz-item
-									+b.qwiz-progress
-										+e.inner
-											+e.text= v
-											+e.bar(style=`width:${i}%`)
-									+e.body
-										+e.title= t
-										.row
-											block
-									+e.footer
-										.row
-											.col-sm-auto.order-sm-last
-												+e.btn--next(type="button") Далее
-											.col-sm-auto
-												if !not
-													+e.btn--back(type="button") Предыдущий вопрос
-								
-								// /+b.qwiz-item
-							mixin radio(t, n)
-								div&attributes(attributes)
-									+b.LABEL.qwiz-radio
-										+e.INPUT.input(type="radio" name=n)
-										+e.lab
-										+e.SPAN.title= t
-										block
-							mixin radioch(t, n)
-								div&attributes(attributes)
-									+b.LABEL.qwiz-radio
-										+e.INPUT.input(type="checkbox" name=n)
-										+e.lab
-										+e.SPAN.title= t
-										block
+				//   повесь этот класс на  .swiper-container .swiper-no-swiping
+				.swiper-container.qwiz-slider
+					.swiper-wrapper
 
-							+item("10","Вопрос 1 из 4","Что планируете хранить в сейфе?", "not")
-								+radioch("Деньги и драгоценности","qwiz-1")(class="col-sm-6")
-								+radioch("Оружие","qwiz-1")(class="col-6")
-								+radioch("Документы","qwiz-1")(class="col-sm-6")
-								+radioch("Другое","qwiz-1")(class="col-sm-6")
-							+item("20","Вопрос 2 из 4","От чего хотите защитить содержимое сейфа?")
-								+radio("От пожара ","qwiz-2")(class="col-sm-6")
-								+radio("От взлома ","qwiz-2")(class="col-sm-6")
-								+radio("От пожара и взлома ","qwiz-2")(class="col-sm-6")
-								+radio(" Другое","qwiz-2")(class="col-sm-6")
-							+item("60","Вопрос 3 из 4","Какой размер сейфа вам больше подходит?")
-								+radio("Большой","qwiz-3")(class="col-md-4 col-sm-6")
-									+e.SPAN.text Высотой более 1&nbsp;м&nbsp;&mdash;  чаще устанавливается открыто там, где есть  под него место.
-								+radio("Средний","qwiz-3")(class="col-md-4 col-sm-6")
-									+e.SPAN.text Высотой менее 80&nbsp;см&nbsp;&mdash; уместится под стол и&nbsp;в&nbsp;шкаф.
-								+radio("Маленький","qwiz-3")(class="col-md-4 col-sm-6")
-									+e.SPAN.text Высотой менее 50&nbsp;см&nbsp;&mdash;  можно &laquo;спрятать&raquo;  в&nbsp;стену, убрать в&nbsp;шкаф  или поставить на&nbsp;стеллаж.
-							+item("80","Вопрос 4 из 4","Выберите сумму, которую готовы потратить на покупку сейфа?")
-								+radio("До 5000 Р","qwiz-price")(class="col-sm-6")
-								+radio("От 5.000 до 10.000 Р","qwiz-price")(class="col-sm-6")
-								+radio("От 10.000 до 20.000 Р","qwiz-price")(class="col-sm-6")
-								+radio("Свыше 20.000 Р","qwiz-price")(class="col-sm-6")
-						.col-lg-auto.d-none.d-lg-block
-							+b.qwiz-sidebar
-								+e.header
-									+e.img-wrap
-										img.res-i(src="img/@2x/man.jpg", alt="")
-									div
-										+e.title Александр Сикерин
-										+e.sm руководитель компании
-								+e.body
-									+e.text Под любой из&nbsp;запросов  у&nbsp;нас всегда в&nbsp;наличии  3-4 популярных варианта сейфов.
-								+e.footer
-									+icon("chat")
-									.h6.fw-400 Нужна помощь специалиста?
-									+e.link.link-modal(href="#modal-call")  Получить консультацию
-				+b.form-wrap
-					.row
-						.col-lg-6.col-md-7
-							.h5.pb-1 Мы&nbsp;уже подбираем для вас подходящие сейфы
-							.h4.strong.mb-3 Выберите, куда прислать подборку?
-							+form-tabs-qwiz()
-							+inputName()
-							+e.btn(type="submit") Получить консультацию
-							+polite
+						.swiper-slide
+							.row
+								.col 
+									+item("10","Вопрос 1 из 4","Что планируете хранить в сейфе?", "not")
+										+radioch("Деньги и драгоценности","qwiz-1")(class="col-sm-6")
+										+radioch("Оружие","qwiz-1")(class="col-6")
+										+radioch("Документы","qwiz-1")(class="col-sm-6")
+										+radioch("Другое","qwiz-1")(class="col-sm-6")
+								+right-bl()
+						.swiper-slide
+							.row
+								.col 
+									+item("20","Вопрос 2 из 4","От чего хотите защитить содержимое сейфа?")
+										+radio("От пожара ","qwiz-2")(class="col-sm-6")
+										+radio("От взлома ","qwiz-2")(class="col-sm-6")
+										+radio("От пожара и взлома ","qwiz-2")(class="col-sm-6")
+										+radio(" Другое","qwiz-2")(class="col-sm-6")
+								+right-bl()
+						.swiper-slide
+							.row
+								.col 
+									+item("60","Вопрос 3 из 4","Какой размер сейфа вам больше подходит?")
+										+radio("Большой","qwiz-3")(class="col-md-4 col-sm-6")
+											+e.SPAN.text Высотой более 1&nbsp;м&nbsp;&mdash;  чаще устанавливается открыто там, где есть  под него место.
+										+radio("Средний","qwiz-3")(class="col-md-4 col-sm-6")
+											+e.SPAN.text Высотой менее 80&nbsp;см&nbsp;&mdash; уместится под стол и&nbsp;в&nbsp;шкаф.
+										+radio("Маленький","qwiz-3")(class="col-md-4 col-sm-6")
+											+e.SPAN.text Высотой менее 50&nbsp;см&nbsp;&mdash;  можно &laquo;спрятать&raquo;  в&nbsp;стену, убрать в&nbsp;шкаф  или поставить на&nbsp;стеллаж.
+								+right-bl()
+						.swiper-slide
+							.row
+								.col 
+									+item("80","Вопрос 4 из 4","Выберите сумму, которую готовы потратить на покупку сейфа?")
+										+radio("До 5000 Р","qwiz-price")(class="col-sm-6")
+										+radio("От 5.000 до 10.000 Р","qwiz-price")(class="col-sm-6")
+										+radio("От 10.000 до 20.000 Р","qwiz-price")(class="col-sm-6")
+										+radio("Свыше 20.000 Р","qwiz-price")(class="col-sm-6")
+								+right-bl()
+						.swiper-slide 
+							+b.form-wrap
+								.row
+									.col-lg-6.col-md-7
+										.h5.pb-1 Мы&nbsp;уже подбираем для вас подходящие сейфы
+										.h4.strong.mb-3 Выберите, куда прислать подборку?
+										+form-tabs-qwiz()
+										+inputName()
+										+e.btn(type="submit") Получить консультацию
+										+polite
 
-						.col.d-none.d-md-block.align-self-end
-							+e.img-wrap
-								img.lazy.res-i(src="#" data-src="img/@2x/man.png", alt="")
-								+e.label
-									+e.label-name Александр Сикерин
-									+e.label-prof руководитель 
+									.col.d-none.d-md-block.align-self-end
+										+e.img-wrap
+											img.lazy.res-i(src="#" data-src="img/@2x/man.png", alt="")
+											+e.label
+												+e.label-name Александр Сикерин
+												+e.label-prof руководитель 
 	// end s-qwiz

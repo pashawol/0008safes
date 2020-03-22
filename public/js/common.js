@@ -231,6 +231,11 @@ function eventHandler() {
 		$(this).toggleClass('active').find("strong").toggleClass("d-none");
 		$(".s-filter-wrap").toggle();
 	});
+	var mySwiper = new Swiper('.swiper-container', {
+		speed: 400,
+		spaceBetween: 100,
+		autoHeight: true
+	});
 }
 
 ;
