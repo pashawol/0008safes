@@ -17,9 +17,19 @@
 	}
 
 	&__slide {
+		height: initial;
 		padding-left: 15px;
 		padding-right: 15px;
 		margin-bottom: rem(44);
+	}
+
+	.slick-track {
+		display: flex;
+
+		&::before,
+		&::after {
+			display: none;
+		}
 	}
 
 	&__footer-text {

@@ -113,10 +113,15 @@
 		padding: rem(8) rem(10);
 		text-decoration: none !important;
 
-		.icon {
-			font-size: rem(27 * 1.2);
+		.icon-wrap {
+
 			margin-right: rem(9);
 			flex-shrink: 0;
+
+			img {
+				width: rem(32px);
+				height: rem(27px);
+			}
 		}
 
 		&:hover {

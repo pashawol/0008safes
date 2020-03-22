@@ -19,6 +19,7 @@
 		<meta property="og:image:height" content="504">
 		<!-- Custom Browsers Color-->
 		<meta name="theme-color" content="#3361d8">
+		<link rel="stylesheet" href="libs/swiper/css/swiper.min.css"/>
 		<link rel="stylesheet" href="libs/slick-carousel/slick/slick.css"/>
 		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
 		<link rel="stylesheet" href="libs/ion-rangeslider/css/ion.rangeSlider.min.css"/>
@@ -172,9 +173,7 @@
 										<div class="menu-top">
 											<ul>
 												<li><a class="scroll-link" href="#s-qwiz"> 
-														<svg class="icon icon-safety-box ">
-															<use xlink:href="img/svg/sprite.svg#safety-box"></use>
-														</svg>Подобрать сейф</a></li>
+														<div class="menu-icon"><span class="menu-image-hover-wrapper"><img class="menu-image menu-image-title-after" src="http://digitalconvertion.ru/wp-content/uploads/2020/02/safety-box.svg" alt=""/><img class="hovered-image menu-image-title-after icon" src="http://digitalconvertion.ru/wp-content/uploads/2020/02/safety-box-blue.svg" alt="" style="margin-left: -0px;"/></span></div>Подобрать сейф</a></li>
 												<li><a href="#">Доставка и оплата</a></li>
 												<li><a href="#">Контакты</a></li>
 											</ul>
@@ -231,9 +230,12 @@
 						<h2>Ответьте на&nbsp;4&nbsp;вопроса и&nbsp;<strong>получите подборку сейфов,</strong>  подходящих именно вам</h2>
 					</div>
 					<div class="qwiz-block">
-						<div class="qwiz-block__questions">
-							<div class="row">
-								<div class="col">
+						<!--   повесь этот класс на  .swiper-container .swiper-no-swiping-->
+						<div class="swiper-container qwiz-slider">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="row">
+										<div class="col"> 
 											<div class="qwiz-item">
 												<div class="qwiz-progress">
 													<div class="qwiz-progress__inner">
@@ -247,22 +249,22 @@
 													<div class="qwiz-item__title">Что планируете хранить в сейфе?
 													</div>
 													<div class="row">
-																<div class="col-sm-6">
-																	<label class="qwiz-radio"><input class="qwiz-radio__input" type="checkbox" name="qwiz-1"/><span class="qwiz-radio__lab"></span><span class="qwiz-radio__title">Деньги и драгоценности</span>
-																	</label>
-																</div>
-																<div class="col-6">
-																	<label class="qwiz-radio"><input class="qwiz-radio__input" type="checkbox" name="qwiz-1"/><span class="qwiz-radio__lab"></span><span class="qwiz-radio__title">Оружие</span>
-																	</label>
-																</div>
-																<div class="col-sm-6">
-																	<label class="qwiz-radio"><input class="qwiz-radio__input" type="checkbox" name="qwiz-1"/><span class="qwiz-radio__lab"></span><span class="qwiz-radio__title">Документы</span>
-																	</label>
-																</div>
-																<div class="col-sm-6">
-																	<label class="qwiz-radio"><input class="qwiz-radio__input" type="checkbox" name="qwiz-1"/><span class="qwiz-radio__lab"></span><span class="qwiz-radio__title">Другое</span>
-																	</label>
-																</div>
+														<div class="col-sm-6">
+															<label class="qwiz-radio"><input class="qwiz-radio__input" type="checkbox" name="qwiz-1"/><span class="qwiz-radio__lab"></span><span class="qwiz-radio__title">Деньги и драгоценности</span>
+															</label>
+														</div>
+														<div class="col-6">
+															<label class="qwiz-radio"><input class="qwiz-radio__input" type="checkbox" name="qwiz-1"/><span class="qwiz-radio__lab"></span><span class="qwiz-radio__title">Оружие</span>
+															</label>
+														</div>
+														<div class="col-sm-6">
+															<label class="qwiz-radio"><input class="qwiz-radio__input" type="checkbox" name="qwiz-1"/><span class="qwiz-radio__lab"></span><span class="qwiz-radio__title">Документы</span>
+															</label>
+														</div>
+														<div class="col-sm-6">
+															<label class="qwiz-radio"><input class="qwiz-radio__input" type="checkbox" name="qwiz-1"/><span class="qwiz-radio__lab"></span><span class="qwiz-radio__title">Другое</span>
+															</label>
+														</div>
 													</div>
 												</div>
 												<div class="qwiz-item__footer">
@@ -277,6 +279,36 @@
 												</div>
 											</div>
 											<!-- /+b.qwiz-item-->
+										</div>
+										<div class="col-lg-auto d-none d-lg-block">
+											<div class="qwiz-sidebar">
+												<div class="qwiz-sidebar__header">
+													<div class="qwiz-sidebar__img-wrap"><img class="res-i" src="img/@2x/man.jpg" alt=""/>
+													</div>
+													<div>
+														<div class="qwiz-sidebar__title">Александр Сикерин
+														</div>
+														<div class="qwiz-sidebar__sm">руководитель компании
+														</div>
+													</div>
+												</div>
+												<div class="qwiz-sidebar__body">
+													<div class="qwiz-sidebar__text">Под любой из&nbsp;запросов  у&nbsp;нас всегда в&nbsp;наличии  3-4 популярных варианта сейфов.
+													</div>
+												</div>
+												<div class="qwiz-sidebar__footer">
+													<svg class="icon icon-chat ">
+														<use xlink:href="img/svg/sprite.svg#chat"></use>
+													</svg>
+													<div class="h6 fw-400">Нужна помощь специалиста?</div><a class="qwiz-sidebar__link link-modal" href="#modal-call"> Получить консультацию</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="row">
+										<div class="col"> 
 											<div class="qwiz-item">
 												<div class="qwiz-progress">
 													<div class="qwiz-progress__inner">
@@ -290,22 +322,22 @@
 													<div class="qwiz-item__title">От чего хотите защитить содержимое сейфа?
 													</div>
 													<div class="row">
-																<div class="col-sm-6">
-																	<label class="qwiz-radio"><input class="qwiz-radio__input" type="radio" name="qwiz-2"/><span class="qwiz-radio__lab"></span><span class="qwiz-radio__title">От пожара </span>
-																	</label>
-																</div>
-																<div class="col-sm-6">
-																	<label class="qwiz-radio"><input class="qwiz-radio__input" type="radio" name="qwiz-2"/><span class="qwiz-radio__lab"></span><span class="qwiz-radio__title">От взлома </span>
-																	</label>
-																</div>
-																<div class="col-sm-6">
-																	<label class="qwiz-radio"><input class="qwiz-radio__input" type="radio" name="qwiz-2"/><span class="qwiz-radio__lab"></span><span class="qwiz-radio__title">От пожара и взлома </span>
-																	</label>
-																</div>
-																<div class="col-sm-6">
-																	<label class="qwiz-radio"><input class="qwiz-radio__input" type="radio" name="qwiz-2"/><span class="qwiz-radio__lab"></span><span class="qwiz-radio__title"> Другое</span>
-																	</label>
-																</div>
+														<div class="col-sm-6">
+															<label class="qwiz-radio"><input class="qwiz-radio__input" type="radio" name="qwiz-2"/><span class="qwiz-radio__lab"></span><span class="qwiz-radio__title">От пожара </span>
+															</label>
+														</div>
+														<div class="col-sm-6">
+															<label class="qwiz-radio"><input class="qwiz-radio__input" type="radio" name="qwiz-2"/><span class="qwiz-radio__lab"></span><span class="qwiz-radio__title">От взлома </span>
+															</label>
+														</div>
+														<div class="col-sm-6">
+															<label class="qwiz-radio"><input class="qwiz-radio__input" type="radio" name="qwiz-2"/><span class="qwiz-radio__lab"></span><span class="qwiz-radio__title">От пожара и взлома </span>
+															</label>
+														</div>
+														<div class="col-sm-6">
+															<label class="qwiz-radio"><input class="qwiz-radio__input" type="radio" name="qwiz-2"/><span class="qwiz-radio__lab"></span><span class="qwiz-radio__title"> Другое</span>
+															</label>
+														</div>
 													</div>
 												</div>
 												<div class="qwiz-item__footer">
@@ -322,6 +354,36 @@
 												</div>
 											</div>
 											<!-- /+b.qwiz-item-->
+										</div>
+										<div class="col-lg-auto d-none d-lg-block">
+											<div class="qwiz-sidebar">
+												<div class="qwiz-sidebar__header">
+													<div class="qwiz-sidebar__img-wrap"><img class="res-i" src="img/@2x/man.jpg" alt=""/>
+													</div>
+													<div>
+														<div class="qwiz-sidebar__title">Александр Сикерин
+														</div>
+														<div class="qwiz-sidebar__sm">руководитель компании
+														</div>
+													</div>
+												</div>
+												<div class="qwiz-sidebar__body">
+													<div class="qwiz-sidebar__text">Под любой из&nbsp;запросов  у&nbsp;нас всегда в&nbsp;наличии  3-4 популярных варианта сейфов.
+													</div>
+												</div>
+												<div class="qwiz-sidebar__footer">
+													<svg class="icon icon-chat ">
+														<use xlink:href="img/svg/sprite.svg#chat"></use>
+													</svg>
+													<div class="h6 fw-400">Нужна помощь специалиста?</div><a class="qwiz-sidebar__link link-modal" href="#modal-call"> Получить консультацию</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="row">
+										<div class="col"> 
 											<div class="qwiz-item">
 												<div class="qwiz-progress">
 													<div class="qwiz-progress__inner">
@@ -335,18 +397,18 @@
 													<div class="qwiz-item__title">Какой размер сейфа вам больше подходит?
 													</div>
 													<div class="row">
-																<div class="col-md-4 col-sm-6">
-																	<label class="qwiz-radio"><input class="qwiz-radio__input" type="radio" name="qwiz-3"/><span class="qwiz-radio__lab"></span><span class="qwiz-radio__title">Большой</span><span class="qwiz-radio__text">Высотой более 1&nbsp;м&nbsp;&mdash;  чаще устанавливается открыто там, где есть  под него место.</span>
-																	</label>
-																</div>
-																<div class="col-md-4 col-sm-6">
-																	<label class="qwiz-radio"><input class="qwiz-radio__input" type="radio" name="qwiz-3"/><span class="qwiz-radio__lab"></span><span class="qwiz-radio__title">Средний</span><span class="qwiz-radio__text">Высотой менее 80&nbsp;см&nbsp;&mdash; уместится под стол и&nbsp;в&nbsp;шкаф.</span>
-																	</label>
-																</div>
-																<div class="col-md-4 col-sm-6">
-																	<label class="qwiz-radio"><input class="qwiz-radio__input" type="radio" name="qwiz-3"/><span class="qwiz-radio__lab"></span><span class="qwiz-radio__title">Маленький</span><span class="qwiz-radio__text">Высотой менее 50&nbsp;см&nbsp;&mdash;  можно &laquo;спрятать&raquo;  в&nbsp;стену, убрать в&nbsp;шкаф  или поставить на&nbsp;стеллаж.</span>
-																	</label>
-																</div>
+														<div class="col-md-4 col-sm-6">
+															<label class="qwiz-radio"><input class="qwiz-radio__input" type="radio" name="qwiz-3"/><span class="qwiz-radio__lab"></span><span class="qwiz-radio__title">Большой</span><span class="qwiz-radio__text">Высотой более 1&nbsp;м&nbsp;&mdash;  чаще устанавливается открыто там, где есть  под него место.</span>
+															</label>
+														</div>
+														<div class="col-md-4 col-sm-6">
+															<label class="qwiz-radio"><input class="qwiz-radio__input" type="radio" name="qwiz-3"/><span class="qwiz-radio__lab"></span><span class="qwiz-radio__title">Средний</span><span class="qwiz-radio__text">Высотой менее 80&nbsp;см&nbsp;&mdash; уместится под стол и&nbsp;в&nbsp;шкаф.</span>
+															</label>
+														</div>
+														<div class="col-md-4 col-sm-6">
+															<label class="qwiz-radio"><input class="qwiz-radio__input" type="radio" name="qwiz-3"/><span class="qwiz-radio__lab"></span><span class="qwiz-radio__title">Маленький</span><span class="qwiz-radio__text">Высотой менее 50&nbsp;см&nbsp;&mdash;  можно &laquo;спрятать&raquo;  в&nbsp;стену, убрать в&nbsp;шкаф  или поставить на&nbsp;стеллаж.</span>
+															</label>
+														</div>
 													</div>
 												</div>
 												<div class="qwiz-item__footer">
@@ -363,6 +425,36 @@
 												</div>
 											</div>
 											<!-- /+b.qwiz-item-->
+										</div>
+										<div class="col-lg-auto d-none d-lg-block">
+											<div class="qwiz-sidebar">
+												<div class="qwiz-sidebar__header">
+													<div class="qwiz-sidebar__img-wrap"><img class="res-i" src="img/@2x/man.jpg" alt=""/>
+													</div>
+													<div>
+														<div class="qwiz-sidebar__title">Александр Сикерин
+														</div>
+														<div class="qwiz-sidebar__sm">руководитель компании
+														</div>
+													</div>
+												</div>
+												<div class="qwiz-sidebar__body">
+													<div class="qwiz-sidebar__text">Под любой из&nbsp;запросов  у&nbsp;нас всегда в&nbsp;наличии  3-4 популярных варианта сейфов.
+													</div>
+												</div>
+												<div class="qwiz-sidebar__footer">
+													<svg class="icon icon-chat ">
+														<use xlink:href="img/svg/sprite.svg#chat"></use>
+													</svg>
+													<div class="h6 fw-400">Нужна помощь специалиста?</div><a class="qwiz-sidebar__link link-modal" href="#modal-call"> Получить консультацию</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="row">
+										<div class="col"> 
 											<div class="qwiz-item">
 												<div class="qwiz-progress">
 													<div class="qwiz-progress__inner">
@@ -376,22 +468,22 @@
 													<div class="qwiz-item__title">Выберите сумму, которую готовы потратить на покупку сейфа?
 													</div>
 													<div class="row">
-																<div class="col-sm-6">
-																	<label class="qwiz-radio"><input class="qwiz-radio__input" type="radio" name="qwiz-price"/><span class="qwiz-radio__lab"></span><span class="qwiz-radio__title">До 5000 Р</span>
-																	</label>
-																</div>
-																<div class="col-sm-6">
-																	<label class="qwiz-radio"><input class="qwiz-radio__input" type="radio" name="qwiz-price"/><span class="qwiz-radio__lab"></span><span class="qwiz-radio__title">От 5.000 до 10.000 Р</span>
-																	</label>
-																</div>
-																<div class="col-sm-6">
-																	<label class="qwiz-radio"><input class="qwiz-radio__input" type="radio" name="qwiz-price"/><span class="qwiz-radio__lab"></span><span class="qwiz-radio__title">От 10.000 до 20.000 Р</span>
-																	</label>
-																</div>
-																<div class="col-sm-6">
-																	<label class="qwiz-radio"><input class="qwiz-radio__input" type="radio" name="qwiz-price"/><span class="qwiz-radio__lab"></span><span class="qwiz-radio__title">Свыше 20.000 Р</span>
-																	</label>
-																</div>
+														<div class="col-sm-6">
+															<label class="qwiz-radio"><input class="qwiz-radio__input" type="radio" name="qwiz-price"/><span class="qwiz-radio__lab"></span><span class="qwiz-radio__title">До 5000 Р</span>
+															</label>
+														</div>
+														<div class="col-sm-6">
+															<label class="qwiz-radio"><input class="qwiz-radio__input" type="radio" name="qwiz-price"/><span class="qwiz-radio__lab"></span><span class="qwiz-radio__title">От 5.000 до 10.000 Р</span>
+															</label>
+														</div>
+														<div class="col-sm-6">
+															<label class="qwiz-radio"><input class="qwiz-radio__input" type="radio" name="qwiz-price"/><span class="qwiz-radio__lab"></span><span class="qwiz-radio__title">От 10.000 до 20.000 Р</span>
+															</label>
+														</div>
+														<div class="col-sm-6">
+															<label class="qwiz-radio"><input class="qwiz-radio__input" type="radio" name="qwiz-price"/><span class="qwiz-radio__lab"></span><span class="qwiz-radio__title">Свыше 20.000 Р</span>
+															</label>
+														</div>
 													</div>
 												</div>
 												<div class="qwiz-item__footer">
@@ -408,111 +500,115 @@
 												</div>
 											</div>
 											<!-- /+b.qwiz-item-->
-								</div>
-								<div class="col-lg-auto d-none d-lg-block">
-									<div class="qwiz-sidebar">
-										<div class="qwiz-sidebar__header">
-											<div class="qwiz-sidebar__img-wrap"><img class="res-i" src="img/@2x/man.jpg" alt=""/>
-											</div>
-											<div>
-												<div class="qwiz-sidebar__title">Александр Сикерин
-												</div>
-												<div class="qwiz-sidebar__sm">руководитель компании
-												</div>
-											</div>
 										</div>
-										<div class="qwiz-sidebar__body">
-											<div class="qwiz-sidebar__text">Под любой из&nbsp;запросов  у&nbsp;нас всегда в&nbsp;наличии  3-4 популярных варианта сейфов.
+										<div class="col-lg-auto d-none d-lg-block">
+											<div class="qwiz-sidebar">
+												<div class="qwiz-sidebar__header">
+													<div class="qwiz-sidebar__img-wrap"><img class="res-i" src="img/@2x/man.jpg" alt=""/>
+													</div>
+													<div>
+														<div class="qwiz-sidebar__title">Александр Сикерин
+														</div>
+														<div class="qwiz-sidebar__sm">руководитель компании
+														</div>
+													</div>
+												</div>
+												<div class="qwiz-sidebar__body">
+													<div class="qwiz-sidebar__text">Под любой из&nbsp;запросов  у&nbsp;нас всегда в&nbsp;наличии  3-4 популярных варианта сейфов.
+													</div>
+												</div>
+												<div class="qwiz-sidebar__footer">
+													<svg class="icon icon-chat ">
+														<use xlink:href="img/svg/sprite.svg#chat"></use>
+													</svg>
+													<div class="h6 fw-400">Нужна помощь специалиста?</div><a class="qwiz-sidebar__link link-modal" href="#modal-call"> Получить консультацию</a>
+												</div>
 											</div>
-										</div>
-										<div class="qwiz-sidebar__footer">
-											<svg class="icon icon-chat ">
-												<use xlink:href="img/svg/sprite.svg#chat"></use>
-											</svg>
-											<div class="h6 fw-400">Нужна помощь специалиста?</div><a class="qwiz-sidebar__link link-modal" href="#modal-call"> Получить консультацию</a>
 										</div>
 									</div>
 								</div>
-							</div>
-						</div>
-						<div class="form-wrap">
-							<div class="row">
-								<div class="col-lg-6 col-md-7">
-									<div class="h5 pb-1">Мы&nbsp;уже подбираем для вас подходящие сейфы</div>
-									<div class="h4 strong mb-3">Выберите, куда прислать подборку?</div>
-									<div class="tabs">
-										<div class="form-wrap__group">
-											<div class="tabs__caption">
-												<div class="tabs__btn tabs__btn--qwiz active">
-													<svg class="icon icon-viber ">
-														<use xlink:href="img/svg/sprite.svg#viber"></use>
-													</svg>Viber
+								<div class="swiper-slide"> 
+									<div class="form-wrap">
+										<div class="row">
+											<div class="col-lg-6 col-md-7">
+												<div class="h5 pb-1">Мы&nbsp;уже подбираем для вас подходящие сейфы</div>
+												<div class="h4 strong mb-3">Выберите, куда прислать подборку?</div>
+												<div class="tabs">
+													<div class="form-wrap__group">
+														<div class="tabs__caption">
+															<div class="tabs__btn tabs__btn--qwiz active">
+																<svg class="icon icon-viber ">
+																	<use xlink:href="img/svg/sprite.svg#viber"></use>
+																</svg>Viber
+															</div>
+															<div class="tabs__btn tabs__btn--qwiz">
+																<svg class="icon icon-whatsapp ">
+																	<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+																</svg>WhatsApp
+															</div>
+															<div class="tabs__btn tabs__btn--qwiz">
+																<svg class="icon icon-telegram ">
+																	<use xlink:href="img/svg/sprite.svg#telegram"></use>
+																</svg>Telegram
+															</div>
+															<div class="tabs__btn tabs__btn--qwiz">
+																<svg class="icon icon-email ">
+																	<use xlink:href="img/svg/sprite.svg#email"></use>
+																</svg>Email
+															</div>
+														</div>
+													</div>
+													<div class="tabs__wrap">
+														<div class="tabs__content active">
+															<div class="form-wrap__input-wrap form-group">
+																<label><span class="form-wrap__title">Введите viber:</span><input class="form-wrap__input form-control" type="tel" placeholder="+7 (999) 999-99-99" name="viber"/>
+																</label>
+															</div>
+															<!-- +e.input-wrap-->
+														</div>
+														<div class="tabs__content">
+															<div class="form-wrap__input-wrap form-group">
+																<label><span class="form-wrap__title">Введите whatsapp:</span><input class="form-wrap__input form-control" type="tel" placeholder="+7 (999) 999-99-99" name="whatsapp"/>
+																</label>
+															</div>
+															<!-- +e.input-wrap-->
+														</div>
+														<div class="tabs__content">
+															<div class="form-wrap__input-wrap form-group">
+																<label><span class="form-wrap__title">Введите telegram:</span><input class="form-wrap__input form-control" type="tel" placeholder="Ваш telegram" name="telegram" required="required"/>
+																</label>
+															</div>
+															<!-- +e.input-wrap-->
+														</div>
+														<div class="tabs__content">
+															<div class="form-wrap__input-wrap form-group">
+																<label><span class="form-wrap__title">Введите email:</span><input class="form-wrap__input form-control" type="email" placeholder="Ваш email" name="email"/>
+																</label>
+															</div>
+															<!-- +e.input-wrap-->
+														</div>
+													</div>
+													<div class="h5 text-secondar">Проверьте правильность номера телефона &mdash;&nbsp;за&nbsp;ним мы&nbsp;зафиксируем вашу скидку&nbsp;10%</div>
 												</div>
-												<div class="tabs__btn tabs__btn--qwiz">
-													<svg class="icon icon-whatsapp ">
-														<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
-													</svg>WhatsApp
-												</div>
-												<div class="tabs__btn tabs__btn--qwiz">
-													<svg class="icon icon-telegram ">
-														<use xlink:href="img/svg/sprite.svg#telegram"></use>
-													</svg>Telegram
-												</div>
-												<div class="tabs__btn tabs__btn--qwiz">
-													<svg class="icon icon-email ">
-														<use xlink:href="img/svg/sprite.svg#email"></use>
-													</svg>Email
-												</div>
-											</div>
-										</div>
-										<div class="tabs__wrap">
-											<div class="tabs__content active">
 												<div class="form-wrap__input-wrap form-group">
-													<label><span class="form-wrap__title">Введите viber:</span><input class="form-wrap__input form-control" type="tel" placeholder="+7 (999) 999-99-99" name="viber"/>
+													<label><span class="form-wrap__title">Как к вам обращаться?</span><input class="form-wrap__input form-control" type="text" placeholder="Иван" name="name" required="required"/>
 													</label>
 												</div>
 												<!-- +e.input-wrap-->
-											</div>
-											<div class="tabs__content">
-												<div class="form-wrap__input-wrap form-group">
-													<label><span class="form-wrap__title">Введите whatsapp:</span><input class="form-wrap__input form-control" type="tel" placeholder="+7 (999) 999-99-99" name="whatsapp"/>
-													</label>
+												<button class="form-wrap__btn" type="submit">Получить консультацию
+												</button>
+												<div class="form-wrap__polite text-secondary"> Нажимая на&nbsp;кнопку, вы&nbsp;даете согласие на&nbsp;обработку своих персональных данных и&nbsp;соглашаетесь с&nbsp;<a class="tdu text-secondary" href="privacy-policy.pdf" target="_blank">Политикой конфиденциальности</a>
 												</div>
-												<!-- +e.input-wrap-->
 											</div>
-											<div class="tabs__content">
-												<div class="form-wrap__input-wrap form-group">
-													<label><span class="form-wrap__title">Введите telegram:</span><input class="form-wrap__input form-control" type="tel" placeholder="Ваш telegram" name="telegram" required="required"/>
-													</label>
+											<div class="col d-none d-md-block align-self-end">
+												<div class="form-wrap__img-wrap"><img class="lazy res-i" src="#" data-src="img/@2x/man.png" alt=""/>
+													<div class="form-wrap__label">
+														<div class="form-wrap__label-name">Александр Сикерин
+														</div>
+														<div class="form-wrap__label-prof">руководитель 
+														</div>
+													</div>
 												</div>
-												<!-- +e.input-wrap-->
-											</div>
-											<div class="tabs__content">
-												<div class="form-wrap__input-wrap form-group">
-													<label><span class="form-wrap__title">Введите email:</span><input class="form-wrap__input form-control" type="email" placeholder="Ваш email" name="email"/>
-													</label>
-												</div>
-												<!-- +e.input-wrap-->
-											</div>
-										</div>
-										<div class="h5 text-secondar">Проверьте правильность номера телефона &mdash;&nbsp;за&nbsp;ним мы&nbsp;зафиксируем вашу скидку&nbsp;10%</div>
-									</div>
-									<div class="form-wrap__input-wrap form-group">
-										<label><span class="form-wrap__title">Как к вам обращаться?</span><input class="form-wrap__input form-control" type="text" placeholder="Иван" name="name" required="required"/>
-										</label>
-									</div>
-									<!-- +e.input-wrap-->
-									<button class="form-wrap__btn" type="submit">Получить консультацию
-									</button>
-									<div class="form-wrap__polite text-secondary"> Нажимая на&nbsp;кнопку, вы&nbsp;даете согласие на&nbsp;обработку своих персональных данных и&nbsp;соглашаетесь с&nbsp;<a class="tdu text-secondary" href="privacy-policy.pdf" target="_blank">Политикой конфиденциальности</a>
-									</div>
-								</div>
-								<div class="col d-none d-md-block align-self-end">
-									<div class="form-wrap__img-wrap"><img class="lazy res-i" src="#" data-src="img/@2x/man.png" alt=""/>
-										<div class="form-wrap__label">
-											<div class="form-wrap__label-name">Александр Сикерин
-											</div>
-											<div class="form-wrap__label-prof">руководитель 
 											</div>
 										</div>
 									</div>
@@ -1036,6 +1132,7 @@
 		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
 		<!-- modal libs-->
 		<!-- slider libs-->
+		<script src="libs/swiper/js/swiper.min.js"></script>
 		<script src="libs/slick-carousel/slick/slick.min.js"></script>
 		<!-- /slider libs-->
 		<!-- for svg libs-->

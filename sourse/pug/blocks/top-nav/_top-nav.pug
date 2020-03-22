@@ -49,7 +49,10 @@ mixin top-nav()
 							+b.menu-top
 								ul
 									li: a.scroll-link(href="#s-qwiz") 
-										+icon("safety-box")
+										.menu-icon
+											span.menu-image-hover-wrapper
+												img.menu-image.menu-image-title-after(src='http://digitalconvertion.ru/wp-content/uploads/2020/02/safety-box.svg', alt='')
+												img.hovered-image.menu-image-title-after.icon(src='http://digitalconvertion.ru/wp-content/uploads/2020/02/safety-box-blue.svg', alt='', style='margin-left: -0px;')
 										| Подобрать сейф
 									li: a(href="#") Доставка и оплата
 									li: a(href="#") Контакты
